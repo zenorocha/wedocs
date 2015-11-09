@@ -143,4 +143,4 @@ $body.timestamp > $data.timestamp
 
 ## 7. What's Next?
 
-* Read the ["Understanding Data"](http://liferay.io/docs/understanding-data.html) guide
+* Read the ["Understanding Data"](http://liferay.io/docs/curl/understanding-data.html) guide

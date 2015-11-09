@@ -60,5 +60,5 @@ You can also try this out on the *API explorer* tab of your service.
 
 ## 5. What's Next?
 
-* Learn how to ["Building APIs"](http://liferay.io/docs/building-apis.html)
-* Read the ["Understanding Data"](http://liferay.io/docs/understanding-data.html) guide
+* Learn how to ["Building APIs"](http://liferay.io/docs/js/building-apis.html)
+* Read the ["Understanding Data"](http://liferay.io/docs/js/understanding-data.html) guide
