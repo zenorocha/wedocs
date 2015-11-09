@@ -408,13 +408,8 @@ The error was triggered because we could not convert the given data to the datat
 
 To access those datatypes, request the root of your service with a "GET", and you'll receive something like the following result:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service')
-  .get()
-  .then(function(response) {
-    console.log( response.body() );
-  });
+```bash
+curl -X "GET" "http://liferay.io/app/service"
 ```
 
 ```json
@@ -438,14 +433,10 @@ Launchpad
 
 If we want to inform the server of the datatype of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service')
-  .post({
-     "places": {
-       "location": "geo_point"
-     }
-  });
+```bash
+curl -X "POST" "http://liferay.io/app/service" \
+     --header "Content-Type: application/json" \
+     --data "{\"places\":{\"location\":\"geo_point\"}}"
 ```
 
 We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: `date`, `geo_point`, and `geo_shape`. We will focus on `geo_point` for this next feature.

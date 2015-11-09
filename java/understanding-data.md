@@ -8,17 +8,10 @@ Read and write operations are translated into a RESTful API. The Launchpad clien
 
 Writing new data is as simple as sending a JSON.
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/movies')
-  .post({
-    "title": "Star Wars IV",
-    "year": 1977,
-    "rating": 8.7
-  })
-  .then(function() {
-    console.log('Data saved');
-  });
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .header("Content-Type", "application/json")
+   .post("{\"title\":\"Star Wars IV\",\"year\":1977,\"rating\":8.7}");
 ```
 
 This operation will return the newly created document, with the following generated ID:
@@ -90,9 +83,8 @@ Launchpad.url("http://liferay.io/app/service/movies").delete();
 
 Reading data from our storage takes only 3 lines of code.
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/movies/star_wars_v')
+```java
+Launchpad.url("http://liferay.io/app/service/movies/star_wars_v")
   .get();
 ```
 
@@ -109,9 +101,8 @@ The response body is the stored JSON document:
 
 We can also get any field value using the full path:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/movies/star_wars_v/title')
+```java
+Launchpad.url("http://liferay.io/app/service/movies/star_wars_v/title")
   .get();
 ```
 
@@ -243,8 +234,8 @@ What we did with `*` can also be done with the `prefix` operator `Filter.prefix(
 So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
 
 ```java
-Launchpad.url('http://liferay.io/app/service/movies')
-  .search(Filter.similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!'))
+Launchpad.url("http://liferay.io/app/service/movies")
+  .search(Filter.similar("title", "The attack an awaken Jedi uses to strike a Sith is pure force!"))
   .get();
 ```
 
@@ -381,18 +372,18 @@ Cool, right? Simply run another query for the newest movies, and then you'll hav
 
 The last search feature we will cover here needs a little setup before we put our documents in the datastore, but it's not as complicated as it sounds. First, let's cover some basics on the datatypes we support. As we said before, we offer a JSON storage, thus we support all JSON types, with the restriction that arrays must be of elements of the same type. Once we put a new document in a collection, we can automatically derive the datatype of the fields added, and bind the fields to that datatype. So, if we try to run the following request:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/places/my_place/foo')
+```java
+Launchpad.url("http://liferay.io/app/service/places/my_place/foo")
   .put("bar");
 ```
 
 And then run the following request afterwards:
 
-```js
+```java
 Launchpad
-  .url('http://liferay.io/app/service/places/my_place/foo')
-  .put({ someObject: true });
+  .url("http://liferay.io/app/service/places/my_place/foo")
+  .header("Content-Type", "application/json")
+  .put("{someObject:true}");
 ```
 
 We will receive an error:
@@ -414,13 +405,9 @@ The error was triggered because we could not convert the given data to the datat
 
 To access those datatypes, request the root of your service with a "GET", and you'll receive something like the following result:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service')
-  .get()
-  .then(function(response) {
-    console.log( response.body() );
-  });
+```java
+Launchpad.url("http://liferay.io/app/service")
+  .get();
 ```
 
 ```json
@@ -444,14 +431,10 @@ Launchpad
 
 If we want to inform the server of the datatype of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service')
-  .post({
-     "places": {
-       "location": "geo_point"
-     }
-  });
+```java
+Launchpad.url("http://liferay.io/app/service")
+   .header("Content-Type", "application/json")
+   .post("{\"places\":{\"location\":\"geo_point\"}}");
 ```
 
 We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: `date`, `geo_point`, and `geo_shape`. We will focus on `geo_point` for this next feature.
@@ -510,8 +493,8 @@ Launchpad.url("http://liferay.io/app/service/places")
    .filter(Filter.any("category", "cinema"))
    .filter(Filter.distance("location", "51.5031653,-0.1123051", "1mi"))
    .watch()
-   .on('changes', this::doSomethingWithReceivedData)
-   .on('fail', this::handleFailure);
+   .on("changes", this::doSomethingWithReceivedData)
+   .on("fail", this::handleFailure);
 ```
 
 Now every time the storage detects changes that affects the query you're watching, you will receive a `changes` notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a `fail` notification on the client.
