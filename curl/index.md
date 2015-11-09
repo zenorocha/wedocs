@@ -44,5 +44,5 @@ You can also try this out on the *API explorer* tab of your service.
 
 ## 5. What's Next?
 
-* Learn how to ["Building APIs"](http://liferay.io/docs/curl/building-apis.html)
+* Read the ["Building APIs"](http://liferay.io/docs/curl/building-apis.html) guide
 * Read the ["Understanding Data"](http://liferay.io/docs/curl/understanding-data.html) guide
