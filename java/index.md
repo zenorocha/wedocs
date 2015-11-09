@@ -22,39 +22,24 @@ At this moment, Launchpad is only available to a restricted group of developers,
 
 ## 3. Connect to your API
 
-In order to send and receive requests to and from Launchpad, you need to include the [API Client for JavaScript](https://github.com/launchpad-project/api.js). This library provides a secure and reliable communication channel with Launchpad. Or if you prefer, you can use the CDN below:
+In order to send and receive requests to and from Launchpad, you need to include the [API Client for Java](https://github.com/launchpad-project/api.java). This library provides a secure and reliable communication channel with Launchpad.
 
-```html
-<script src="https://cdn.rawgit.com/launchpad-project/api.js/master/build/globals/api-min.js"></script>
-```
 ## 4. Read & Write Data
 
 Now, you can send any valid JSON object to Launchpad using `post()`. The following example post some information for a popular Science Fiction film:
 
-```js
-Launchpad
-  .url('http://liferay.io/<YOUR-APP>/<YOUR-SERVICE>/items')
-  .post({
-    "title": "Star Wars IV",
-    "year": 1977
-  })
-  .then(function() {
-    console.log('Data saved');
-  });
+```java
+Launchpad.url("http://liferay.io/<YOUR-APP>/<YOUR-SERVICE>/items")
+   .header("Content-Type", "application/json")
+   .post("{\"title\":\"Star Wars IV\",\"year\":1977}");
 ```
 
 Now that you have posted data to your database, you can read it using `get()` with no arguments:
 
-```js
-Launchpad
-  .url('http://liferay.io/<YOUR-APP>/<YOUR-SERVICE>/items')
-  .get()
-  .then(function(response) {
-    console.log(response.body());
-  });
+```java
+Launchpad.url("http://liferay.io/<YOUR-APP>/<YOUR-SERVICE>/items")
+  .get();
 ```
-
-Calling `body()` on the returned response will give you access to a JSON object.
 
 You can also try this out on the *API explorer* tab of your service.
 
