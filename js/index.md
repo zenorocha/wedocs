@@ -10,7 +10,7 @@ At this moment, Launchpad is only available to a restricted group of developers,
 
 ## 2. Create an API
 
-1. Once you have an account, go to [Dashboard](http://liferay.io/dashboard/apps) and click *Create App* and enter a name and URL for your app. 
+1. Once you have an account, go to [Dashboard](http://liferay.io/dashboard/apps) and click *Create App* and enter a name and URL for your app.
 
 3. Select *Add Service*, and enter a name and URL to create your service. The service acts as a  container, which exposes your RESTful APIs.
 

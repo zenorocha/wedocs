@@ -23,7 +23,7 @@ Launchpad
 
 This operation will return the newly created document, with the following generated ID:
 
-```js
+```json
 {
   "title": "Star Wars",
   "id":" 115992383516607958",
@@ -34,13 +34,13 @@ This operation will return the newly created document, with the following genera
 
 The URL we just created stored a new document in our `app`'s `service`, inside the _collection_ `movies`. More information on how to setup this datastore URL can be seen in the section [Building APIs](http://liferay.io/docs/js/building-apis.html). For now, we only need to know that within the path where the data is mounted, the URL will be interpreted as a key that points to a stored resource like the one below:
 
-```json
+```text
 /collectionName/documentId/documentProperty/documentInnerProperty
 ```
 
 For example, to reference the newly created _Star Wars_ rating, we can use the path:
 
-```json
+```text
 /movies/115992383516607958/rating
 ```
 
@@ -57,7 +57,7 @@ Launchpad.url('http://liferay.io/app/service/movies')
 
 Note in the example above the data was sent as request form attributes. The response is the modified document:
 
-```js
+```json
 {
   "title": "Star Wars",
   "id": "115992383516607958",
@@ -123,7 +123,7 @@ Launchpad
 
 The full path returns the raw content in the response body:
 
-```json
+```text
 Star Wars: Episode V - The Empire Strikes Back
 ```
 
