@@ -8,17 +8,10 @@ Read and write operations are translated into a RESTful API. The Launchpad clien
 
 Writing new data is as simple as sending a JSON.
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/movies')
-  .post({
-    "title": "Star Wars IV",
-    "year": 1977,
-    "rating": 8.7
-  })
-  .then(function() {
-    console.log('Data saved');
-  });
+```bash
+curl -X "POST" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"title\":\"Star Wars IV\",\"year\":1977,\"rating\":8.7}"
 ```
 
 This operation will return the newly created document, with the following generated ID:
@@ -46,13 +39,11 @@ For example, to reference the newly created _Star Wars_ rating, we can use the p
 
 From this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .path('115992383516607958')
-   .form('stars', 'Mark Hamill')
-   .form('stars', 'Harrison Ford')
-   .form('stars', 'Carrie Fisher')
-   .patch();
+```bash
+curl -X "PATCH" "http://liferay.io/app/service/movies/115992383516607958" \
+     --data-urlencode "stars=Mark+Hamill" \
+     --data-urlencode "stars=Harrison+Ford" \
+     --data-urlencode "stars=Carrie+Fisher"
 ```
 
 Note in the example above the data was sent as request form attributes. The response is the modified document:
@@ -69,37 +60,28 @@ Note in the example above the data was sent as request form attributes. The resp
 
 To create a document with a custom ID, or override an existing one, we can use the PUT method at the document level. The following example creates a new entry with the custom ID `star_wars_v`:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-  .path('star_wars_v')
-  .put({
-    "title":"Star Wars: Episode V - The Empire Strikes Back",
-    "year":1980,
-    "rating":8.8
-  })
-  .then(function() {
-    console.log('Data saved');
-  });
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies/star_wars_v" \
+     --header "Content-Type: application/json" \
+     --data "{\"title\":\"Star Wars: Episode V - The Empire Strikes Back\",\"year\":1980,\"rating\":8.8}"
 ```
 
 To override an existing entry you would just specify the existing ID.
 
 To delete a field, document, or the entire collection, we just use the DELETE method:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies/star_wars_v/title').delete();
-Launchpad.url('http://liferay.io/app/service/movies/star_wars_v').delete();
-Launchpad.url('http://liferay.io/app/service/movies').delete();
+```bash
+curl -X "DELETE" "http://liferay.io/app/service/movies/star_wars_v/title"
+curl -X "DELETE" "http://liferay.io/app/service/movies/star_wars_v"
+curl -X "DELETE" "http://liferay.io/app/service/movies"
 ```
 
 ## 2. Read
 
 Reading data from our storage takes only 3 lines of code.
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/movies/star_wars_v')
-  .get();
+```bash
+curl -X "GET" "http://liferay.io/app/service/movies/star_wars_v"
 ```
 
 The response body is the stored JSON document:
@@ -115,10 +97,8 @@ The response body is the stored JSON document:
 
 We can also get any field value using the full path:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/movies/star_wars_v/title')
-  .get();
+```bash
+curl -X "GET" "http://liferay.io/app/service/movies/star_wars_v/title"
 ```
 
 The full path returns the raw content in the response body:
@@ -143,10 +123,10 @@ Requesting the entire `movies` collection using `curl -X "GET" "http://liferay.i
 
 The result is ordered by the document `id`, as we can see in the list above. We can select the order we want the results to be in, by passing a sort parameter, using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .sort('rating', 'desc')
-   .get();
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"sort\":{\"rating\":\"desc\"}}"
 ```
 
 As expected, the result would be the following list:
@@ -167,11 +147,13 @@ Notice that Episode VII has no rating, as it was not released yet, thus it's sor
 
 In addition to sorting the results, we can also apply filters using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .filter('year', '<', 2000)
-   .filter('rating', '>', 8.5)
-   .get();
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":[ \
+               {\"year\":{\"operator\":\"<\",\"value\":2000}}, \
+               {\"rating\":{\"operator\":\">\",\"value\":8.5}} \
+            ]}"
 ```
 
 The result of the filters just used is the following entries:
@@ -185,13 +167,13 @@ The result of the filters just used is the following entries:
 
 We can also paginate the result using the `limit` and `offset` properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .filter('year', '>', 2000)
-   .sort('rating')
-   .limit(2)
-   .offset(1)
-   .get();
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{\"year\":{\"operator\":\">\",\"value\":2000}}, \
+              \"sort\":{\"rating\":\"asc\"}, \
+              \"limit\":2, \
+              \"offset\":1}"
 ```
 
 Notice that filtering by the year we only get episodes I, II, III and VII. Applying the rating sort will give us this same order. We also limited the result to show only 2 documents, and skipped the first one. The final result is the following entries:
@@ -211,9 +193,10 @@ Well, we did some great stuff with basic HTTP methods, like create, update, and 
 
 First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like `"Revenge of the Sith"`. We are not interested if the letter is in upper or lower case, since we are using English connectors like `"of"` and `"the"`. We want something flexible enough it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our `match` operator is just what we need to run the search.
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', "Sith's revenge"));
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"Sith's Revenge\"}}}"
 ```
 
 The result of the `match` operator query is the following entry:
@@ -224,18 +207,21 @@ The result of the `match` operator query is the following entry:
 
 We can also use simple text operators in our match:
 
-```js
-// we can run this
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', '(jedi | force) -return'));
+```bash
+# we can run this
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"(jedi | force) -return\"}}}"
 
-// or this
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', 'awake*'));
+# or this
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"awake*\"}}}"
 
-// or even this
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', 'wakens~'));
+# or even this
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"wakens~\"}}"
 ```
 
 Any search in the previous example results in the following match:
@@ -248,10 +234,10 @@ What we did with `*` can also be done with the `prefix` operator `Filter.prefix(
 
 So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-  .search(Filter.similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!'))
-  .get();
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{\"title\":{\"operator\":\"similar\",\"value\":\"The attack an awaken Jedi uses to strike a Sith is pure force!\"}}}"
 ```
 
 We receive not only the documents that match the filter, but also search metadata:
@@ -296,11 +282,14 @@ Notice that the score of the `star_wars_vii` document is bigger than the other m
 
 Want more? Well, let's make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-  .search(Filter.similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!'))
-  .highlight('title')
-  .get();
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{ \
+                \"title\":{ \
+                   \"operator\":\"similar\", \
+                   \"value\":\"The attack an awakened Jedi uses to strike a Sith is pure force!\"}}, \
+             \"highlight\":\"title\"}"
 ```
 
 As you can see in the code below, our keywords are highlighted in the results:
@@ -343,12 +332,12 @@ As you can see in the code below, our keywords are highlighted in the results:
 
 The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? Well, we can do that with aggregations, using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .filter(Filter.lt('year', 1990))
-   .aggregate('Old Movies', 'rating', 'avg')
-   .count()
-   .get();
+```bash
+curl -X "PUT" "http://liferay.io/app/service/movies" \
+     --header "Content-Type: application/json" \
+     --data "{\"filter\":{\"year\":{\"operator\":\"<\",\"value\":1990}}, \
+              \"aggregate\":{\"rating\":{\"name\":\"Old Movies\",\"operator\":\"avg\"}}, \
+              \"type\":\"count\"}"
 ```
 
 The `count` we added to the query informed the server we are not interested in the documents themselves, but rather the number of matches and search metadata. The result in this case will be the following data:
@@ -387,18 +376,17 @@ Cool, right? Simply run another query for the newest movies, and then you'll hav
 
 The last search feature we will cover here needs a little setup before we put our documents in the datastore, but it's not as complicated as it sounds. First, let's cover some basics on the datatypes we support. As we said before, we offer a JSON storage, thus we support all JSON types, with the restriction that arrays must be of elements of the same type. Once we put a new document in a collection, we can automatically derive the datatype of the fields added, and bind the fields to that datatype. So, if we try to run the following request:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/places/my_place/foo')
-  .put("bar");
+```bash
+curl -X "PUT" "http://liferay.io/app/service/places/my_place/foo" \
+     --data "bar"
 ```
 
 And then run the following request afterwards:
 
-```js
-Launchpad
-  .url('http://liferay.io/app/service/places/my_place/foo')
-  .put({ someObject: true });
+```bash
+curl -X "PUT" "http://liferay.io/app/service/places/my_place/foo" \
+     --header "Content-Type: application/json" \
+     --data "{\"key\":\"value\"}"
 ```
 
 We will receive an error:
@@ -464,11 +452,12 @@ We can never update an already mapped field, but we can map new fields in an exi
 
 So, we mapped a field called `location`, in the collection `places`, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let's try something simple: find cinemas close to [London's Waterloo Station](https://www.google.com.br/maps/place/Waterloo+Station/@51.5031653,-0.1123051,17z/data=!3m1!4b1!4m2!3m1!1s0x487604b9c09f521d:0x1d0598197b5003ba?hl=en). To run the search criteria, we'll use the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/places')
-   .filter(Filter.any('category', 'cinema'))
-   .filter(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
-   .get();
+```bash
+curl -X "PUT" "http://liferay.io/app/service/places" \
+    --header "Content-Type: application/json" \
+    --data "{\"filter\":[ \
+               {\"category\":{\"operator\":\"any\",\"value\":\"cinema\"}}, \
+               {\"location\":{\"operator\":\"gd\",\"value\":{\"location\":\"51.5031653,-0.1123051\",\"max\":\"1mi\"}}}]}"
 ```
 
 Our result is the following matches:
@@ -509,18 +498,7 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 ## 4. Watch
 
-Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in realtime, all we need to do is change the Launchpad API method we use to the `watch` method:
-
-```js
-Launchpad.url('http://liferay.io/app/service/places')
-   .filter(Filter.any('category', 'cinema'))
-   .filter(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
-   .watch()
-   .on('changes', doSomethingWithReceivedData)
-   .on('fail', handleFailure);
-```
-
-Now every time the storage detects changes that affects the query you're watching, you will receive a `changes` notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a `fail` notification on the client.
+Unfortunately, you can't watch for realtime changes using cURL. Try using [Java](http://liferay.io/docs/java/understanding-data.html#4-watch) or [JavaScript](http://liferay.io/docs/js/understanding-data.html#4-watch) to accomplish that.
 
 ## 5. What's next?
 
