@@ -46,12 +46,12 @@ For example, to reference the newly created _Star Wars_ rating, we can use the p
 
 From this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .path('115992383516607958')
-   .form('stars', 'Mark Hamill')
-   .form('stars', 'Harrison Ford')
-   .form('stars', 'Carrie Fisher')
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .path("115992383516607958")
+   .form("stars", "Mark Hamill")
+   .form("stars", "Harrison Ford")
+   .form("stars", "Carrie Fisher")
    .patch();
 ```
 
@@ -69,27 +69,21 @@ Note in the example above the data was sent as request form attributes. The resp
 
 To create a document with a custom ID, or override an existing one, we can use the PUT method at the document level. The following example creates a new entry with the custom ID `star_wars_v`:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-  .path('star_wars_v')
-  .put({
-    "title":"Star Wars: Episode V - The Empire Strikes Back",
-    "year":1980,
-    "rating":8.8
-  })
-  .then(function() {
-    console.log('Data saved');
-  });
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .path("star_wars_v")
+   .header("Content-Type", "application/json")
+   .put("{\"title\":\"Star Wars: Episode V - The Empire Strikes Back\",\"year\":1980,\"rating\":8.8}");
 ```
 
 To override an existing entry you would just specify the existing ID.
 
 To delete a field, document, or the entire collection, we just use the DELETE method:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies/star_wars_v/title').delete();
-Launchpad.url('http://liferay.io/app/service/movies/star_wars_v').delete();
-Launchpad.url('http://liferay.io/app/service/movies').delete();
+```java
+Launchpad.url("http://liferay.io/app/service/movies/star_wars_v/title").delete();
+Launchpad.url("http://liferay.io/app/service/movies/star_wars_v").delete();
+Launchpad.url("http://liferay.io/app/service/movies").delete();
 ```
 
 ## 2. Read
@@ -143,9 +137,9 @@ Requesting the entire `movies` collection using `curl -X "GET" "http://liferay.i
 
 The result is ordered by the document `id`, as we can see in the list above. We can select the order we want the results to be in, by passing a sort parameter, using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .sort('rating', 'desc')
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .sort("rating", "desc")
    .get();
 ```
 
@@ -167,10 +161,10 @@ Notice that Episode VII has no rating, as it was not released yet, thus it's sor
 
 In addition to sorting the results, we can also apply filters using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .filter('year', '<', 2000)
-   .filter('rating', '>', 8.5)
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .filter("year", "<", 2000)
+   .filter("rating", ">", 8.5)
    .get();
 ```
 
@@ -185,10 +179,10 @@ The result of the filters just used is the following entries:
 
 We can also paginate the result using the `limit` and `offset` properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .filter('year', '>', 2000)
-   .sort('rating')
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .filter("year", ">", 2000)
+   .sort("rating")
    .limit(2)
    .offset(1)
    .get();
@@ -211,9 +205,9 @@ Well, we did some great stuff with basic HTTP methods, like create, update, and 
 
 First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like `"Revenge of the Sith"`. We are not interested if the letter is in upper or lower case, since we are using English connectors like `"of"` and `"the"`. We want something flexible enough it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our `match` operator is just what we need to run the search.
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', "Sith's revenge"));
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .get(Filter.match("title", "Sith's revenge"));
 ```
 
 The result of the `match` operator query is the following entry:
@@ -224,18 +218,18 @@ The result of the `match` operator query is the following entry:
 
 We can also use simple text operators in our match:
 
-```js
+```java
 // we can run this
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', '(jedi | force) -return'));
+Launchpad.url("http://liferay.io/app/service/movies")
+   .get(Filter.match("title", "(jedi | force) -return"));
 
 // or this
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', 'awake*'));
+Launchpad.url("http://liferay.io/app/service/movies")
+   .get(Filter.match("title", "awake*"));
 
 // or even this
-Launchpad.url('http://liferay.io/app/service/movies')
-  .get(Filter.match('title', 'wakens~'));
+Launchpad.url("http://liferay.io/app/service/movies")
+   .get(Filter.match("title", "wakens~"));
 ```
 
 Any search in the previous example results in the following match:
@@ -248,7 +242,7 @@ What we did with `*` can also be done with the `prefix` operator `Filter.prefix(
 
 So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
 
-```js
+```java
 Launchpad.url('http://liferay.io/app/service/movies')
   .search(Filter.similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!'))
   .get();
@@ -296,11 +290,11 @@ Notice that the score of the `star_wars_vii` document is bigger than the other m
 
 Want more? Well, let's make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-  .search(Filter.similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!'))
-  .highlight('title')
-  .get();
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .search(Filter.similar("title", "The attack an awakened Jedi uses to strike a Sith is pure force!"))
+   .highlight("title")
+   .get();
 ```
 
 As you can see in the code below, our keywords are highlighted in the results:
@@ -343,10 +337,10 @@ As you can see in the code below, our keywords are highlighted in the results:
 
 The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? Well, we can do that with aggregations, using the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/movies')
-   .filter(Filter.lt('year', 1990))
-   .aggregate('Old Movies', 'rating', 'avg')
+```java
+Launchpad.url("http://liferay.io/app/service/movies")
+   .filter(Filter.lt("year", 1990))
+   .aggregate("Old Movies", "rating", "avg")
    .count()
    .get();
 ```
@@ -464,10 +458,10 @@ We can never update an already mapped field, but we can map new fields in an exi
 
 So, we mapped a field called `location`, in the collection `places`, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let's try something simple: find cinemas close to [London's Waterloo Station](https://www.google.com.br/maps/place/Waterloo+Station/@51.5031653,-0.1123051,17z/data=!3m1!4b1!4m2!3m1!1s0x487604b9c09f521d:0x1d0598197b5003ba?hl=en). To run the search criteria, we'll use the following code:
 
-```js
-Launchpad.url('http://liferay.io/app/service/places')
-   .filter(Filter.any('category', 'cinema'))
-   .filter(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
+```java
+Launchpad.url("http://liferay.io/app/service/places")
+   .filter(Filter.any("category", "cinema"))
+   .filter(Filter.distance("location", "51.5031653,-0.1123051", "1mi"))
    .get();
 ```
 
@@ -511,13 +505,13 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in realtime, all we need to do is change the Launchpad API method we use to the `watch` method:
 
-```js
-Launchpad.url('http://liferay.io/app/service/places')
-   .filter(Filter.any('category', 'cinema'))
-   .filter(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
+```java
+Launchpad.url("http://liferay.io/app/service/places")
+   .filter(Filter.any("category", "cinema"))
+   .filter(Filter.distance("location", "51.5031653,-0.1123051", "1mi"))
    .watch()
-   .on('changes', doSomethingWithReceivedData)
-   .on('fail', handleFailure);
+   .on('changes', this::doSomethingWithReceivedData)
+   .on('fail', this::handleFailure);
 ```
 
 Now every time the storage detects changes that affects the query you're watching, you will receive a `changes` notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a `fail` notification on the client.
