@@ -32,7 +32,7 @@ This operation will return the newly created document, with the following genera
 }
 ```
 
-The URL we just created stored a new document in our `app`'s `service`, inside the _collection_ `movies`. More information on how to setup this datastore URL can be seen in the section [Building APIs](http://liferay.io/docs/building-apis.html). For now, we only need to know that within the path where the data is mounted, the URL will be interpreted as a key that points to a stored resource like the one below:
+The URL we just created stored a new document in our `app`'s `service`, inside the _collection_ `movies`. More information on how to setup this datastore URL can be seen in the section [Building APIs](http://liferay.io/docs/java/building-apis.html). For now, we only need to know that within the path where the data is mounted, the URL will be interpreted as a key that points to a stored resource like the one below:
 
 ```json
 /collectionName/documentId/documentProperty/documentInnerProperty
