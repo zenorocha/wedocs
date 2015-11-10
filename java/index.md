@@ -22,7 +22,35 @@ At this moment, Launchpad is only available to a restricted group of developers,
 
 ## 3. Connect to your API
 
-In order to send and receive requests to and from Launchpad, you need to include the [API Client for Java](https://github.com/launchpad-project/api.java). This library provides a secure and reliable communication channel with Launchpad.
+In order to send and receive requests to and from Launchpad, you need to include the [API Client for Java](https://github.com/launchpad-project/api.java). This library provides a secure and reliable communication channel with Launchpad. It is possible to download the client jar file directly from our [Bintray's JCenter](https://bintray.com/liferay/launchpad/api-client/view) repository, or to add it as a dependency to your *gradle* project like this:
+
+```
+repositories {
+	jcenter()
+}
+dependencies {
+	compile 'com.liferay.launchpad:api-client:0.40.2'
+}
+```
+
+Or using *maven*:
+
+```xml
+<repositories>
+  <repository>
+    <id>jcenter</id>
+    <url>http://jcenter.bintray.com</url>
+  </repository>
+</repositories>
+
+<dependencies>
+  <dependency>
+    <groupId>com.liferay.launchpad</groupId>
+	<artifactId>api-client</artifactId>
+	<version>0.40.2</version>
+  </dependency>
+</dependencies>
+```
 
 ## 4. Read & Write Data
 
