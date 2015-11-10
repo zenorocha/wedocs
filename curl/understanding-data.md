@@ -211,17 +211,26 @@ We can also use simple text operators in our match:
 # we can run this
 curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
-     --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"(jedi | force) -return\"}}}"
+     --data "{\"filter\":{ \
+                \"title\":{ \
+                   \"operator\":\"match\", \
+                   \"value\":\"(jedi | force) -return\"}}}"
 
 # or this
 curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
-     --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"awake*\"}}}"
+     --data "{\"filter\":{ \
+                \"title\":{ \
+                   \"operator\":\"match\", \
+                   \"value\":\"awake*\"}}}"
 
 # or even this
 curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
-     --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"wakens~\"}}"
+     --data "{\"filter\":{ \
+                \"title\":{ \
+                   \"operator\":\"match\", \
+                   \"value\":\"wakens~\"}}}"
 ```
 
 Any search in the previous example results in the following match:
@@ -237,7 +246,10 @@ So far we are still just filtering data with filters. We can do so much more tha
 ```bash
 curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
-     --data "{\"filter\":{\"title\":{\"operator\":\"similar\",\"value\":\"The attack an awaken Jedi uses to strike a Sith is pure force!\"}}}"
+     --data "{\"filter\":{ \
+                \"title\":{ \
+                   \"operator\":\"similar\", \
+                   \"value\":\"The attack an awakened Jedi uses to strike a Sith is pure force!\"}}}"
 ```
 
 We receive not only the documents that match the filter, but also search metadata:
