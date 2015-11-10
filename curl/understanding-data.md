@@ -41,9 +41,9 @@ From this point, update and delete operations can be performed at any level of t
 
 ```bash
 curl -X "PATCH" "http://liferay.io/app/service/movies/115992383516607958" \
-     --data-urlencode "stars=Mark+Hamill" \
-     --data-urlencode "stars=Harrison+Ford" \
-     --data-urlencode "stars=Carrie+Fisher"
+     --data-urlencode "stars=Mark Hamill" \
+     --data-urlencode "stars=Harrison Ford" \
+     --data-urlencode "stars=Carrie Fisher"
 ```
 
 Note in the example above the data was sent as request form attributes. The response is the modified document:
