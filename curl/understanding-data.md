@@ -124,7 +124,7 @@ Requesting the entire `movies` collection using `curl -X "GET" "http://liferay.i
 The result is ordered by the document `id`, as we can see in the list above. We can select the order we want the results to be in, by passing a sort parameter, using the following code:
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"sort\":{\"rating\":\"desc\"}}"
 ```
@@ -148,7 +148,7 @@ Notice that Episode VII has no rating, as it was not released yet, thus it's sor
 In addition to sorting the results, we can also apply filters using the following code:
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":[ \
                {\"year\":{\"operator\":\"<\",\"value\":2000}}, \
@@ -168,7 +168,7 @@ The result of the filters just used is the following entries:
 We can also paginate the result using the `limit` and `offset` properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{\"year\":{\"operator\":\">\",\"value\":2000}}, \
               \"sort\":{\"rating\":\"asc\"}, \
@@ -194,7 +194,7 @@ Well, we did some great stuff with basic HTTP methods, like create, update, and 
 First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like `"Revenge of the Sith"`. We are not interested if the letter is in upper or lower case, since we are using English connectors like `"of"` and `"the"`. We want something flexible enough it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our `match` operator is just what we need to run the search.
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"Sith's Revenge\"}}}"
 ```
@@ -209,17 +209,17 @@ We can also use simple text operators in our match:
 
 ```bash
 # we can run this
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"(jedi | force) -return\"}}}"
 
 # or this
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"awake*\"}}}"
 
 # or even this
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{\"title\":{\"operator\":\"match\",\"value\":\"wakens~\"}}"
 ```
@@ -235,7 +235,7 @@ What we did with `*` can also be done with the `prefix` operator `Filter.prefix(
 So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{\"title\":{\"operator\":\"similar\",\"value\":\"The attack an awaken Jedi uses to strike a Sith is pure force!\"}}}"
 ```
@@ -283,7 +283,7 @@ Notice that the score of the `star_wars_vii` document is bigger than the other m
 Want more? Well, let's make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{ \
                 \"title\":{ \
@@ -333,7 +333,7 @@ As you can see in the code below, our keywords are highlighted in the results:
 The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? Well, we can do that with aggregations, using the following code:
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/movies" \
+curl -X "GET" "http://liferay.io/app/service/movies" \
      --header "Content-Type: application/json" \
      --data "{\"filter\":{\"year\":{\"operator\":\"<\",\"value\":1990}}, \
               \"aggregate\":{\"rating\":{\"name\":\"Old Movies\",\"operator\":\"avg\"}}, \
@@ -444,7 +444,7 @@ We can never update an already mapped field, but we can map new fields in an exi
 So, we mapped a field called `location`, in the collection `places`, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let's try something simple: find cinemas close to [London's Waterloo Station](https://www.google.com.br/maps/place/Waterloo+Station/@51.5031653,-0.1123051,17z/data=!3m1!4b1!4m2!3m1!1s0x487604b9c09f521d:0x1d0598197b5003ba?hl=en). To run the search criteria, we'll use the following code:
 
 ```bash
-curl -X "PUT" "http://liferay.io/app/service/places" \
+curl -X "GET" "http://liferay.io/app/service/places" \
     --header "Content-Type: application/json" \
     --data "{\"filter\":[ \
                {\"category\":{\"operator\":\"any\",\"value\":\"cinema\"}}, \
