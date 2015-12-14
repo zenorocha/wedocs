@@ -141,6 +141,6 @@ $body.timestamp > $data.timestamp
 
 > Note that the validator must return `true` for the request to be accepted.
 
-## 7. What's Next?
+## 8. What's Next?
 
 * Read the ["Understanding Data"](http://liferay.io/docs/java/understanding-data.html) guide
