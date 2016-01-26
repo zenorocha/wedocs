@@ -1,4 +1,4 @@
-# Understanding Data
+# Understanding Data with Java
 
 Launchpad provides a JSON document store with search and realtime capabilities.
 

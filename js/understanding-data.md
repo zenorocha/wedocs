@@ -1,4 +1,4 @@
-# Understanding Data
+# Understanding Data with JavaScript
 
 Launchpad provides a JSON document store with search and realtime capabilities.
 

@@ -1,4 +1,4 @@
-# Quickstart
+# Quickstart with Java
 
 Let's start from zero and build a RESTful API that stores and sync data.
 
