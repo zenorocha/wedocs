@@ -1,6 +1,6 @@
 # Quickstart with JavaScript
 
-Let's start from zero and build a RESTful API that stores and sync data.
+###### Let's start from zero and build a RESTful API that stores and sync data.
 
 ## 1. Request invitation
 

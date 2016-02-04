@@ -1,8 +1,6 @@
 # Understanding Data with JavaScript
 
-Launchpad provides a JSON document store with search and realtime capabilities.
-
-Read and write operations are translated into a RESTful API. The Launchpad client also helps you to easily create complex queries in Java, JavaScript, or Swift, and search your data in realtime. Yes, you can listen for query in realtime, with no need of extra server-side code.
+###### Launchpad provides a JSON document store with search and realtime capabilities. Read and write operations are translated into a RESTful API. The Launchpad client also helps you to easily create complex queries in Java, JavaScript, or Swift, and search your data in realtime. Yes, you can listen for query in realtime, with no need of extra server-side code.
 
 ## 1. Write
 
