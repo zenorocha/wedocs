@@ -2,7 +2,7 @@
 
 ###### In Launchpad you can create apps, each composed of one or more services. A service exposes a REST interface that can be accessed via HTTP. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code.
 
-<!-- article(#1-method) -->
+<!-- <article id="1-method-section"> -->
 
 ## 1. Method
 
@@ -14,9 +14,9 @@ A *Method* works as a filter for requests that will be routed to this API defini
 * `PATCH`
 * `DELETE`
 
-<!-- /article -->
+<!-- </article> -->
 
-<!-- article(#2-endpoint) -->
+<!-- <article id="2-endpoint-section"> -->
 
 ## 2. Endpoint
 
@@ -54,9 +54,9 @@ The example above will match any request with two numbers after `sum`. For insta
 
 > Notice the endpoint from two different APIs may overlap, or even be identical. In this case, your service will match the first API, in the order they were created, and if this one doesn't handle the request, or explicitly calls `next` inside the handler, then it will match and execute the second one.
 
-<!-- /article -->
+<!-- </article> -->
 
-<!-- article(#3-parameters) -->
+<!-- <article id="3-parameters-section"> -->
 
 ## 3. Parameters
 
@@ -75,9 +75,9 @@ The *Value* field defines a value that will be injected in the received request 
 
 The *Validator* is a JavaScript expression that will be executed if a value is passed for this parameter. You can read more about it in the [Validator section](#7-validator).
 
-<!-- /article -->
+<!-- </article> -->
 
-<!-- article(#4-body) -->
+<!-- <article id="4-body-section"> -->
 
 ## 4. Body
 
@@ -89,9 +89,9 @@ $body.startsWith("foo")
 
 You can read more about it in the [Validator section](#7-validator).
 
-<!-- /article -->
+<!-- </article> -->
 
-<!-- article(#5-handler) -->
+<!-- <article id="5-handler-section"> -->
 
 ## 5. Handler
 
@@ -119,17 +119,17 @@ function handler(request) {
 }
 ```
 
-<!-- /article -->
+<!-- </article> -->
 
-<!-- article(#6-authentication) -->
+<!-- <article id="6-authentication-section"> -->
 
 ## 6. Authentication
 
 The *Validator* field enables you to describe any JavaScript expression to authorize the request. You can read more about it in the [Validator section](#7-validator).
 
-<!-- /article -->
+<!-- </article> -->
 
-<!-- article(#7-validator) -->
+<!-- <article id="7-validator-section"> -->
 
 ## 7. Validator
 
@@ -167,7 +167,7 @@ $body.timestamp > $data.timestamp
 
 > Note that the validator must return `true` for the request to be accepted.
 
-<!-- /article -->
+<!-- </article> -->
 
 ## 8. What's Next?
 
