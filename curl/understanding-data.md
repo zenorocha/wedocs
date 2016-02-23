@@ -2,6 +2,8 @@
 
 ###### Launchpad provides a JSON document store with search and realtime capabilities. Read and write operations are translated into a RESTful API. The Launchpad client also helps you to easily create complex queries in Java, JavaScript, or Swift, and search your data in realtime. Yes, you can listen for query in realtime, with no need of extra server-side code.
 
+<!-- article(#1-write) -->
+
 ## 1. Write
 
 Writing new data is as simple as sending a JSON.
@@ -73,6 +75,10 @@ curl -X "DELETE" "http://liferay.io/app/service/movies/star_wars_v/title"
 curl -X "DELETE" "http://liferay.io/app/service/movies/star_wars_v"
 curl -X "DELETE" "http://liferay.io/app/service/movies"
 ```
+
+<!-- /article -->
+
+<!-- article(#2-read) -->
 
 ## 2. Read
 
@@ -184,6 +190,10 @@ Notice that filtering by the year we only get episodes I, II, III and VII. Apply
 ```
 
 We support all basic SQL-like operators (`=`, `!=`, `>`, `>=`, `<`, `<=`, `~`), as well as `any` and `none` to filter elements in a list. We also give support for search operators, which we will see in more details in the section [Search Data](#3-search).
+
+<!-- /article -->
+
+<!-- article(#3-search) -->
 
 ## 3. Search
 
@@ -497,9 +507,15 @@ Our result is the following matches:
 
 Now we can plug a map to our app, and let users see and filter places, with just a few lines of code.
 
+<!-- /article -->
+
+<!-- article(#4-watch) -->
+
 ## 4. Watch
 
 Unfortunately, you can't watch for realtime changes using cURL. Try using [Java](http://liferay.io/docs/java/understanding-data.html#4-watch) or [JavaScript](http://liferay.io/docs/js/understanding-data.html#4-watch) to accomplish that.
+
+<!-- /article -->
 
 ## 5. What's next?
 

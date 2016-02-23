@@ -2,6 +2,8 @@
 
 ###### In Launchpad you can create apps, each composed of one or more services. A service exposes a REST interface that can be accessed via HTTP. We provide easy and powerful ways for you to describe and configure your APIs, so you can do more with less code.
 
+<!-- article(#1-method) -->
+
 ## 1. Method
 
 A *Method* works as a filter for requests that will be routed to this API definition. By default, all HTTP requests are mapped to an API, but you can change it to any subset you need. Launchpad currently supports the following HTTP methods:
@@ -11,6 +13,10 @@ A *Method* works as a filter for requests that will be routed to this API defini
 * `PUT`
 * `PATCH`
 * `DELETE`
+
+<!-- /article -->
+
+<!-- article(#2-endpoint) -->
 
 ## 2. Endpoint
 
@@ -48,6 +54,10 @@ The example above will match any request with two numbers after `sum`. For insta
 
 > Notice the endpoint from two different APIs may overlap, or even be identical. In this case, your service will match the first API, in the order they were created, and if this one doesn't handle the request, or explicitly calls `next` inside the handler, then it will match and execute the second one.
 
+<!-- /article -->
+
+<!-- article(#3-parameters) -->
+
 ## 3. Parameters
 
 *Parameters* can be used to describe any parameter a request may receive. They are loaded from:
@@ -65,6 +75,10 @@ The *Value* field defines a value that will be injected in the received request 
 
 The *Validator* is a JavaScript expression that will be executed if a value is passed for this parameter. You can read more about it in the [Validator section](#7-validator).
 
+<!-- /article -->
+
+<!-- article(#4-body) -->
+
 ## 4. Body
 
 The body is a descriptor, similar to a parameter descriptor, with the exception of the *Value* field, which can be used to describe and validate the request body. It can be useful when the body is not a form URL encoded, multipart form, or a JSON object, making it impossible to validate it with the `parameters` field. One example is to validate body data in a API, using the following validator:
@@ -74,6 +88,10 @@ $body.startsWith("foo")
 ```
 
 You can read more about it in the [Validator section](#7-validator).
+
+<!-- /article -->
+
+<!-- article(#5-handler) -->
 
 ## 5. Handler
 
@@ -101,9 +119,17 @@ function handler(request) {
 }
 ```
 
+<!-- /article -->
+
+<!-- article(#6-authentication) -->
+
 ## 6. Authentication
 
 The *Validator* field enables you to describe any JavaScript expression to authorize the request. You can read more about it in the [Validator section](#7-validator).
+
+<!-- /article -->
+
+<!-- article(#7-validator) -->
 
 ## 7. Validator
 
@@ -140,6 +166,8 @@ $body.timestamp > $data.timestamp
 ```
 
 > Note that the validator must return `true` for the request to be accepted.
+
+<!-- /article -->
 
 ## 8. What's Next?
 

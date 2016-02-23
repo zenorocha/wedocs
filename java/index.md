@@ -2,11 +2,17 @@
 
 ###### Let's start from zero and build a RESTful API that stores and sync data.
 
+<!-- article(#1-request-invitation) -->
+
 ## 1. Request invitation
 
 The first thing you need to do to get started with Launchpad is to [request an invitation](http://liferay.io/#invitation).
 
 At this moment, Launchpad is only available to a restricted group of developers, but don't worry we're sending invites on a daily basis.
+
+<!-- /article -->
+
+<!-- article(#2-create-an-api) -->
 
 ## 2. Create an API
 
@@ -19,6 +25,10 @@ At this moment, Launchpad is only available to a restricted group of developers,
 5. Also check that *GET* and *POST* are selected in the *Method* section. These methods allow you to read and write on this URL.
 
 5. In the *Endpoint* field, type `/items/*`. The `*` symbol indicates that any request starting with `items` will match this endpoint.
+
+<!-- /article -->
+
+<!-- article(#3-connect-to-your-api) -->
 
 ## 3. Connect to your API
 
@@ -52,6 +62,10 @@ Or using *maven*:
 </dependencies>
 ```
 
+<!-- /article -->
+
+<!-- article(#4-read-write-data) -->
+
 ## 4. Read & Write Data
 
 Now, you can send any valid JSON object to Launchpad using `post()`. The following example post some information for a popular Science Fiction film:
@@ -70,6 +84,8 @@ Launchpad.url("http://liferay.io/<YOUR-APP>/<YOUR-SERVICE>/items")
 ```
 
 You can also try this out on the *API explorer* tab of your service.
+
+<!-- /article -->
 
 ## 5. What's Next?
 

@@ -2,11 +2,17 @@
 
 ###### Let's start from zero and build a RESTful API that stores and sync data.
 
+<!-- article(#1-request-invitation) -->
+
 ## 1. Request invitation
 
 The first thing you need to do to get started with Launchpad is to [request an invitation](http://liferay.io/#invitation).
 
 At this moment, Launchpad is only available to a restricted group of developers, but don't worry we're sending invites on a daily basis.
+
+<!-- /article -->
+
+<!-- article(#2-create-an-api) -->
 
 ## 2. Create an API
 
@@ -20,6 +26,10 @@ At this moment, Launchpad is only available to a restricted group of developers,
 
 5. In the *Endpoint* field, type `/items/*`. The `*` symbol indicates that any request starting with `items` will match this endpoint.
 
+<!-- /article -->
+
+<!-- article(#3-connect-to-your-api) -->
+
 ## 3. Connect to your API
 
 In order to send and receive requests to and from Launchpad, you need to include the [API Client for JavaScript](https://github.com/launchpad-project/api.js). This library provides a secure and reliable communication channel with Launchpad. Or if you prefer, you can use the CDN below:
@@ -27,6 +37,11 @@ In order to send and receive requests to and from Launchpad, you need to include
 ```html
 <script src="https://cdn.rawgit.com/launchpad-project/api.js/master/build/globals/api-min.js"></script>
 ```
+
+<!-- /article -->
+
+<!-- article(#4-read-write-data) -->
+
 ## 4. Read & Write Data
 
 Now, you can send any valid JSON object to Launchpad using `post()`. The following example post some information for a popular Science Fiction film:
@@ -57,6 +72,8 @@ Launchpad
 Calling `body()` on the returned response will give you access to a JSON object.
 
 You can also try this out on the *API explorer* tab of your service.
+
+<!-- /article -->
 
 ## 5. What's Next?
 

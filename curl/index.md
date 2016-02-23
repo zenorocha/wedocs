@@ -2,11 +2,17 @@
 
 ###### Let's start from zero and build a RESTful API that stores and sync data.
 
+<!-- article(#1-request-invitation) -->
+
 ## 1. Request invitation
 
 The first thing you need to do to get started with Launchpad is to [request an invitation](http://liferay.io/#invitation).
 
 At this moment, Launchpad is only available to a restricted group of developers, but don't worry we're sending invites on a daily basis.
+
+<!-- /article -->
+
+<!-- article(#2-create-an-api) -->
 
 ## 2. Create an API
 
@@ -20,9 +26,17 @@ At this moment, Launchpad is only available to a restricted group of developers,
 
 5. In the *Endpoint* field, type `/items/*`. The `*` symbol indicates that any request starting with `items` will match this endpoint.
 
+<!-- /article -->
+
+<!-- article(#3-connect-to-your-api) -->
+
 ## 3. Connect to your API
 
 The cURL workflow is different from Java and JavaScript workflows because it doesn't need an API Client. In this case, connecting to your API is as simple as requesting an URL.
+
+<!-- /article -->
+
+<!-- article(#4-read-write-data) -->
 
 ## 4. Read & Write Data
 
@@ -41,6 +55,8 @@ curl -X "GET" "http://liferay.io/<YOUR-APP>/<YOUR-SERVICE>/items"
 ```
 
 You can also try this out on the *API explorer* tab of your service.
+
+<!-- /article -->
 
 ## 5. What's Next?
 
