@@ -1,4 +1,4 @@
-# Praesent semper augue
+# Lorem ipsum dolor
 
 ###### Illum magni, nulla animi id expedita minima qui aliquam excepturi praesentium ex fugit quis sint. Illo beatae, minus pariatur velit possimus quia, voluptates eum aliquam neque libero earum optio harum exercitationem aut error.
 
@@ -67,4 +67,4 @@ Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accus
 
 ## 5. What's Next?
 
-* Excepturi nihil nulla nam, [lorem ipsum dolor](./lorem.html).
+* Excepturi nihil nulla nam, [maecenas rutrum odio](./maecenas.html).
