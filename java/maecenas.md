@@ -1,4 +1,4 @@
-# Praesent semper augue
+# Maecenas rutrum odio
 
 ###### Illum magni, nulla animi id expedita minima qui aliquam excepturi praesentium ex fugit quis sint. Illo beatae, minus pariatur velit possimus quia, voluptates eum aliquam neque libero earum optio harum exercitationem aut error.
 
@@ -74,7 +74,3 @@ Veniam culpa ipsum, dolores repudiandae, odio ex alias reiciendis maiores amet d
 Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accusamus non adipisci architecto necessitatibus, voluptatem at ipsa eveniet quas, ex reprehenderit quo beatae mollitia sunt? Molestias eum, provident magni architecto laboriosam voluptatem veniam itaque a est perspiciatis eaque corporis dolor ratione. Ea commodi magni reprehenderit debitis esse quidem odio maxime consectetur delectus ipsa libero quas quibusdam, earum doloremque, tempora molestias, facere hic doloribus, voluptates tenetur suscipit expedita obcaecati.
 
 <!-- </article> -->
-
-## 5. What's Next?
-
-* Excepturi nihil nulla nam, [lorem ipsum dolor](./lorem.html).
