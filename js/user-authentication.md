@@ -1,4 +1,4 @@
-# Getting Started
+# User Authentication
 
 ###### Illum magni, nulla animi id expedita minima qui aliquam excepturi praesentium ex fugit quis sint. Illo beatae, minus pariatur velit possimus quia, voluptates eum aliquam neque libero earum optio harum exercitationem aut error.
 
@@ -71,4 +71,4 @@ Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accus
 
 ## 5. What's Next?
 
-* That's it! Now we're ready to authenticate users, which we'll cover in the [next section](./user-authentication.html).
+* That's it! Now we're ready to save and retrive data in real-time, which we'll cover in the [next section](./realtime-database.html).

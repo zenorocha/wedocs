@@ -1,4 +1,4 @@
-# Lorem ipsum dolor
+# Realtime Database
 
 ###### Illum magni, nulla animi id expedita minima qui aliquam excepturi praesentium ex fugit quis sint. Illo beatae, minus pariatur velit possimus quia, voluptates eum aliquam neque libero earum optio harum exercitationem aut error.
 
@@ -71,4 +71,4 @@ Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accus
 
 ## 5. What's Next?
 
-* Excepturi nihil nulla nam, [maecenas rutrum odio](./maecenas.html).
+* That's it! Now we're ready to send emails to our users, which we'll cover in the [next section](./email.html).
