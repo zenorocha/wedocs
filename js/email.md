@@ -1,74 +1,72 @@
 # Email
 
-###### Illum magni, nulla animi id expedita minima qui aliquam excepturi praesentium ex fugit quis sint. Illo beatae, minus pariatur velit possimus quia, voluptates eum aliquam neque libero earum optio harum exercitationem aut error.
+###### Send emails asynchronously and easily check their status using *WeDeploy™ Email*.
 
-<!-- <article id="1-first-section"> -->
+<!-- <article id="1-install-email-container"> -->
 
-## 1. Consectetur adipisicing elit
+## 1. Install Email Container
 
-*Lorem* ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quo ad, error nihil deserunt quia neque numquam atque debitis. Obcaecati [laudantium adipisci](#) deserunt eveniet, placeat repellendus ut qui `tempore` recusandae!
+First, we need to make sure that *WeDeploy™ Email* is installed. We can do that by following these steps:
+
+1. Go to the Dashboard.
+2. Select your project.
+3. Click on *"Install Container"*.
+4. Select *"WeDeploy Email"*
+5. Click on *"Install Container"*.
+
+Once we installed it, WeDeploy will provide an endpoint for this container. This endpoint will be used to access all the RESTful APIs that this container exposes. A container endpoint looks like this `<containerID>.<projectID>.wedeploy.io`, for example: `email.sample.wedeploy.io`.
+
+<!-- </article> -->
+
+<!-- <article id="2-send-an-email"> -->
+
+## 2. Send an Email
+
+Now that we have our container up and running, it's time to start sending some emails. [As seen before](./), we can use the API Client to facilitate the process of sending requests to WeDeploy.
+
+In order to send emails, we have to make a `POST` request to `/emails` passing some required parameters like `from`, `to`, and `subject`:
 
 ```js
 WeDeploy
-  .url('/data/tasks')
-  .post({
-    desc: 'Buy milk'
-  });
+	.url('http://<containerID>.<projectID>.wedeploy.io/emails')
+	.form('from', 'from@domain.com')
+	.form('to', 'to@domain.com')
+	.form('subject', 'Hi there!')
+	.post()
+	.then(function(response) {
+		console.log('Email ID:', response.body());
+	})
+	.catch(function(error) {
+		// Some error has happened
+	});
+```
+
+> For the full list of parameters, check [github.com/wedeploy/email](https://github.com/wedeploy/email#readme).
+
+As a result, we'll receive an email ID. This doesn't indicate that the email was already sent, it actually says that it was added to the email queue. That's why we have another API to check the email status.
+
+<!-- </article> -->
+
+<!-- <article id="3-check-email-status"> -->
+
+## 3. Check an Email Status
+
+In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. `123`, and send a `GET` request to `/emails/123/status`.
+
+```js
+WeDeploy
+	.url('http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status')
+	.get()
+	.then(function(response) {
+		console.log('Email status:', response.body());
+	})
+	.catch(function(error) {
+		// Some error has happened
+	});
 ```
 
 <!-- </article> -->
 
-<!-- <article id="2-second-section"> -->
-
-## 2. Possimus impedit deleniti
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis quas hic veritatis numquam aut recusandae aperiam nesciunt exercitationem [fuga atque qui](#), minima, cum asperiores repellendus at debitis accusamus quaerat quae soluta obcaecati similique.
-
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-
-Perspiciatis asperiores eum vel unde blanditiis veritatis, voluptatem numquam laudantium aspernatur quisquam commodi magnam, excepturi culpa debitis dolor. Quis labore illum repellat quia incidunt, deserunt saepe. Aperiam illo consectetur soluta obcaecati tempore, dignissimos ipsa cum aliquam quis alias, doloribus quaerat, voluptatum voluptatem ipsum cupiditate repellat.
-
-> Animi labore ducimus praesentium, eius ipsum enim accusantium maiores accusamus sapiente ullam ex, quod atque iure officiis minus tempore libero delectus qui iste illo. Non aliquid rem adipisci veniam perferendis cum, quas laboriosam tempora accusantium fuga, architecto et dicta eveniet ut.
-
-<!-- </article> -->
-
-<!-- <article id="3-third-section"> -->
-
-## 3. Sit aliquid nostrum fugit
-
-Nisi mollitia saepe soluta, voluptatum sapiente, sequi molestiae minus ducimus quas possimus tempore iste et modi aliquam vel tenetur sint reiciendis aperiam [voluptatem exercitationem](#) nulla molestias incidunt accusamus delectus in.
-
-Adipisci doloribus harum exercitationem quis quam quasi quos maxime, iusto doloremque hic at qui dolores totam aperiam consectetur, ipsa perspiciatis nostrum obcaecati cumque expedita tempore quae tenetur consequatur quisquam molestiae.
-
-```js
-WeDeploy
-  .url('/data/tasks')
-  .get()
-  .then(function(clientResponse) {
-    console.log(clientResponse.body())
-  });
-```
-
-Excepturi nihil nulla nam unde consequuntur illum reiciendis deserunt rem iste necessitatibus, ullam vel assumenda voluptate atque pariatur repellendus, nostrum `voluptatum` omnis quisquam modi vitae impedit, eius mollitia obcaecati autem.
-
-Qui, rerum ad atque impedit a molestiae voluptates quibusdam porro hic nostrum maxime, eos doloribus accusamus deleniti, sequi eveniet nihil necessitatibus optio neque nam eius doloremque eligendi. Provident.
-
-<!-- </article> -->
-
-<!-- <article id="4-fourth-section"> -->
-
-## 4. Non esse id excepturi iste
-
-Veniam culpa ipsum, dolores repudiandae, odio ex alias reiciendis maiores amet dolore voluptatum sequi, eos iusto! Laudantium saepe minima, sint, earum atque voluptatem ipsam. At debitis maxime neque, amet dolore similique, quaerat cum praesentium, rem `inventore` vel dolorem! Error corporis, totam labore molestiae cum repellat quas eaque maxime eius cumque impedit consectetur, sequi fugiat rem velit commodi optio iure quibusdam doloremque, quidem quae voluptates, mollitia eos.
-
-Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accusamus non adipisci architecto necessitatibus, voluptatem at ipsa eveniet quas, ex reprehenderit quo beatae mollitia sunt? Molestias eum, provident magni architecto laboriosam voluptatem veniam itaque a est perspiciatis eaque corporis dolor ratione. Ea commodi magni reprehenderit debitis esse quidem odio maxime consectetur delectus ipsa libero quas quibusdam, earum doloremque, tempora molestias, facere hic doloribus, voluptates tenetur suscipit expedita obcaecati.
-
-<!-- </article> -->
-
-## 5. What's Next?
+## 4. What's Next?
 
 * That's it! Now we're ready to host our static files, which we'll cover in the [next section](./static-hosting.html).
