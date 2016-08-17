@@ -71,4 +71,4 @@ Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accus
 
 ## 5. What's Next?
 
-* That's it! Now we're ready to send emails to our users, which we'll cover in the [next section](./email.html).
+* That's it! Now we're ready to send emails to our users, which we'll cover in the [next section](./email-sending.html).

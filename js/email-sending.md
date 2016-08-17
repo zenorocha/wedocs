@@ -1,4 +1,4 @@
-# Email
+# Email Sending
 
 ###### Send emails asynchronously and easily check their status using *WeDeploy™ Email*.
 
