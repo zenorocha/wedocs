@@ -8,7 +8,7 @@
 
 In order to have access to WeDeploy functionalities you're going to receive an invite though email with the link to create a new account.
 
-![SignUp](https://d1zjcuqflbd5k.cloudfront.net/files/acc_400263/18T10?response-content-disposition=inline;%20filename=Screen%20Shot%20on%202016-08-18%20at%2016%3A12%3A49.png&Expires=1471562288&Signature=ffutcUCrNcA9x5P05-3FBHrfT4mXRPri3bvSe5dcjnINJIa739mBaCDj9lcmuhzpI-L1CWvzmVjJtQ2p15aUs33VT01bPN4GDckQHcp~IxIXLxWS-ZUL8-s1XyKayNYLJOUCGj04o8CJozT9CTurERQe97~r8sUsrwzypLL6OCY_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+![SignUp](https://cloud.githubusercontent.com/assets/301291/17794030/c75a120a-6560-11e6-867e-582391b3eb9c.png)
 
 <!-- </article> -->
 
@@ -16,7 +16,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 ## 2. Access your dashboard
 
-![Dashboard](https://d1zjcuqflbd5k.cloudfront.net/files/acc_400263/1iGVT?response-content-disposition=inline;%20filename=Screen%20Shot%202016-08-18%20at%2012.03.41%20PM.png&Expires=1471562606&Signature=QksBD-E6PxKj~T2PYKv3uaiklbQnWloKtJ5nvJTGcu0E1WAGSLUA3GNtVugVk2Gl-97RKJke6-kO5RPdVhnPcu7bvjwNcH730cHTmBXoo4GgK-~krvaxpM-OofKrNv866n-skk9IdlpBkaWOrqdtIQnU9NpO0nDuWjuNasLW9iw_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+![Dashboard](https://cloud.githubusercontent.com/assets/301291/17794055/1648e0c6-6561-11e6-9636-1928a45742d5.png)
 
 <!-- </article> -->
 
@@ -24,7 +24,15 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 ## 3. Create a New Project
 
-![New Project](https://d1zjcuqflbd5k.cloudfront.net/files/acc_400263/1iGVT?response-content-disposition=inline;%20filename=Screen%20Shot%202016-08-18%20at%2012.03.41%20PM.png&Expires=1471562606&Signature=QksBD-E6PxKj~T2PYKv3uaiklbQnWloKtJ5nvJTGcu0E1WAGSLUA3GNtVugVk2Gl-97RKJke6-kO5RPdVhnPcu7bvjwNcH730cHTmBXoo4GgK-~krvaxpM-OofKrNv866n-skk9IdlpBkaWOrqdtIQnU9NpO0nDuWjuNasLW9iw_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+![New Project](https://cloud.githubusercontent.com/assets/301291/17794088/489d7c94-6561-11e6-95d5-218dedc01d40.png)
+
+<!-- </article> -->
+
+<!-- <article id="4-fourth-section"> -->
+
+## 4. Open your project
+
+![Project Container List](https://cloud.githubusercontent.com/assets/301291/17794132/86acb450-6561-11e6-8569-aec65e33fe55.png)
 
 <!-- </article> -->
 
@@ -32,7 +40,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 ## 4. Click in Install Container
 
-![Project Container List](https://d1zjcuqflbd5k.cloudfront.net/files/acc_400263/1eOhe?response-content-disposition=inline;%20filename=Screen%20Shot%202016-08-18%20at%2012.04.07%20PM.png&Expires=1471562795&Signature=K0-5Y0Yy~Uag61HddEoTftZtz~Np9RJKTvH~mHgwi3Qojj4cyCoVudk6jRwVNw5JfU9gcv2Uh7gDyYDkslJg71gqXYSoiFuasuWGMAe2yiEXzBAUsjLpQfqxmsd7zmVTGpUQg4mBJfJlpr5qCM2-6B3vZt91TkBLehpLXs6eSnE_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+![Project Container List](https://cloud.githubusercontent.com/assets/301291/17794105/5990a530-6561-11e6-9e3d-fa8ade3d93ac.png)
 
 <!-- </article> -->
 
@@ -40,7 +48,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 ## 5. Select a Container type
 
-![New Project](https://d1zjcuqflbd5k.cloudfront.net/files/acc_400263/1fjaO?response-content-disposition=inline;%20filename=Screen%20Shot%202016-08-18%20at%2012.06.43%20PM.png&Expires=1471562841&Signature=DDigzikGnA-BiIdxiKIsHQne~si95-26eKuohhvRlaZz4OClF88tKfpmHztyj3vVVUL1ZQf0Ta5sLaEZVAYADgAIGpSBwMpZ76Ns8E91eIkh3IFtgIGQpxDNCK9k89pefB8~no7GqvIAXy0Lo2IQaAoMyFvnAIQuwm7BDI0nHRI_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+![New Project](https://cloud.githubusercontent.com/assets/301291/17794174/e36924f8-6561-11e6-8bf1-a14dd40f522b.png)
 
 
 <!-- </article> -->
