@@ -25,53 +25,22 @@ With WeDeploy, you are able to quickly and efficiently respond to user demand:
 
 ## 2. WeDeploy is not
 
-*WeDeploy* gives you the built-in APIs that can help you create modern apps faster.
-
-From simple applications to micro service stack, choose between dozens of languages, frameworks, or entire application stacks and launch production-ready environments in matter of minutes.
-
-With WeDeploy, you are able to quickly and efficiently respond to user demand:
-
-* Deploy your applications quickly.
-* Automatically distribute incoming traffic across multiple instances.
-* Authenticate users in few lines of code.
-* Store data securely and consume information in real-time.
-* Release applications with zero downtime.
-* Build and deploy micro services.
+[to do]
 
 <!-- </article> -->
 
-<!-- <article id="3-second-section"> -->
+<!-- <article id="3-third-section"> -->
 
 ## 3. Why should I use WeDeploy?
 
-*WeDeploy* gives you the built-in APIs that can help you create modern apps faster.
-
-From simple applications to micro service stack, choose between dozens of languages, frameworks, or entire application stacks and launch production-ready environments in matter of minutes.
-
-With WeDeploy, you are able to quickly and efficiently respond to user demand:
-
-* Deploy your applications quickly.
-* Automatically distribute incoming traffic across multiple instances.
-* Authenticate users in few lines of code.
-* Store data securely and consume information in real-time.
-* Release applications with zero downtime.
-* Build and deploy micro services.
+[to do]
 
 <!-- </article> -->
 
-## 3. How WeDeploy will help me to ____
+<!-- <article id="4-fourth-section"> -->
 
-*WeDeploy* gives you the built-in APIs that can help you create modern apps faster.
+## 4. How WeDeploy will help me to deploy from simple to advanced applications?
 
-From simple applications to micro service stack, choose between dozens of languages, frameworks, or entire application stacks and launch production-ready environments in matter of minutes.
-
-With WeDeploy, you are able to quickly and efficiently respond to user demand:
-
-* Deploy your applications quickly.
-* Automatically distribute incoming traffic across multiple instances.
-* Authenticate users in few lines of code.
-* Store data securely and consume information in real-time.
-* Release applications with zero downtime.
-* Build and deploy micro services.
+[to do]
 
 <!-- </article> -->
