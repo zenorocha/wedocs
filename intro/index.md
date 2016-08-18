@@ -1,6 +1,6 @@
 # Using WeDeploy API
 
-###### Forget about infrastructure. WeDeploy helps you to dedicate your time to what really matters: building and scaling great apps.
+###### Forget about infrastructure. WeDeploy helps you to dedicate your time to what really matters: building and scaling great apps. Before going further in WeDeploy, make sure you understand its purpose and philosophy.
 
 <!-- <article id="1-first-section"> -->
 
