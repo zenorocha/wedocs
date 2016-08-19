@@ -1,10 +1,10 @@
-# Sign-in with email and password
+# Sign-in with password
 
 ###### You can let your users authenticate with WeDeploy using their email addresses and passwords. *WeDeploy™ Authentication*.
 
 <!-- <article id="sign-in"> -->
 
-## Sign-in with email and password
+## Sign-in with password
 
 To sign in by email and password, call `signInWithEmailAndPassword`:
 
