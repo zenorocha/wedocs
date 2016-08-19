@@ -4,7 +4,7 @@
 
 <!-- <article id="1-dependencies"> -->
 
-## 1. Dependencies
+## Dependencies
 
 The following external software dependencies are necessary to correctly run some commands:
 
@@ -32,12 +32,12 @@ The availability of dependencies are tested just before its immediate use. If a 
 
 <!-- <article id="2-installing"> -->
 
-## 2. Installing
+## Installing
 
 Install this tool with:
 
 ```
-curl https://raw.githubusercontent.com/wedeploy/cli/master/install.sh -s | bash
+curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
 ```
 or download from our [stable release channel](https://dl.equinox.io/wedeploy/cli/stable):
 
@@ -48,7 +48,7 @@ To update this tool, just run `we update`.
 
 <!-- <article id="3-creating-projects"> -->
 
-## 3. Creating projects locally from the CLI
+## Creating projects locally from the CLI
 
 The project is the fundamental unit of organization on *WeDeploy™*. Each project can be associated with its own set of provisioned services.
 
@@ -73,7 +73,7 @@ Global Flags:
 
 <!-- <article id="3-creating-projects"> -->
 
-## 4. Running projects locally from the CLI
+## Running projects locally from the CLI
 
 1. Start local infrastructure:
 
