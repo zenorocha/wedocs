@@ -29,12 +29,8 @@ Docker is a tool that automates the deployment of WeDeploy containers in your lo
 The WeDeploy Command-Line Interface (CLI) is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications.
 
 ```sh
-curl https://raw.githubusercontent.com/wedeploy/cli/master/install.sh -s | bash
+curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
 ```
-
-<div class="guide-download">
-  <a href="https://github.com/wedeploy/boilerplate-email/archive/js.zip" class="btn btn-accent btn-sm"><span class="icon-16-download"></span>Download JavaScript Email Boilerplate</a>
-</div>
 
 <!-- </article> -->
 
