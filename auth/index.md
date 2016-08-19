@@ -1,6 +1,6 @@
 # Auth
 
-###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, and Twitter, and more using *WeDeploy™ Auth*.
+###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, Twitter, and more using *WeDeploy™ Auth*.
 
 <!-- <article id="install-dependencies"> -->
 
