@@ -29,3 +29,26 @@ or download from our [stable release channel](https://dl.equinox.io/wedeploy/cli
 To update this tool, just run `we update`.
 
 <!-- </article> -->
+
+
+<!-- <article id="3-creating-projects"> -->
+
+## 3. Creating Projects from the CLI
+
+The project is the fundamental unit of organization on *WeDeploy™*. Each project can be associated with its own set of provisioned services.
+
+Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers can only be created from inside projects and are stored on the first subdirectory of its project.
+```
+Usage:
+  we create <project/container id> [flags]
+```
+Examples:
+`we create relay`
+
+```
+Global Flags:
+      --no-color        Disable color output
+      --remote string   Remote to use
+  -v, --verbose         Verbose output
+```
+<!-- </article> -->
