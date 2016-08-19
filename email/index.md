@@ -83,7 +83,7 @@ WeDeploy
 	});
 ```
 
-> For the full list of parameters, check [github.com/wedeploy/email](https://github.com/wedeploy/email#readme).
+> For the full list of parameters, check this container's README in the [Dashboard](http://dashboard.wedeploy.io/).
 
 As a result, we'll receive an email ID. This doesn't indicate that the email was already sent, it actually says that it was added to the email queue. That's why we have another API to check the email status.
 
