@@ -1,6 +1,6 @@
 # Using the CLI
 
-###### The *WeDeploy™ Command-line interface (CLI)* is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications. It's generally installed in your local development operating system.
+The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support to things like creating, managing, and scaling applications.
 
 <!-- <article id="1-dependencies"> -->
 
@@ -8,24 +8,11 @@
 
 The following external software dependencies are necessary to correctly run some commands:
 
-**A) Docker**
+a) [Git](https://git-scm.com/) (download for [Linux](https://git-scm.com/download/linux), [Mac OS X](https://git-scm.com/download/mac), [Windows](https://git-scm.com/download/win))
 
-Docker is a tool that automates the deployment of WeDeploy containers in your local environment.
+b) [Docker](https://www.docker.com/) (download for [Mac OS X](https://download.docker.com/mac/stable/Docker.dmg), [Linux](https://docs.docker.com/engine/installation/linux/), [Windows](https://download.docker.com/win/stable/InstallDocker.msi))
 
-  * [Mac OS X](https://download.docker.com/mac/stable/Docker.dmg)
-  * [Windows](https://download.docker.com/win/stable/InstallDocker.msi)
-  * [Linux](https://docs.docker.com/engine/installation/linux/)
-
-
-**B) Git**
-
-Git is a version control system that is required for working with WeDeploy projects.
-
-* [Mac OS X](https://git-scm.com/download/mac)
-* [Windows](https://git-scm.com/download/win)
-* [Linux](https://git-scm.com/download/linux)
-
-The availability of dependencies are tested just before its immediate use. If a required dependency is not found, an useful error message is printed and the calling process is terminated with an error code.
+An useful error message feedback is given and the process is terminated, if a required dependency is not available when it is necessary.
 
 <!-- </article> -->
 
@@ -36,103 +23,78 @@ The availability of dependencies are tested just before its immediate use. If a 
 
 Install this tool with:
 
-```
+```text
 curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
 ```
 
-To update this tool, just run `we update`.
+The tool verifies daily if new updates are available and let the user know when it is. To update, just run `we update`.
 
 <!-- </article> -->
 
 
 <!-- <article id="3-creating-projects"> -->
 
-## Creating projects locally from the CLI
+## Creating projects locally
 
-The project is the fundamental unit of organization on *WeDeploy™*. Each project can be associated with its own set of provisioned services.
+On the WeDeploy platform you create projects. Each project might have many containers, for handling static hosting, data API, email sending, etc.
 
-Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers can only be created from inside projects and are stored on the first subdirectory of its project.
+Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers are usually created from inside projects and are stored on the first subdirectory of its project.
 
-```
+```text
 Usage:
-  we create <project/container id> [flags]
+  we create <project/container id>
 ```
 
 Examples:
 
-`we create appexample`
+`we create app`
 
-```
-Global Flags:
-      --no-color        Disable color output
-      --remote string   Remote to use
-  -v, --verbose         Verbose output
-```
 <!-- </article> -->
 
 <!-- <article id="4-running-projects-locally"> -->
 
-## Running projects locally from the CLI
+## Running projects locally
 
 1. Start local infrastructure:
 
-  ```sh
+  ```text
 we run
   ```
 
 2. Clone this repository:
 
-  ```sh
+  ```text
 git clone https://github.com/wedeploy/boilerplate-hosting.git
 cd boilerplate-hosting
   ```
 
 3. Link this container with the local infrastructure:
 
-  ```sh
+  ```text
 we link
   ```
 
-4. Now your container is ready to be used:
+4. Now your container is ready at:
 
-  ```
+  ```text
 http://hosting.<projectID>.wedeploy.me
   ```
 
 <!-- </article> -->
 
-## Fetch project logs
-
-To fetch your logs, use the `we logs` command.
+## Fetch project and container logs
 
 Usage:
 
-```
+```text
 we logs [project] [container] --instance hash [flags]
 ```
 
 Examples:
 
-```
+```text
 we logs (on project or container directory)
-we logs chat
-we logs portal email
+we logs wechat
+we logs wechat data --since 20min --watch
 we logs portal email --instance abc
-```
-
-Flags:
-
-```
-      --instance string   Instance ID or hash
-      --level string      Severity (critical, error, warning, info (default), debug)
-      --since string      Show since moment (i.e., 20min, 3h, UNIX timestamp)
-  -w, --watch             Watch / follow log output
-```
-
-Global Flags:
-
-```
-      --no-color        Disable color output
-      --remote string   Remote to use
-  -v, --verbose         Verbose output
 ```
