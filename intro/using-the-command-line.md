@@ -45,10 +45,6 @@ Usage:
   we create <project/container id>
 ```
 
-Examples:
-
-`we create app`
-
 <!-- </article> -->
 
 <!-- <article id="4-running-projects-locally"> -->
