@@ -60,7 +60,7 @@ http://authdemo.wedeploy.io
 
 <!-- </article> -->
 
-<!-- <article id="signing-in"> -->
+<!-- <article id=“key-capabilities“> -->
 
 ## Key capabilities
 
@@ -78,6 +78,10 @@ Create a client id and client secret by [registering your application](https://g
 
 Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google. 
 
+<!-- </article> -->
+
+<!-- <article id=“initializing-auth-service-locally"> -->
+
 ## Initializing auth service locally
 
 ```js
@@ -85,6 +89,8 @@ WeDeploy.auth('http://auth.<projectID>.wedeploy.me');
 ```
 
 <!-- </article> -->
+
+<!-- <article id=“initializing-auth-service-cloud”> -->
 
 ## Initializing auth service on the Cloud
 
@@ -95,6 +101,8 @@ WeDeploy.auth('http://auth.<projectID>.wedeploy.io');
 After initialized the authentication service url, WeDeploy client stores its information for future calls.
 
 <!-- </article> -->
+
+<!-- <article id=“sign-in-with-password”> -->
 
 ## Sign-In With Password
 
@@ -113,6 +121,8 @@ WeDeploy
 ```
 
 <!-- </article> -->
+
+<!-- <article id=“sign-in-with-github”> -->
 
 ## Sign-In With Redirect (GitHub)
 
@@ -133,6 +143,8 @@ auth.onSignIn(function(user) {
 
 <!-- </article> -->
 
+<!-- <article id=“sign-in-with-google”> -->
+
 ## Sign-In With Redirect (Google)
 
 You can let your users authenticate with WeDeploy using their Google Accounts by integrating Google Sign-In into your app. 
@@ -152,6 +164,8 @@ auth.onSignIn(function(user) {
 
 <!-- </article> -->
 
+<!-- <article id=“sign-out”> -->
+
 ## Sign-Out
 
 ```js
@@ -167,6 +181,8 @@ WeDeploy
 ```
 
 <!-- </article> -->
+
+<!-- <article id=“create-user”> -->
 
 ## Create User
 
@@ -188,6 +204,8 @@ WeDeploy
 ```
 
 <!-- </article> -->
+
+<!-- <article id=“get-user”> -->
 
 ## Get User
 
@@ -215,6 +233,8 @@ WeDeploy
 
 <!-- </article> -->
 
+<!-- <article id=“delete-user”> -->
+
 ## Delete User
 
 You can delete a user account with the delete method. For example:
@@ -233,6 +253,8 @@ currentUser.deleteUser()
 
 
 <!-- </article> -->
+
+<!-- <article id=“update-user”> -->
 
 ## Update User
 
@@ -256,6 +278,8 @@ currentUser.updateUser({
 ```
 
 <!-- </article> -->
+
+<!-- <article id=“reset-email”> -->
 
 ## Send a password reset email
 
