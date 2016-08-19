@@ -39,7 +39,6 @@ Install this tool with:
 ```
 curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
 ```
-or download from our [stable release channel](https://dl.equinox.io/wedeploy/cli/stable):
 
 To update this tool, just run `we update`.
 
