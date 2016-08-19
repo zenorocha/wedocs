@@ -2,68 +2,30 @@
 
 ###### The *WeDeploy™ Command-line interface (CLI)* is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications. It's generally installed in your local development operating system.
 
-<!-- <article id="1-installing"> -->
+<!-- <article id="1-dependencies"> -->
 
-## 1. Installing
+## 1. Dependencies
 
-Install this tool with
+The following external software dependencies are necessary to correctly run some commands:
+
+* [docker](https://www.docker.com/)
+* [git](https://git-scm.com/)
+
+The availability of dependencies are tested just before its immediate use. If a required dependency is not found, an useful error message is printed and the calling process is terminated with an error code.
+
+<!-- </article> -->
+
+
+<!-- <article id="2-installing"> -->
+
+## 2. Installing
+
+Install this tool with:
 
 `curl https://raw.githubusercontent.com/wedeploy/cli/master/install.sh -s | bash`
 
-or download from our stable release channel:
-
-<div class="guide-download">
-	<a href="https://dl.equinox.io/wedeploy/cli/stable" class="btn btn-accent btn-sm"><span class="icon-16-download"></span>Download Command-line</a>
-</div>
+or download from our [stable release channel](https://dl.equinox.io/wedeploy/cli/stable):
 
 To update this tool, just run `we update`.
-
-<!-- </article> -->
-
-<!-- <article id="2-second-section"> -->
-
-## 2. Possimus impedit deleniti
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis quas hic veritatis numquam aut recusandae aperiam nesciunt exercitationem [fuga atque qui](#), minima, cum asperiores repellendus at debitis accusamus quaerat quae soluta obcaecati similique.
-
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-
-Perspiciatis asperiores eum vel unde blanditiis veritatis, voluptatem numquam laudantium aspernatur quisquam commodi magnam, excepturi culpa debitis dolor. Quis labore illum repellat quia incidunt, deserunt saepe. Aperiam illo consectetur soluta obcaecati tempore, dignissimos ipsa cum aliquam quis alias, doloribus quaerat, voluptatum voluptatem ipsum cupiditate repellat.
-
-> Animi labore ducimus praesentium, eius ipsum enim accusantium maiores accusamus sapiente ullam ex, quod atque iure officiis minus tempore libero delectus qui iste illo. Non aliquid rem adipisci veniam perferendis cum, quas laboriosam tempora accusantium fuga, architecto et dicta eveniet ut.
-
-<!-- </article> -->
-
-<!-- <article id="3-third-section"> -->
-
-## 3. Sit aliquid nostrum fugit
-
-Nisi mollitia saepe soluta, voluptatum sapiente, sequi molestiae minus ducimus quas possimus tempore iste et modi aliquam vel tenetur sint reiciendis aperiam [voluptatem exercitationem](#) nulla molestias incidunt accusamus delectus in.
-
-Adipisci doloribus harum exercitationem quis quam quasi quos maxime, iusto doloremque hic at qui dolores totam aperiam consectetur, ipsa perspiciatis nostrum obcaecati cumque expedita tempore quae tenetur consequatur quisquam molestiae.
-
-```bash
-curl -X "POST" "/items" \
-     --data-urlencode "title=Star+Wars+IV" \
-     --data-urlencode "year=1977"
-```
-
-Excepturi nihil nulla nam unde consequuntur illum reiciendis deserunt rem iste necessitatibus, ullam vel assumenda voluptate atque pariatur repellendus, nostrum `voluptatum` omnis quisquam modi vitae impedit, eius mollitia obcaecati autem.
-
-Qui, rerum ad atque impedit a molestiae voluptates quibusdam porro hic nostrum maxime, eos doloribus accusamus deleniti, sequi eveniet nihil necessitatibus optio neque nam eius doloremque eligendi. Provident.
-
-<!-- </article> -->
-
-<!-- <article id="4-fourth-section"> -->
-
-## 4. Non esse id excepturi iste
-
-Veniam culpa ipsum, dolores repudiandae, odio ex alias reiciendis maiores amet dolore voluptatum sequi, eos iusto! Laudantium saepe minima, sint, earum atque voluptatem ipsam. At debitis maxime neque, amet dolore similique, quaerat cum praesentium, rem `inventore` vel dolorem! Error corporis, totam labore molestiae cum repellat quas eaque maxime eius cumque impedit consectetur, sequi fugiat rem velit commodi optio iure quibusdam doloremque, quidem quae voluptates, mollitia eos.
-
-Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accusamus non adipisci architecto necessitatibus, voluptatem at ipsa eveniet quas, ex reprehenderit quo beatae mollitia sunt? Molestias eum, provident magni architecto laboriosam voluptatem veniam itaque a est perspiciatis eaque corporis dolor ratione. Ea commodi magni reprehenderit debitis esse quidem odio maxime consectetur delectus ipsa libero quas quibusdam, earum doloremque, tempora molestias, facere hic doloribus, voluptates tenetur suscipit expedita obcaecati.
 
 <!-- </article> -->
