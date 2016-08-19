@@ -156,7 +156,7 @@ WeDeploy
 WeDeploy
 	.auth()
 	.createUser({
-		email: 'brian.chan@liferay.com',
+		email: 'user@domain.com',
 		password: 'abc'
 	})
 	.then((user) -> {  
@@ -231,7 +231,7 @@ currentUser.updateUser({
 ```js
 WeDeploy
 	.auth()
-	.sendPasswordResetEmail("michael.han@liferay.com")
+	.sendPasswordResetEmail("user@domain.com")
 	.then(() => {
 		// Email sent.
 	})
