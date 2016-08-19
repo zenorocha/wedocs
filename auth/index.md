@@ -98,7 +98,7 @@ After initialized the authentication service url, WeDeploy client stores its inf
 WeDeploy
 	.auth()
 	.signInWithPassword("user@domain.com", "password")
-	.then(function() {
+	.then(function(user) {
 		// User is signed in.
 	})
 	.catch(function(err) {  
