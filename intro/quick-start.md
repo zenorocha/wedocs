@@ -36,6 +36,8 @@ You are able to organize your services by project. Select a project name and ID 
 
 ## 4. Open your project
 
+Open your server by clicking in the Project name.
+
 ![Project Container List](https://cloud.githubusercontent.com/assets/301291/17795964/ba9a34d0-6571-11e6-9d49-c30e4862d2c2.jpg)
 
 <!-- </article> -->
