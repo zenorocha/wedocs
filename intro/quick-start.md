@@ -112,6 +112,6 @@ Now that you installed the boilerplate, in the container screen is possible to s
 
 ## 12. It works!
 That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
-![URL Generated](https://cloud.githubusercontent.com/assets/301291/17795480/859b7b3a-656d-11e6-8d78-49e6b9d94640.png)
+![URL Generated](https://cloud.githubusercontent.com/assets/301291/17796616/b2ca3fd4-6576-11e6-8e18-85423f206b94.jpg)
 
 <!-- </article> -->
