@@ -2,7 +2,7 @@
 
 ###### You can let your users authenticate using their Google Accounts by integrating Google Sign-In into your app. *WeDeploy™ Authentication*.
 
-<!-- <article id="sign-in> -->
+<!-- <article id="sign-in"> -->
 
 ## Sign-in with Google
 
@@ -21,7 +21,7 @@ auth.onSignIn(function(user) {
 
 <!-- </article> -->
 
-<!-- <article id="setup-app-client-id-and-secret> -->
+<!-- <article id="setup-app-client-id-and-secret"> -->
 
 ## Setup app client id and secret
 
