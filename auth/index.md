@@ -89,18 +89,19 @@ Create, delete or update users by a simple api.
 
 ## Initializing auth service
 
+By using WeDeploy api client you can ininialize authentication service by referencing its url, like in the example below.
+
 ```js
 WeDeploy.auth('http://auth.<projectID>.wedeploy.me');
 ```
 
+After initialized the authentication service url, WeDeploy client stores its information for future calls.
 
-## Initializing auth service on the Cloud
+Note that if you are initializing auth service pointing to the Cloud you should use the proper domain:
 
 ```js
 WeDeploy.auth('http://auth.<projectID>.wedeploy.io');
 ```
-
-After initialized the authentication service url, WeDeploy client stores its information for future calls.
 
 <!-- </article> -->
 
