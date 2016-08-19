@@ -16,6 +16,10 @@ First, we need to make sure that *WeDeploy™ Email* is installed. We can do tha
 
 Once we installed it, WeDeploy will provide an endpoint for this container. This endpoint will be used to access all the RESTful APIs that this container exposes. A container endpoint looks like this `<containerID>.<projectID>.wedeploy.io`, for example: `email.sample.wedeploy.io`.
 
+<div class="guide-download">
+	<a href="https://github.com/wedeploy/boilerplate-email/archive/js.zip" class="btn btn-accent btn-sm"><span class="icon-16-download"></span>Download JavaScript Email Boilerplate</a>
+</div>
+
 <!-- </article> -->
 
 <!-- <article id="2-send-an-email"> -->
