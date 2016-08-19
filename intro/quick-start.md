@@ -8,7 +8,7 @@
 
 In order to have access to WeDeploy functionalities you're going to receive an invite though email with the link to create a new account.
 
-![SignUp](https://cloud.githubusercontent.com/assets/301291/17795727/b519bbc2-656f-11e6-8185-b19eb31d0514.jpg)
+![SignUp](https://cloud.githubusercontent.com/assets/301291/17795864/bfc70c4a-6570-11e6-94f8-2b9cf3c45998.jpg)
 
 <!-- </article> -->
 
