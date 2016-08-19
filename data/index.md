@@ -271,7 +271,7 @@ We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as any
 
 ## Searching Data
 
-Well, we did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need to do more powerful queries with our documents? Well, in Launchpad you can do a text search, handle user misspellings, show the number of documents by category with your data, and much more.
+Well, we did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need to do more powerful queries with our documents? Well, in WeDeploy you can do a text search, handle user misspellings, show the number of documents by category with your data, and much more.
 
 First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our match operator is just what we need to run the search.
 
@@ -575,7 +575,7 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 ## Watching Data Changes
 
-Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in realtime, all we need to do is change the Launchpad API method we use to the watch method:
+Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in realtime, all we need to do is change the WeDeploy API method we use to the watch method:
 
 ```
 WeDeploy.url('/data/places')
