@@ -111,7 +111,7 @@ You can use WeDeploy Authentication to let your users authenticate with WeDeploy
 ```js
 WeDeploy
 	.auth()
-	.signInWithPassword("user@domain.com", "password")
+	.signInWithEmailAndPassword("user@domain.com", "password")
 	.then(function(user) {
 		// User is signed in.
 	})
