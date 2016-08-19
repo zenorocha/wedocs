@@ -47,11 +47,12 @@ http://emaildemo.wedeploy.me
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-email/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.io).
-3. Create a project.
+3. [Create a project](http://dashboard.wedeploy.io/projects/create).
 4. In the sidebar, click on *GitHub Integration*.
 5. Type your repository URL and `js` branch.
-6. Click on *Update Project* and wait a few seconds.
-7. Once you see it in the Dashboard, your container will be ready to be used.
+6. Click on *Update Project*.
+7. Click on *Build All Repos* and wait a few seconds.
+8. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
 http://emaildemo.wedeploy.io
