@@ -6,31 +6,7 @@
 
 ## Install Dependencies
 
-WeDeploy relies on three dependencies, make sure to download them before we continue.
-
-**A) Git**
-
-Git is a version control system that is required for working with WeDeploy projects.
-
-* [Mac OS X](https://git-scm.com/download/mac)
-* [Windows](https://git-scm.com/download/win)
-* [Linux](https://git-scm.com/download/linux)
-
-**B) Docker**
-
-Docker is a tool that automates the deployment of WeDeploy containers in your local environment.
-
-* [Mac OS X](https://download.docker.com/mac/stable/Docker.dmg)
-* [Windows](https://download.docker.com/win/stable/InstallDocker.msi)
-* [Linux](https://docs.docker.com/engine/installation/linux/)
-
-**C) WeDeploy CLI**
-
-The WeDeploy Command-Line Interface (CLI) is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications.
-
-```text
-curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
-```
+We assume that you already have the **WeDeploy CLI** installed and *Docker* is running. [Visit this guide](/docs/intro/using-the-cli.html) if you need help setting that up.
 
 <!-- </article> -->
 
