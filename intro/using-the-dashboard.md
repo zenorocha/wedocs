@@ -84,9 +84,9 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 <!-- <article id="9-download-the-hosting-boilerplate"> -->
 
-## 9. Download the hosting boilerplate and create a GitHub Repository
+## 8. Fork the boilerplate
 
-In order to facilitate your work, WeDeploy provide many boilerplates to help you to deploy many types of applications. In this example download the [Static Host Boilerplate](https://github.com/wedeploy/boilerplate-hosting).
+In order to facilitate your work, WeDeploy provide many boilerplates to help you to deploy many types of applications. In this example [Fork the Static Host Boilerplate](https://github.com/wedeploy/boilerplate-hosting/fork).
 
 <!-- </article> -->
 
@@ -101,9 +101,10 @@ In this current version, WeDeploy only supports public GitHub repositories. This
 
 <!-- <article id="11-push-your-boilerplate"> -->
 
-## 11. Push your boilerplate to the GitHub repository
+## 11. Click on *Build All Repos* and wait a few seconds
 
-After download the boilerplate, you should add your remote repository in the git config of your folder. Every time you send a new commit to its GitHub repository, WeDeploy will build and deploy your project automatically.
+Every time you send a new commit to its github repository, WeDeploy will build and deploy your project automatically.
+
 <!-- </article> -->
 
 
