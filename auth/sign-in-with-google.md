@@ -8,6 +8,7 @@
 
 To sign in by redirecting to the sign-in page, call `signInWithRedirect`:
 
+
 ```js
 var auth = WeDeploy.auth();
 
