@@ -82,19 +82,70 @@ http://hosting.<projectID>.wedeploy.me
 
 <!-- </article> -->
 
-## Fetch project and container logs
+<!-- <article id="5-using-remotes"> -->
 
-Usage:
+## Using remotes
+To use the CLI tool with the WeDeploy cloud you need to add remotes first.
 
+The commands here are pretty similar to git's remote commands.
+
+Watch for logs on the wechat project:
 ```text
-we logs [project] [container] --instance hash [flags]
+we remote add staging office-cloud.internal
 ```
 
-Examples:
+<!-- </article> -->
+
+
+<!-- <article id="6-fetching-logs"> -->
+
+## Fetching project and container logs
+
+You can fetch projects and container logs with
 
 ```text
-we logs (on project or container directory)
-we logs wechat
-we logs wechat data --since 20min --watch
-we logs portal email --instance abc
+we logs <project id> <container id>
 ```
+
+### Examples:
+
+See the logs for the last 20min for the data container on the wechat project:
+
+```text
+we logs wechat data --since 20min
+```
+
+Watch for logs on the wechat project:
+```text
+we logs wechat --watch
+```
+
+Watch for logs on the wechat project on the production (remote) cloud:
+
+```text
+we logs wechat --remote production
+```
+
+<!-- </article> -->
+
+<!-- <article id="7-list"> -->
+
+## Listing projects and containers
+
+Watch the listing of all projects running locally:
+```text
+we list --watch
+```
+
+List all projects on a given cloud:
+```text
+we list --remote <remote>
+```
+
+List the containers of the project "ci" on the cloud "staging":
+```text
+we list ci --remote staging
+```
+
+<!-- </article> -->
+
