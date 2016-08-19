@@ -71,7 +71,7 @@ Global Flags:
 ```
 <!-- </article> -->
 
-<!-- <article id="3-creating-projects"> -->
+<!-- <article id="4-running-projects-locally"> -->
 
 ## Running projects locally from the CLI
 
