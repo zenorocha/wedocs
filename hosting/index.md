@@ -12,7 +12,7 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 <!-- <article id="running-locally"> -->
 
-## Running locally
+## Running Locally
 
 1. Start local infrastructure:
 
@@ -43,7 +43,7 @@ http://hosting.<projectID>.wedeploy.me
 
 <!-- <article id="deploying-to-the-cloud"> -->
 
-## Deploying to the cloud
+## Deploying to the Cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-hosting/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.io).
