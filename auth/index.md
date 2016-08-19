@@ -66,10 +66,17 @@ http://authdemo.wedeploy.io
 
 Easily add a complete sign-in system to your application. WeDeploy provides a ready-to-use auth solution that handles the UI flows for signing in users with email addresses and passwords, Google Sign-In, and GitHub Login.
 
-|:-|:-|
-| Email and password  | Authenticate users with their email addresses and passwords. Provides methods to create and manage users that use their email addresses and passwords to sign in, also handles sending password reset emails. |
-| GitHub | Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub. |
-| Google | Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google. |
+**Email and password**
+
+Authenticate users with their email addresses and passwords. Provides methods to create and manage users that use their email addresses and passwords to sign in, also handles sending password reset emails.
+
+**GitHub**
+
+Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub.
+
+**Google**
+
+Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google. 
 
 ## Initializing auth service locally
 
