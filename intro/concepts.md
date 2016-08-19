@@ -12,14 +12,14 @@
 
 <!-- <article id="2-second-section"> -->
 
-## 2. Plug Services
+## 2. Plug Containers
 
 [to do]
 <!-- </article> -->
 
 <!-- <article id="3-third-section"> -->
 
-## 3. Hosting Services
+## 3. Hosting Containers
 
 [to do]
 
