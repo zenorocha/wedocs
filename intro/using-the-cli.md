@@ -101,3 +101,39 @@ http://hosting.<projectID>.wedeploy.me
   ```
 
 <!-- </article> -->
+
+## Fetch project logs
+
+To fetch your logs, use the `we logs` command.
+
+Usage:
+
+```
+we logs [project] [container] --instance hash [flags]
+```
+
+Examples:
+
+```
+we logs (on project or container directory)
+we logs chat
+we logs portal email
+we logs portal email --instance abc
+```
+
+Flags:
+
+```
+      --instance string   Instance ID or hash
+      --level string      Severity (critical, error, warning, info (default), debug)
+      --since string      Show since moment (i.e., 20min, 3h, UNIX timestamp)
+  -w, --watch             Watch / follow log output
+```
+
+Global Flags:
+
+```
+      --no-color        Disable color output
+      --remote string   Remote to use
+  -v, --verbose         Verbose output
+```
