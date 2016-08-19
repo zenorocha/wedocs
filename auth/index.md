@@ -79,6 +79,10 @@ Create a client id and client secret by [registering your application](https://g
 
 Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google. 
 
+**Manage Users**
+
+Create, delete or update users by a simple api.
+
 <!-- </article> -->
 
 <!-- <article id="initializing-auth"> -->
