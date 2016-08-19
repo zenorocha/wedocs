@@ -8,7 +8,7 @@
 
 In order to have access to WeDeploy functionalities you're going to receive an invite though email with the link to create a new account.
 
-![SignUp](https://cloud.githubusercontent.com/assets/301291/17794030/c75a120a-6560-11e6-867e-582391b3eb9c.png)
+![SignUp](https://cloud.githubusercontent.com/assets/301291/17795727/b519bbc2-656f-11e6-8185-b19eb31d0514.jpg)
 
 <!-- </article> -->
 
@@ -16,7 +16,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 ## 2. Access your dashboard
 
-As the main page, the dashboard will list all your projects and status of availability in the server.
+As the main page, the dashboard will list all your projects and status of availability in the server. In the Dashboard, click in New Project .
 
 ![Dashboard](https://cloud.githubusercontent.com/assets/301291/17794055/1648e0c6-6561-11e6-9636-1928a45742d5.png)
 
@@ -24,7 +24,9 @@ As the main page, the dashboard will list all your projects and status of availa
 
 <!-- <article id="3-create-a-new-project"> -->
 
-## 3. Create a New Project
+## 3. Create a new project
+
+You are able to organize your services by project. Select a project name and ID and click in Create Project.
 
 ![New Project](https://cloud.githubusercontent.com/assets/301291/17794088/489d7c94-6561-11e6-95d5-218dedc01d40.png)
 
