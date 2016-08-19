@@ -1,6 +1,6 @@
 # Email
 
-###### Send emails asynchronously and easily check their status using *WeDeploy™ Email*.
+###### Send emails asynchronously and check their status using *WeDeploy™ Email*.
 
 <!-- <article id="install-dependencies"> -->
 
@@ -73,7 +73,7 @@ http://emaildemo.wedeploy.me
 2. Go to the [Dashboard](http://dashboard.wedeploy.io).
 3. Create a project.
 4. In the sidebar, click on *GitHub Integration*.
-5. Type your repository URL and `master` branch.
+5. Type your repository URL and `js` branch.
 6. Click on *Update Project* and wait a few seconds.
 7. Once you see it in the Dashboard, your container will be ready to be used.
 
