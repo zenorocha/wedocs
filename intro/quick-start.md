@@ -38,17 +38,24 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 <!-- <article id="4-fourth-section"> -->
 
-## 4. Click in Install Container
+## 5. Click in Install Container
 
-![Project Container List](https://cloud.githubusercontent.com/assets/301291/17794105/5990a530-6561-11e6-9e3d-fa8ade3d93ac.png)
+![Project Container List](https://cloud.githubusercontent.com/assets/301291/17794534/1f2f7aca-6565-11e6-961c-652fcb1cb53b.png)
 
 <!-- </article> -->
 
 <!-- <article id="4-fourth-section"> -->
 
-## 5. Select a Container type
+## 6. Select a Container type
 
 ![New Project](https://cloud.githubusercontent.com/assets/301291/17794174/e36924f8-6561-11e6-8bf1-a14dd40f522b.png)
 
+<!-- </article> -->
+
+<!-- <article id="4-fourth-section"> -->
+
+## 7. Fill in the name and ID and click in install container
+
+![New Project](https://cloud.githubusercontent.com/assets/301291/17794174/e36924f8-6561-11e6-8bf1-a14dd40f522b.png)
 
 <!-- </article> -->
