@@ -1,5 +1,30 @@
 # Sign-in with GitHub
 
+###### You can let your users authenticate using their GitHub Accounts by integrating GitHub Sign-In into your app. *WeDeploy™ Authentication*.
+
+## Sign-in with GitHub
+
+<!-- <article id="sign-in> -->
+
+```js
+var auth = WeDeploy.auth();
+
+var provider = new auth.provider.Github();
+provider.setProviderScope("user:email");
+
+auth.signInWithRedirect(provider);
+
+auth.onSignIn(function(user) {
+	// Fires when user is signed in after redirect.
+});
+```
+
+<!-- </article> -->
+
+<!-- <article id="setup-app-client-id-and-secret> -->
+
+## Setup app client id and secret
+
 Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub. After retrieving the client id and client secret you can configure it as environment variables of the authentication container.
 
 ```json
@@ -16,25 +41,6 @@ Create a client id and client secret by [registering your application](https://g
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "providers,password,resetKey,supportedScopes"
 	}
 }
-```
-
-## Sign-in with GitHub
-
-<!-- <article id="sign-in-with-github> -->
-
-You can let your users authenticate with WeDeploy using their GitHub accounts by integrating GitHub authentication into your app.
-
-```js
-var auth = WeDeploy.auth();
-
-var provider = new auth.provider.Github();
-provider.setProviderScope("user:email");
-
-auth.signInWithRedirect(provider);
-
-auth.onSignIn(function(user) {
-	// Fires when user is signed in after redirect.
-});
 ```
 
 <!-- </article> -->

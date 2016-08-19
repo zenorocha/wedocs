@@ -1,5 +1,30 @@
 # Sign-in with Google
 
+###### You can let your users authenticate using their Google Accounts by integrating Google Sign-In into your app. *WeDeploy™ Authentication*.
+
+## Sign-in with Google
+
+<!-- <article id="sign-in> -->
+
+```js
+var auth = WeDeploy.auth();
+
+var provider = new auth.provider.Google();
+provider.setProviderScope("email");
+
+auth.signInWithRedirect(provider);
+
+auth.onSignIn(function(user) {
+	// Fires when user is signed in after redirect.
+});
+```
+
+<!-- </article> -->
+
+<!-- <article id="setup-app-client-id-and-secret> -->
+
+## Setup app client id and secret
+
 Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google. 
 
 ```json
@@ -16,25 +41,6 @@ Create a client id and client secret by [registering your application](https://d
 		"WEDEPLOY_AUTH_SECURE_FIELDS": "providers,password,resetKey,supportedScopes"
 	}
 }
-```
-
-## Sign-in with Google
-
-<!-- <article id="sign-in-with-google> -->
-
-You can let your users authenticate with WeDeploy using their Google Accounts by integrating Google Sign-In into your app. 
-
-```js
-var auth = WeDeploy.auth();
-
-var provider = new auth.provider.Google();
-provider.setProviderScope("email");
-
-auth.signInWithRedirect(provider);
-
-auth.onSignIn(function(user) {
-	// Fires when user is signed in after redirect.
-});
 ```
 
 <!-- </article> -->
