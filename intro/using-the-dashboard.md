@@ -41,7 +41,7 @@ You are able to organize your services by project. Select a project name and ID 
 
 ## 4. Open your project
 
-Open your server by clicking in the Project name.
+Open your project by clicking in the Project name.
 
 ![Project Container List](https://cloud.githubusercontent.com/assets/301291/17795964/ba9a34d0-6571-11e6-9d49-c30e4862d2c2.jpg)
 
@@ -49,7 +49,7 @@ Open your server by clicking in the Project name.
 
 <!-- <article id="5-click-in-install-container"> -->
 
-## 5. Click in Install Container
+## 5. Click on Install Container
 
 Projects can have more than one container. In this example we're going to deploy a static website.
 
@@ -82,42 +82,42 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 <!-- </article> -->
 
-<!-- <article id="8-hosting-template-and-github-repository"> -->
+<!-- <article id="9-download-the-hosting-boilerplate"> -->
 
-## 8. Download the hosting boilerplate and create a Github Repository
+## 9. Download the hosting boilerplate and create a GitHub Repository
 
 In order to facilitate your work, WeDeploy provide many boilerplates to help you to deploy many types of applications. In this example download the [Static Host Boilerplate](https://github.com/wedeploy/boilerplate-hosting).
 
 <!-- </article> -->
 
-<!-- <article id="9-github-project"> -->
-
-## 9. Configure the github for the project
-
-In this current version, WeDeploy only supports public Github repositories. This repository is going to be used to trigger deployments every time you send a new commit.
-![Configure Github Host](https://cloud.githubusercontent.com/assets/301291/17795272/c3fbf5dc-656b-11e6-8e81-79a97c97f9cb.png)
-
-<!-- </article> -->
-
 <!-- <article id="10-github-project"> -->
 
-## 10. Push your boilerplate to the github repository
+## 10. Configure the GitHub for the project
 
-After download the boilerplate, you should add your remote repository in the git config of your folder. Every time you send a new commit to its github repository, WeDeploy will build and deploy your project automatically.
+In this current version, WeDeploy only supports public GitHub repositories. This repository is going to be used to trigger deployments every time you send a new commit.
+![Configure GitHub Host](https://cloud.githubusercontent.com/assets/301291/17795272/c3fbf5dc-656b-11e6-8e81-79a97c97f9cb.png)
+
+<!-- </article> -->
+
+<!-- <article id="11-push-your-boilerplate"> -->
+
+## 11. Push your boilerplate to the GitHub repository
+
+After download the boilerplate, you should add your remote repository in the git config of your folder. Every time you send a new commit to its GitHub repository, WeDeploy will build and deploy your project automatically.
 <!-- </article> -->
 
 
-<!-- <article id="11-generated-url"> -->
+<!-- <article id="12-access-the-url-generated"> -->
 
-## 11. Access the url generated for your container
-Now that you installed the boilerplate, in the container screen is possible to see the status of the container and its URL. Click in the url to copy to your clipboard and open that in a new tab in your browser.
+## 12. Access the url generated for your container
+Now that you installed the boilerplate, in the container screen is possible to see the status of the container and its URL. Click on the url to copy to your clipboard and open that in a new tab in your browser.
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/17795316/424b3a2e-656c-11e6-8023-904b83b091f5.png)
 
 <!-- </article> -->
 
-<!-- <article id="12-it-works"> -->
+<!-- <article id="13-it-works"> -->
 
-## 12. It works!
+## 13. It works!
 That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/17796616/b2ca3fd4-6576-11e6-8e18-85423f206b94.jpg)
 
