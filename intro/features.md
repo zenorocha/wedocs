@@ -1,6 +1,6 @@
 # Features
 
-###### Features Sub
+###### This is an overview of the features that make WeDeploy™ easiest way to deploy and scale applications.
 
 <!-- <article id="1-zero-downtime-upgrades"> -->
 
