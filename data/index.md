@@ -68,7 +68,7 @@ Writing new data is as simple as sending a JSON.
 
 ```
 WeDeploy
-  .url('/data/movies')
+  .url('http://data.datademo.wedeploy.me/movies')
   .post({
     "title": "Star Wars IV",
     "year": 1977,
@@ -99,13 +99,13 @@ The URL we just created stored a new document in our app's service, inside the c
 For example, to reference the newly created Star Wars rating, we can use the path:
 
 ```
-/data/movies/115992383516607958/rating
+http://data.datademo.wedeploy.me/movies/115992383516607958/rating
 ```
 
 From this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .path('115992383516607958')
    .form('stars', 'Mark Hamill')
    .form('stars', 'Harrison Ford')
@@ -128,7 +128,7 @@ Note in the example above the data was sent as request form attributes. The resp
 To create a document with a custom ID, or override an existing one, we can use the PUT method at the document level. The following example creates a new entry with the custom ID star_wars_v:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
   .path('star_wars_v')
   .put({
     "title":"Star Wars: Episode V - The Empire Strikes Back",
@@ -145,9 +145,9 @@ To override an existing entry you would just specify the existing ID.
 To delete a field, document, or the entire collection, we just use the DELETE method:
 
 ```
-WeDeploy.url('/data/movies/star_wars_v/title').delete();
-WeDeploy.url('/data/movies/star_wars_v').delete();
-WeDeploy.url('/data/movies').delete();
+WeDeploy.url('http://data.datademo.wedeploy.me/movies/star_wars_v/title').delete();
+WeDeploy.url('http://data.datademo.wedeploy.me/movies/star_wars_v').delete();
+WeDeploy.url('http://data.datademo.wedeploy.me/movies').delete();
 ```
 
 <!-- </article> -->
@@ -160,7 +160,7 @@ Reading data from our storage takes only 3 lines of code.
 
 ```
 WeDeploy
-  .url('/data/movies/star_wars_v')
+  .url('http://data.datademo.wedeploy.me/movies/star_wars_v')
   .get();
 ```
 
@@ -179,14 +179,14 @@ We can also get any field value using the full path:
 
 ```
 WeDeploy
-  .url('/data/movies/star_wars_v/title')
+  .url('http://data.datademo.wedeploy.me/movies/star_wars_v/title')
   .get();
 ```
 
 The full path returns the raw content in the response body:
 
 Star Wars: Episode V - The Empire Strikes Back
-Requesting the entire movies collection using curl -X "GET" "/data/movies" results in the first 10 documents stored:
+Requesting the entire movies collection using curl -X "GET" "http://data.datademo.wedeploy.me/movies" results in the first 10 documents stored:
 
 ```
 [
@@ -203,7 +203,7 @@ Requesting the entire movies collection using curl -X "GET" "/data/movies" resul
 The result is ordered by the document id, as we can see in the list above. We can select the order we want the results to be in, by passing a sort parameter, using the following code:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .sort('rating', 'desc')
    .get();
 ```
@@ -227,7 +227,7 @@ Notice that Episode VII has no rating, as it was not released yet, thus it's sor
 In addition to sorting the results, we can also apply filters using the following code:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .filter('year', '<', 2000)
    .filter('rating', '>', 8.5)
    .get();
@@ -245,7 +245,7 @@ The result of the filters just used is the following entries:
 We can also paginate the result using the limit and offset properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .filter('year', '>', 2000)
    .sort('rating')
    .limit(2)
@@ -276,7 +276,7 @@ Well, we did some great stuff with basic HTTP methods, like create, update, and 
 First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our match operator is just what we need to run the search.
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
   .get(Filter.match('title', "Sith's revenge"));
 ```
 
@@ -290,15 +290,15 @@ We can also use simple text operators in our match:
 
 ```
 // we can run this
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
   .get(Filter.match('title', '(jedi | force) -return'));
 
 // or this
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
   .get(Filter.match('title', 'awake*'));
 
 // or even this
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
   .get(Filter.match('title', 'wakens~'));
 ```
 
@@ -313,7 +313,7 @@ What we did with * can also be done with the prefix operator Filter.prefix('titl
 So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
   .search(Filter.similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!'))
   .get();
 ```
@@ -361,7 +361,7 @@ Notice that the score of the star_wars_vii document is bigger than the other mat
 Want more? Well, let's make things even easier for the user! Adding one entry to the search query, we can automatically highlight the words that matched our query, showing not only how relevant the document is to the search, but also where it matches our criteria. We can do this with small changes in our previous search, using the following code:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
   .search(Filter.similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!'))
   .highlight('title')
   .get();
@@ -408,7 +408,7 @@ As you can see in the code below, our keywords are highlighted in the results:
 The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? Well, we can do that with aggregations, using the following code:
 
 ```
-WeDeploy.url('/data/movies')
+WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .filter(Filter.lt('year', 1990))
    .aggregate('Old Movies', 'rating', 'avg')
    .count()
@@ -453,7 +453,7 @@ The last search feature we will cover here needs a little setup before we put ou
 
 ```
 WeDeploy
-  .url('/data/places/my_place/foo')
+  .url('http://data.datademo.wedeploy.me/places/my_place/foo')
   .put("bar");
 ```
 
@@ -461,7 +461,7 @@ And then run the following request afterwards:
 
 ```
 WeDeploy
-  .url('/data/places/my_place/foo')
+  .url('http://data.datademo.wedeploy.me/places/my_place/foo')
   .put({ someObject: true });
 ```
 
@@ -491,6 +491,9 @@ WeDeploy
   .then(function(response) {
     console.log( response.body() );
   });
+```
+
+```
 [
   {
     "movies": {
@@ -525,7 +528,7 @@ We can never update an already mapped field, but we can map new fields in an exi
 So, we mapped a field called location, in the collection places, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let's try something simple: find cinemas close to London's Waterloo Station. To run the search criteria, we'll use the following code:
 
 ```
-WeDeploy.url('/data/places')
+WeDeploy.url('http://data.datademo.wedeploy.me/places')
    .filter(Filter.any('category', 'cinema'))
    .filter(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
    .get();
@@ -578,7 +581,7 @@ Now we can plug a map to our app, and let users see and filter places, with just
 Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in realtime, all we need to do is change the WeDeploy API method we use to the watch method:
 
 ```
-WeDeploy.url('/data/places')
+WeDeploy.url('http://data.datademo.wedeploy.me/places')
    .filter(Filter.any('category', 'cinema'))
    .filter(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
    .watch()
