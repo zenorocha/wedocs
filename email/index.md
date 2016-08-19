@@ -2,29 +2,90 @@
 
 ###### Send emails asynchronously and easily check their status using *WeDeploy™ Email*.
 
-<!-- <article id="1-install-email-container"> -->
+<!-- <article id="install-dependencies"> -->
 
-## 1. Install Email Container
+## Install Dependencies
 
-First, we need to make sure that *WeDeploy™ Email* is installed. We can do that by following these steps:
+WeDeploy relies on three dependencies, make sure to download them before we continue.
 
-1. Go to the Dashboard.
-2. Select your project.
-3. Click on *"Install Container"*.
-4. Select *"WeDeploy Email"*
-5. Click on *"Install Container"*.
+**A) Git**
 
-Once we installed it, WeDeploy will provide an endpoint for this container. This endpoint will be used to access all the RESTful APIs that this container exposes. A container endpoint looks like this `<containerID>.<projectID>.wedeploy.io`, for example: `email.sample.wedeploy.io`.
+Git is a version control system that is required for working with WeDeploy projects.
 
-<div class="guide-download">
-	<a href="https://github.com/wedeploy/boilerplate-email/archive/js.zip" class="btn btn-accent btn-sm"><span class="icon-16-download"></span>Download JavaScript Email Boilerplate</a>
-</div>
+* [Mac OS X](https://git-scm.com/download/mac)
+* [Windows](https://git-scm.com/download/win)
+* [Linux](https://git-scm.com/download/linux)
+
+**B) Docker**
+
+Docker is a tool that automates the deployment of WeDeploy containers in your local environment.
+
+* [Mac OS X](https://download.docker.com/mac/stable/Docker.dmg)
+* [Windows](https://download.docker.com/win/stable/InstallDocker.msi)
+* [Linux](https://docs.docker.com/engine/installation/linux/)
+
+**C) WeDeploy CLI**
+
+The WeDeploy Command-Line Interface (CLI) is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications.
+
+```text
+curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
+```
 
 <!-- </article> -->
 
-<!-- <article id="2-send-an-email"> -->
+<!-- <article id="running-locally"> -->
 
-## 2. Send an Email
+## Running locally
+
+1. Start local infrastructure:
+
+  ```text
+we run
+  ```
+
+2. Clone this repository:
+
+  ```text
+git clone -b js https://github.com/wedeploy/boilerplate-email.git boilerplate-email-js
+cd boilerplate-email-js
+  ```
+
+3. Link this container with the local infrastructure:
+
+  ```text
+we link
+  ```
+
+4. Now your container is ready to be used:
+
+  ```text
+http://emaildemo.wedeploy.me
+  ```
+
+<!-- </article> -->
+
+<!-- <article id="deploying-to-the-cloud"> -->
+
+## Deploying to the cloud
+
+1. [Fork this repository](https://github.com/wedeploy/boilerplate-email/fork).
+2. Go to the [Dashboard](http://dashboard.wedeploy.io).
+3. Create a project.
+4. In the sidebar, click on *GitHub Integration*.
+5. Type your repository URL and `master` branch.
+6. Click on *Update Project* and wait a few seconds.
+7. Once you see it in the Dashboard, your container will be ready to be used.
+
+  ```text
+http://emaildemo.wedeploy.io
+  ```
+
+<!-- </article> -->
+
+<!-- <article id="sending-an-email"> -->
+
+## Sending an Email
 
 Now that we have our container up and running, it's time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.
 
@@ -51,9 +112,9 @@ As a result, we'll receive an email ID. This doesn't indicate that the email was
 
 <!-- </article> -->
 
-<!-- <article id="3-check-email-status"> -->
+<!-- <article id="checking-email-status"> -->
 
-## 3. Check an Email Status
+## Checking an Email Status
 
 In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. `123`, and send a `GET` request to `/emails/123/status`.
 
@@ -71,6 +132,6 @@ WeDeploy
 
 <!-- </article> -->
 
-## 4. What's Next?
+## What's Next?
 
-* That's it! Now we're ready to host our static files, which we'll cover in the [next section](./hosting/).
+* That's it! Now we're ready to start sending emails to our users.

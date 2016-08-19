@@ -85,4 +85,4 @@ http://hosting.<projectID>.wedeploy.io
 
 ## What's Next?
 
-* Now you can start adding new static files and keep growing your application.
+* Now you can start adding new static files and grow your application.
