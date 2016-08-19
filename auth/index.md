@@ -84,6 +84,8 @@ Create a client id and client secret by [registering your application](https://d
 WeDeploy.auth('http://auth.<projectID>.wedeploy.me');
 ```
 
+<!-- </article> -->
+
 ## Initializing auth service on the Cloud
 
 ```js
@@ -92,7 +94,11 @@ WeDeploy.auth('http://auth.<projectID>.wedeploy.io');
 
 After initialized the authentication service url, WeDeploy client stores its information for future calls.
 
+<!-- </article> -->
+
 ## Sign-In With Password
+
+You can use WeDeploy Authentication to let your users authenticate with WeDeploy using their email addresses and passwords.
 
 ```js
 WeDeploy
@@ -106,7 +112,11 @@ WeDeploy
 	});
 ```
 
+<!-- </article> -->
+
 ## Sign-In With Redirect (GitHub)
+
+You can let your users authenticate with WeDeploy using their GitHub accounts by integrating GitHub authentication into your app.
 
 ```js
 var auth = WeDeploy.auth();
@@ -121,7 +131,11 @@ auth.onSignIn(function(user) {
 });
 ```
 
+<!-- </article> -->
+
 ## Sign-In With Redirect (Google)
+
+You can let your users authenticate with WeDeploy using their Google Accounts by integrating Google Sign-In into your app. 
 
 ```js
 var auth = WeDeploy.auth();
@@ -136,21 +150,27 @@ auth.onSignIn(function(user) {
 });
 ```
 
+<!-- </article> -->
+
 ## Sign-Out
 
 ```js
 WeDeploy
 	.auth()
 	.signOut()
-		.then(function() {
-			// User is signed out.
-		})
-		.catch(function(err) {  
-		  // User was signed out.
-		});
+	.then(function() {
+		// User is signed out.
+	})
+	.catch(function(err) {  
+	  // User was signed out.
+	});
 ```
 
+<!-- </article> -->
+
 ## Create User
+
+You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
 
 ```js
 WeDeploy
@@ -166,6 +186,8 @@ WeDeploy
 	  // Not created.
 	});
 ```
+
+<!-- </article> -->
 
 ## Get User
 
@@ -191,8 +213,11 @@ WeDeploy
 	});
 ```
 
+<!-- </article> -->
 
 ## Delete User
+
+You can delete a user account with the delete method. For example:
 
 ```js
 var currentUser = WeDeploy.auth().currentUser;
@@ -207,7 +232,11 @@ currentUser.deleteUser()
 ```
 
 
+<!-- </article> -->
+
 ## Update User
+
+You can update a user's basic information. For example:
 
 ```js
 var currentUser = WeDeploy.auth().currentUser;
@@ -226,7 +255,11 @@ currentUser.updateUser({
 });
 ```
 
+<!-- </article> -->
+
 ## Send a password reset email
+
+You can send a password reset email to a user with the sendPasswordResetEmail method. For example:
 
 ```js
 WeDeploy
