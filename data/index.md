@@ -1,80 +1,120 @@
-# Praesent semper augue
+# Data
 
-###### Illum magni, nulla animi id expedita minima qui aliquam excepturi praesentium ex fugit quis sint. Illo beatae, minus pariatur velit possimus quia, voluptates eum aliquam neque libero earum optio harum exercitationem aut error.
+###### Leverage a NoSQL database with search and realtime capabilities using *WeDeploy™ Data*.
 
-<!-- <article id="1-first-section"> -->
+<!-- <article id="install-dependencies"> -->
 
-## 1. Consectetur adipisicing elit
+## Install Dependencies
 
-*Lorem* ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quo ad, error nihil deserunt quia neque numquam atque debitis. Obcaecati [laudantium adipisci](#) deserunt eveniet, placeat repellendus ut qui `tempore` recusandae!
+WeDeploy relies on three dependencies, make sure to download them before we continue.
 
-```xml
-<repositories>
-  <repository>
-    <id>jcenter</id>
-    <url>http://jcenter.bintray.com</url>
-  </repository>
-</repositories>
+**A) Git**
 
-<dependencies>
-  <dependency>
-    <groupId>com.liferay.launchpad</groupId>
-  <artifactId>api-client</artifactId>
-  <version>0.40.2</version>
-  </dependency>
-</dependencies>
+Git is a version control system that is required for working with WeDeploy projects.
+
+* [Mac OS X](https://git-scm.com/download/mac)
+* [Windows](https://git-scm.com/download/win)
+* [Linux](https://git-scm.com/download/linux)
+
+**B) Docker**
+
+Docker is a tool that automates the deployment of WeDeploy containers in your local environment.
+
+* [Mac OS X](https://download.docker.com/mac/stable/Docker.dmg)
+* [Windows](https://download.docker.com/win/stable/InstallDocker.msi)
+* [Linux](https://docs.docker.com/engine/installation/linux/)
+
+**C) WeDeploy CLI**
+
+The WeDeploy Command-Line Interface (CLI) is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications.
+
+```text
+curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
 ```
 
 <!-- </article> -->
 
-<!-- <article id="2-second-section"> -->
+<!-- <article id="running-locally"> -->
 
-## 2. Possimus impedit deleniti
+## Running locally
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis quas hic veritatis numquam aut recusandae aperiam nesciunt exercitationem [fuga atque qui](#), minima, cum asperiores repellendus at debitis accusamus quaerat quae soluta obcaecati similique.
+1. Start local infrastructure:
 
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
-* Lorem ipsum dolor sit amet.
+  ```text
+we run
+  ```
 
-Perspiciatis asperiores eum vel unde blanditiis veritatis, voluptatem numquam laudantium aspernatur quisquam commodi magnam, excepturi culpa debitis dolor. Quis labore illum repellat quia incidunt, deserunt saepe. Aperiam illo consectetur soluta obcaecati tempore, dignissimos ipsa cum aliquam quis alias, doloribus quaerat, voluptatum voluptatem ipsum cupiditate repellat.
+2. Clone this repository:
 
-> Animi labore ducimus praesentium, eius ipsum enim accusantium maiores accusamus sapiente ullam ex, quod atque iure officiis minus tempore libero delectus qui iste illo. Non aliquid rem adipisci veniam perferendis cum, quas laboriosam tempora accusantium fuga, architecto et dicta eveniet ut.
+  ```text
+git clone -b js https://github.com/wedeploy/boilerplate-data.git boilerplate-data-js
+cd boilerplate-data-js
+  ```
 
-<!-- </article> -->
+3. Link this container with the local infrastructure:
 
-<!-- <article id="3-third-section"> -->
+  ```text
+we link
+  ```
 
-## 3. Sit aliquid nostrum fugit
+4. Now your container is ready to be used:
 
-Nisi mollitia saepe soluta, voluptatum sapiente, sequi molestiae minus ducimus quas possimus tempore iste et modi aliquam vel tenetur sint reiciendis aperiam [voluptatem exercitationem](#) nulla molestias incidunt accusamus delectus in.
-
-Adipisci doloribus harum exercitationem quis quam quasi quos maxime, iusto doloremque hic at qui dolores totam aperiam consectetur, ipsa perspiciatis nostrum obcaecati cumque expedita tempore quae tenetur consequatur quisquam molestiae.
-
-```java
-WeDeploy.url("/items")
-  .header("Content-Type", "application/json")
-  .post("{\"title\":\"Star Wars IV\",\"year\":1977}");
-```
-
-Excepturi nihil nulla nam unde consequuntur illum reiciendis deserunt rem iste necessitatibus, ullam vel assumenda voluptate atque pariatur repellendus, nostrum `voluptatum` omnis quisquam modi vitae impedit, eius mollitia obcaecati autem.
-
-Qui, rerum ad atque impedit a molestiae voluptates quibusdam porro hic nostrum maxime, eos doloribus accusamus deleniti, sequi eveniet nihil necessitatibus optio neque nam eius doloremque eligendi. Provident.
+  ```text
+http://datademo.wedeploy.me
+  ```
 
 <!-- </article> -->
 
-<!-- <article id="4-fourth-section"> -->
+<!-- <article id="deploying-to-the-cloud"> -->
 
-## 4. Non esse id excepturi iste
+## Deploying to the cloud
 
-Veniam culpa ipsum, dolores repudiandae, odio ex alias reiciendis maiores amet dolore voluptatum sequi, eos iusto! Laudantium saepe minima, sint, earum atque voluptatem ipsam. At debitis maxime neque, amet dolore similique, quaerat cum praesentium, rem `inventore` vel dolorem! Error corporis, totam labore molestiae cum repellat quas eaque maxime eius cumque impedit consectetur, sequi fugiat rem velit commodi optio iure quibusdam doloremque, quidem quae voluptates, mollitia eos.
+1. [Fork this repository](https://github.com/wedeploy/boilerplate-data/fork).
+2. Go to the [Dashboard](http://dashboard.wedeploy.io).
+3. Create a project.
+4. In the sidebar, click on *GitHub Integration*.
+5. Type your repository URL and `js` branch.
+6. Click on *Update Project* and wait a few seconds.
+7. Once you see it in the Dashboard, your container will be ready to be used.
 
-Eos alias debitis est obcaecati corrupti vero [voluptas commodi veniam](#) accusamus non adipisci architecto necessitatibus, voluptatem at ipsa eveniet quas, ex reprehenderit quo beatae mollitia sunt? Molestias eum, provident magni architecto laboriosam voluptatem veniam itaque a est perspiciatis eaque corporis dolor ratione. Ea commodi magni reprehenderit debitis esse quidem odio maxime consectetur delectus ipsa libero quas quibusdam, earum doloremque, tempora molestias, facere hic doloribus, voluptates tenetur suscipit expedita obcaecati.
+  ```text
+http://datademo.wedeploy.io
+  ```
 
 <!-- </article> -->
 
-## 5. What's Next?
+<!-- <article id="saving-data"> -->
 
-* Excepturi nihil nulla nam, [lorem ipsum dolor](./lorem.html).
+## Saving Data
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis quas hic veritatis numquam aut recusandae aperiam nesciunt exercitationem, minima, cum asperiores repellendus at debitis accusamus quaerat quae soluta obcaecati similique.
+
+<!-- </article> -->
+
+<!-- <article id="retrieving-data"> -->
+
+## Retrieving Data
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis quas hic veritatis numquam aut recusandae aperiam nesciunt exercitationem, minima, cum asperiores repellendus at debitis accusamus quaerat quae soluta obcaecati similique.
+
+<!-- </article> -->
+
+<!-- <article id="searching-data"> -->
+
+## Searching Data
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis quas hic veritatis numquam aut recusandae aperiam nesciunt exercitationem, minima, cum asperiores repellendus at debitis accusamus quaerat quae soluta obcaecati similique.
+
+<!-- </article> -->
+
+<!-- <article id="watching-data-changes"> -->
+
+## Watching Data Changes
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium perferendis quas hic veritatis numquam aut recusandae aperiam nesciunt exercitationem, minima, cum asperiores repellendus at debitis accusamus quaerat quae soluta obcaecati similique.
+
+<!-- </article> -->
+
+## What's Next?
+
+* Now we're ready to save and retrive data in real-time.
