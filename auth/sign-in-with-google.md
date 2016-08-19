@@ -1,4 +1,4 @@
-# Sign-in with Google
+# Sign-in With Google
 
 ###### You can let your users authenticate using their Google Accounts by integrating Google Sign-In into your app. *WeDeploy™ Authentication*.
 

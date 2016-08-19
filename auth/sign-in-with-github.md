@@ -1,4 +1,4 @@
-# Sign-in with GitHub
+# Sign-in With GitHub
 
 ###### You can let your users authenticate using their GitHub Accounts by integrating GitHub Sign-In into your app. *WeDeploy™ Authentication*.
 
