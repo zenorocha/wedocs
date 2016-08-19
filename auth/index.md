@@ -1,12 +1,12 @@
 # Auth
 
-###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook and Twitter, and more using *WeDeploy™ Auth*.
+###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, and Twitter, and more using *WeDeploy™ Auth*.
 
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies
 
-This section assumes that you already have the **WeDeploy CLI** installed and **Docker** is running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
+This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
 
 <!-- </article> -->
 
@@ -96,7 +96,7 @@ WeDeploy.auth('http://auth.<projectID>.wedeploy.me');
 WeDeploy.auth('http://auth.<projectID>.wedeploy.io');
 ```
 
-After initialized the authentication service url, WeDeploy client stores its information for future calls.
+After initialized the authentication service URL, WeDeploy client stores its information for future calls.
 
 <!-- </article> -->
 
@@ -108,14 +108,14 @@ You can use WeDeploy Authentication to let your users authenticate with WeDeploy
 
 ```js
 WeDeploy
-	.auth()
-	.signInWithEmailAndPassword("user@domain.com", "password")
-	.then(function(user) {
-		// User is signed in.
-	})
-	.catch(function(err) {  
-	  // User is not signed in.
-	});
+    .auth()
+    .signInWithEmailAndPassword("user@domain.com", "password")
+    .then(function(user) {
+        // User is signed in.
+    })
+    .catch(function(err) {  
+      // User is not signed in.
+    });
 ```
 
 <!-- </article> -->
@@ -126,14 +126,14 @@ WeDeploy
 
 ```js
 WeDeploy
-	.auth()
-	.signOut()
-	.then(function() {
-		// User is signed out.
-	})
-	.catch(function(err) {  
-	  // User was signed out.
-	});
+    .auth()
+    .signOut()
+    .then(function() {
+        // User is signed out.
+    })
+    .catch(function(err) {  
+      // User was signed out.
+    });
 ```
 
 <!-- </article> -->
@@ -146,17 +146,17 @@ You create a new user in your WeDeploy project by calling the `createUser` metho
 
 ```js
 WeDeploy
-	.auth()
-	.createUser({
-		email: 'user@domain.com',
-		password: 'abc'
-	})
-	.then(function(user) {  
-		// Successfully created.
-	})
-	.catch(function(err) {  
-	  // Not created.
-	});
+    .auth()
+    .createUser({
+        email: 'user@domain.com',
+        password: 'abc'
+    })
+    .then(function(user) {  
+        // Successfully created.
+    })
+    .catch(function(err) {  
+      // Not created.
+    });
 ```
 
 <!-- </article> -->
@@ -169,9 +169,9 @@ WeDeploy
 var currentUser = WeDeploy.auth().currentUser;
 
 if (currentUser) {
-	// User is signed in.
+    // User is signed in.
 } else {
-	// No user is signed in.
+    // No user is signed in.
 }
 ```
 
@@ -183,14 +183,14 @@ if (currentUser) {
 
 ```js
 WeDeploy
-	.auth()
-	.getUser(userId)
-	.then(function(user) {
-		// User found.
-	})
-	.catch(function(err) {  
-		// User does not exists.
-	});
+    .auth()
+    .getUser(userId)
+    .then(function(user) {
+        // User found.
+    })
+    .catch(function(err) {  
+        // User does not exists.
+    });
 ```
 
 <!-- </article> -->
@@ -205,12 +205,12 @@ You can delete a user account with the delete method. For example:
 var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.deleteUser()
-	.then(function() {  
-		// Successfully deleted.
-	})
-	.catch(function(err) {  
-	  // Not deleted.
-	});
+    .then(function() {  
+        // Successfully deleted.
+    })
+    .catch(function(err) {  
+      // Not deleted.
+    });
 ```
 
 
@@ -226,13 +226,13 @@ You can update a user's basic information. For example:
 var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.updateUser({
-	password: "password",
-	email: "eleven@hawkinslabs.com",
-	name: "Eleven",
-	photoUrl: "https://hawkinslabs.com/011/profile.jpg"
+    password: "password",
+    email: "eleven@hawkinslabs.com",
+    name: "Eleven",
+    photoUrl: "https://hawkinslabs.com/011/profile.jpg"
 })
 .then(function() {  
-	// Successfully updated.
+    // Successfully updated.
 })
 .catch(function(err) {  
   // Not updated.
@@ -249,18 +249,18 @@ You can send a password reset email to a user with the sendPasswordResetEmail me
 
 ```js
 WeDeploy
-	.auth()
-	.sendPasswordResetEmail("user@domain.com")
-	.then(function() {
-		// Email sent.
-	})
-	.catch(function(err) {  
-	  // An error happened.
-	});
+    .auth()
+    .sendPasswordResetEmail("user@domain.com")
+    .then(function() {
+        // Email sent.
+    })
+    .catch(function(err) {  
+      // An error happened.
+    });
 ```
 
 <!-- </article> -->
 
 ## What's Next?
 
-* Now we're ready to start authenticating and grow our user base.
+* Now we're ready to start authenticating accounts and growing our user base.
