@@ -20,7 +20,7 @@ Create a client id and client secret by [registering your application](https://d
 
 ## Sign-in with Google
 
-<!-- <article id="sign-in-with-github> -->
+<!-- <article id="sign-in-with-google> -->
 
 You can let your users authenticate with WeDeploy using their Google Accounts by integrating Google Sign-In into your app. 
 
