@@ -2,7 +2,7 @@
 
 ###### Forget about infrastructure. WeDeploy helps you to dedicate your time to what really matters: building and scaling great apps. Before going further in WeDeploy, make sure you understand its purpose and philosophy.
 
-<!-- <article id="1-first-section"> -->
+<!-- <article id="1-what-is-wedeploy"> -->
 
 ## 1. What's WeDeploy?
 
@@ -21,26 +21,23 @@ With WeDeploy, you are able to quickly and efficiently respond to user demand:
 
 <!-- </article> -->
 
-<!-- <article id="2-second-section"> -->
+<!-- <article id="2-why-should-i-use-wedeploy"> -->
 
-## 2. WeDeploy is not
+## 2. Why should I use WeDeploy?
 
-[to do]
+Even though WeDeploy provides a lot of tools you need to develop high-quality app, there are always news scenarios that would benefit from automated management.
 
-<!-- </article> -->
+In order to focus on development, you can leave the hard work of infrastructure and scalability of your services. We cover the major essentials features in order to allow you to monetize your business and focus on your users.
 
-<!-- <article id="3-third-section"> -->
-
-## 3. Why should I use WeDeploy?
-
-[to do]
+This is why WeDeploy was also designed to serve as a platform for building an manageable ecosystem of components and tools to make it easier to deploy and scale any application.
 
 <!-- </article> -->
+
 
 <!-- <article id="4-fourth-section"> -->
 
 ## 4. How WeDeploy will help me to deploy from simple to advanced applications?
 
-[to do]
+WeDeploy provides a large amou
 
 <!-- </article> -->
