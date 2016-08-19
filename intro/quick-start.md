@@ -77,7 +77,9 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 <!-- <article id="8-hosting-template-and-github-repository"> -->
 
-## 8. Download the hosting template and create a Github Repository
+## 8. Download the hosting boilerplate and create a Github Repository
+
+In order to facilitate your work, WeDeploy provide many boilerplates to help you to deploy many types of applications. In this example download the [Static Host Boilerplate](https://github.com/wedeploy/boilerplate-hosting).
 
 <!-- </article> -->
 
@@ -85,30 +87,31 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## 9. Configure the github for the project
 
-![Configure Github Host](https://cloud.githubusercontent.com/assets/301291/17795272/c3fbf5dc-656b-11e6-8e81-79a97c97f9cb.png))
+In this current version, WeDeploy only supports public Github repositories. This repository is going to be used to trigger deployments every time you send a new commit.
+![Configure Github Host](https://cloud.githubusercontent.com/assets/301291/17795272/c3fbf5dc-656b-11e6-8e81-79a97c97f9cb.png)
 
 <!-- </article> -->
 
 <!-- <article id="9-github-project"> -->
 
-## 10. Push your template to the github repository
+## 10. Push your boilerplate to the github repository
 
+After download the boilerplate, you should add your remote repository in the git config of your folder. Every time you send a new commit to its github repository, WeDeploy will build and deploy your project automatically.
 <!-- </article> -->
 
 
 <!-- <article id="10-generated-url"> -->
 
 ## 11. Access the url generated for your container
-
-![URL Generated](https://cloud.githubusercontent.com/assets/301291/17795316/424b3a2e-656c-11e6-8023-904b83b091f5.png))
+Now that you installed the boilerplate, in the container screen is possible to see the status of the container and its URL. Click in the url to copy to your clipboard and open that in a new tab in your browser.
+![URL Generated](https://cloud.githubusercontent.com/assets/301291/17795316/424b3a2e-656c-11e6-8023-904b83b091f5.png)
 
 <!-- </article> -->
 
 <!-- <article id="11-it-works"> -->
 
 ## 12. It works!
-
-![URL Generated](https://cloud.githubusercontent.com/assets/301291/17795480/859b7b3a-656d-11e6-8d78-49e6b9d94640.png))
-
+That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
+![URL Generated](https://cloud.githubusercontent.com/assets/301291/17795480/859b7b3a-656d-11e6-8d78-49e6b9d94640.png)
 
 <!-- </article> -->
