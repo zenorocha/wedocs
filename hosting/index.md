@@ -2,9 +2,9 @@
 
 ###### Serve static files easily using *WeDeploy™ Hosting*.
 
-<!-- <article id="1-install-dependencies"> -->
+<!-- <article id="install-dependencies"> -->
 
-## 1. Install Dependencies
+## Install Dependencies
 
 WeDeploy relies on three dependencies, make sure to download them before we continue.
 
@@ -28,46 +28,46 @@ Docker is a tool that automates the deployment of WeDeploy containers in your lo
 
 The WeDeploy Command-Line Interface (CLI) is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications.
 
-```sh
+```text
 curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
 ```
 
 <!-- </article> -->
 
-<!-- <article id="2-running-locally"> -->
+<!-- <article id="running-locally"> -->
 
-## 2. Running locally
+## Running locally
 
-Start local infrastructure:
+1. Start local infrastructure:
 
-```sh
+  ```text
 we run
-```
+  ```
 
-Clone this repository:
+2. Clone this repository:
 
-```sh
+  ```text
 git clone https://github.com/wedeploy/boilerplate-hosting.git
 cd boilerplate-hosting
-```
+  ```
 
-Link this container with the local infrastructure:
+3. Link this container with the local infrastructure:
 
-```sh
+  ```text
 we link
-```
+  ```
 
-Now your container is ready to be used:
+4. Now your container is ready to be used:
 
-```text
+  ```text
 http://hosting.<projectID>.wedeploy.me
-```
+  ```
 
 <!-- </article> -->
 
-<!-- <article id="3-deploying-to-the-cloud"> -->
+<!-- <article id="deploying-to-the-cloud"> -->
 
-## 3. Deploying to the cloud
+## Deploying to the cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-hosting/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.io).
@@ -77,8 +77,12 @@ http://hosting.<projectID>.wedeploy.me
 6. Click on *Update Project* and wait a few seconds.
 7. Once you see it in the Dashboard, your container will be ready to be used.
 
-```text
+  ```text
 http://hosting.<projectID>.wedeploy.io
-```
+  ```
 
 <!-- </article> -->
+
+## What's Next?
+
+* Now you can start adding new static files and keep growing your application.
