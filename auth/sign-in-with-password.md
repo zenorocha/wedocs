@@ -1,4 +1,4 @@
-# Sign-in With password
+# Sign-in With Password
 
 ###### You can let your users authenticate with WeDeploy using their email addresses and passwords. *WeDeploy™ Authentication*.
 
