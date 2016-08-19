@@ -6,6 +6,8 @@
 
 ## Sign-in with GitHub
 
+To sign in by redirecting to the sign-in page, call `signInWithRedirect`:
+
 ```js
 var auth = WeDeploy.auth();
 
@@ -25,7 +27,7 @@ auth.onSignIn(function(user) {
 
 ## Setup app client id and secret
 
-Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub. After retrieving the client id and client secret you can configure it as environment variables of the authentication container.
+Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub. After retrieving the client id and client secret you can configure it as environment variables of the authentication `container.json`.
 
 ```json
 {
