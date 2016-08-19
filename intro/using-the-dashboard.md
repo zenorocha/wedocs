@@ -1,4 +1,4 @@
-# Quick Start
+# Using the Dashboard
 
 ###### In this section, you'll learn how to deploy an application using WeDeploy Dashboard.
 
