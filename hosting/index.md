@@ -2,9 +2,9 @@
 
 ###### Serve static files easily using *WeDeploy™ Hosting*.
 
-<!-- <article id="1-install-dependencies"> -->
+<!-- <article id="install-dependencies"> -->
 
-## 1. Install Dependencies
+## Install Dependencies
 
 WeDeploy relies on three dependencies, make sure to download them before we continue.
 
@@ -34,9 +34,9 @@ curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
 
 <!-- </article> -->
 
-<!-- <article id="2-running-locally"> -->
+<!-- <article id="running-locally"> -->
 
-## 2. Running locally
+## Running locally
 
 1. Start local infrastructure:
 
@@ -59,15 +59,15 @@ we link
 
 4. Now your container is ready to be used:
 
-  ```
+  ```text
 http://hosting.<projectID>.wedeploy.me
   ```
 
 <!-- </article> -->
 
-<!-- <article id="#-running-locally"> -->
+<!-- <article id="deploying-to-the-cloud"> -->
 
-## 3. Deploying to the cloud
+## Deploying to the cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-hosting/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.io).
@@ -77,7 +77,7 @@ http://hosting.<projectID>.wedeploy.me
 6. Click on *Update Project* and wait a few seconds.
 7. Once you see them in the Dashboard, your container will be ready to be used.
 
-  ```
+  ```text
 http://hosting.<projectID>.wedeploy.io
   ```
 
