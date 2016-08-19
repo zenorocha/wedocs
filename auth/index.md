@@ -60,11 +60,12 @@ http://authdemo.wedeploy.io
 
 <!-- </article> -->
 
-<!-- <article id=“key-capabilities“> -->
+<!-- <article id="key-capabilities"> -->
 
 ## Key capabilities
 
 Easily add a complete sign-in system to your application. WeDeploy provides a ready-to-use auth solution that handles the UI flows for signing in users with email addresses and passwords, Google Sign-In, and GitHub Login.
+
 
 **Email and password**
 
@@ -80,17 +81,14 @@ Create a client id and client secret by [registering your application](https://d
 
 <!-- </article> -->
 
-<!-- <article id=“initializing-auth-service-locally"> -->
+<!-- <article id="initializing-auth"> -->
 
-## Initializing auth service locally
+## Initializing auth service
 
 ```js
 WeDeploy.auth('http://auth.<projectID>.wedeploy.me');
 ```
 
-<!-- </article> -->
-
-<!-- <article id=“initializing-auth-service-cloud”> -->
 
 ## Initializing auth service on the Cloud
 
@@ -102,9 +100,9 @@ After initialized the authentication service url, WeDeploy client stores its inf
 
 <!-- </article> -->
 
-<!-- <article id=“sign-in-with-password”> -->
+<!-- <article id="sign-in-with-password"> -->
 
-## Sign-In With Password
+## Sign-In with email and password
 
 You can use WeDeploy Authentication to let your users authenticate with WeDeploy using their email addresses and passwords.
 
@@ -122,9 +120,9 @@ WeDeploy
 
 <!-- </article> -->
 
-<!-- <article id=“sign-in-with-github”> -->
+<!-- <article id="sign-in-with-github"> -->
 
-## Sign-In With Redirect (GitHub)
+## Sign-in with GitHub
 
 You can let your users authenticate with WeDeploy using their GitHub accounts by integrating GitHub authentication into your app.
 
@@ -143,9 +141,9 @@ auth.onSignIn(function(user) {
 
 <!-- </article> -->
 
-<!-- <article id=“sign-in-with-google”> -->
+<!-- <article id="sign-in-with-google"> -->
 
-## Sign-In With Redirect (Google)
+## Sign-in with Google
 
 You can let your users authenticate with WeDeploy using their Google Accounts by integrating Google Sign-In into your app. 
 
@@ -164,9 +162,9 @@ auth.onSignIn(function(user) {
 
 <!-- </article> -->
 
-<!-- <article id=“sign-out”> -->
+<!-- <article id="sign-out"> -->
 
-## Sign-Out
+## Sign-out
 
 ```js
 WeDeploy
@@ -182,9 +180,9 @@ WeDeploy
 
 <!-- </article> -->
 
-<!-- <article id=“create-user”> -->
+<!-- <article id="create-user"> -->
 
-## Create User
+## Create user
 
 You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
 
@@ -205,9 +203,9 @@ WeDeploy
 
 <!-- </article> -->
 
-<!-- <article id=“get-user”> -->
+<!-- <article id="get-current-user"> -->
 
-## Get User
+## Get current user
 
 ```js
 var currentUser = WeDeploy.auth().currentUser;
@@ -218,6 +216,12 @@ if (currentUser) {
 	// No user is signed in.
 }
 ```
+
+<!-- </article> -->
+
+<!-- <article id="get-user"> -->
+
+## Get user
 
 ```js
 WeDeploy
@@ -233,9 +237,9 @@ WeDeploy
 
 <!-- </article> -->
 
-<!-- <article id=“delete-user”> -->
+<!-- <article id="delete-user"> -->
 
-## Delete User
+## Delete user
 
 You can delete a user account with the delete method. For example:
 
@@ -254,9 +258,9 @@ currentUser.deleteUser()
 
 <!-- </article> -->
 
-<!-- <article id=“update-user”> -->
+<!-- <article id="update-user"> -->
 
-## Update User
+## Update user
 
 You can update a user's basic information. For example:
 
@@ -279,7 +283,7 @@ currentUser.updateUser({
 
 <!-- </article> -->
 
-<!-- <article id=“reset-email”> -->
+<!-- <article id="reset-email"> -->
 
 ## Send a password reset email
 
