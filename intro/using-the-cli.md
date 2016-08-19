@@ -38,11 +38,14 @@ To update this tool, just run `we update`.
 The project is the fundamental unit of organization on *WeDeploy™*. Each project can be associated with its own set of provisioned services.
 
 Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers can only be created from inside projects and are stored on the first subdirectory of its project.
+
 ```
 Usage:
   we create <project/container id> [flags]
 ```
+
 Examples:
+
 `we create relay`
 
 ```
