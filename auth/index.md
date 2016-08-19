@@ -112,7 +112,7 @@ WeDeploy
 var auth = WeDeploy.auth();
 
 var provider = new auth.provider.Github();
-provider.addScope("user");
+provider.setProviderScope("user");
 
 auth.signInWithRedirect(provider);
 
@@ -127,7 +127,7 @@ auth.onSignIn((user) => {
 var auth = WeDeploy.auth();
 
 var provider = new auth.provider.Google();
-provider.addScope("profile");
+provider.setProviderScope("profile");
 
 auth.signInWithRedirect(provider);
 
