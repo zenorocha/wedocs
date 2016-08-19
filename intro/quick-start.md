@@ -56,6 +56,6 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 ## 7. Fill in the name and ID and click in install container
 
-![New Project](https://cloud.githubusercontent.com/assets/301291/17794174/e36924f8-6561-11e6-8bf1-a14dd40f522b.png)
+![New Project](https://cloud.githubusercontent.com/assets/301291/17794576/8db847ce-6565-11e6-92d7-519c59a286f9.png)
 
 <!-- </article> -->
