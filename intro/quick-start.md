@@ -92,7 +92,7 @@ In this current version, WeDeploy only supports public Github repositories. This
 
 <!-- </article> -->
 
-<!-- <article id="9-github-project"> -->
+<!-- <article id="10-github-project"> -->
 
 ## 10. Push your boilerplate to the github repository
 
@@ -100,7 +100,7 @@ After download the boilerplate, you should add your remote repository in the git
 <!-- </article> -->
 
 
-<!-- <article id="10-generated-url"> -->
+<!-- <article id="11-generated-url"> -->
 
 ## 11. Access the url generated for your container
 Now that you installed the boilerplate, in the container screen is possible to see the status of the container and its URL. Click in the url to copy to your clipboard and open that in a new tab in your browser.
@@ -108,7 +108,7 @@ Now that you installed the boilerplate, in the container screen is possible to s
 
 <!-- </article> -->
 
-<!-- <article id="11-it-works"> -->
+<!-- <article id="12-it-works"> -->
 
 ## 12. It works!
 That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
