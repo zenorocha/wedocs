@@ -486,7 +486,7 @@ To access those datatypes, request the root of your service with a "GET", and yo
 
 ```
 WeDeploy
-  .url('/data')
+  .url('http://data.datademo.wedeploy.me/')
   .get()
   .then(function(response) {
     console.log( response.body() );
@@ -515,7 +515,7 @@ If we want to inform the server of the datatype of a collection field before it 
 
 ```
 WeDeploy
-  .url('/data')
+  .url('http://data.datademo.wedeploy.me/')
   .post({
      "places": {
        "location": "geo_point"
