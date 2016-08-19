@@ -2,9 +2,9 @@
 
 ###### You can let your users authenticate using their GitHub Accounts by integrating GitHub Sign-In into your app. *WeDeploy™ Authentication*.
 
-## Sign-in with GitHub
-
 <!-- <article id="sign-in> -->
+
+## Sign-in with GitHub
 
 ```js
 var auth = WeDeploy.auth();
