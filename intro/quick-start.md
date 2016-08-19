@@ -44,6 +44,8 @@ You are able to organize your services by project. Select a project name and ID 
 
 ## 5. Click in Install Container
 
+Projects can have more than one container. In this example we're going to deploy a static website.
+
 ![Install Container](https://cloud.githubusercontent.com/assets/301291/17794534/1f2f7aca-6565-11e6-961c-652fcb1cb53b.png)
 
 <!-- </article> -->
@@ -53,7 +55,7 @@ You are able to organize your services by project. Select a project name and ID 
 ## 6. Select a Container type
 In this tutorial we're going to use the WeDeploy Hosting in order to host a static project.
 
-![Select a Container Type](https://cloud.githubusercontent.com/assets/301291/17794174/e36924f8-6561-11e6-8bf1-a14dd40f522b.png)
+![Select a Container Type](https://cloud.githubusercontent.com/assets/301291/17796007/14480e94-6572-11e6-9d33-fbaed635de0b.jpg)
 
 <!-- </article> -->
 
@@ -61,7 +63,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## 7. Fill in the name and ID and click in install container
 
-![Install Container Form](https://cloud.githubusercontent.com/assets/301291/17794576/8db847ce-6565-11e6-92d7-519c59a286f9.png)
+![Install Container Form](https://cloud.githubusercontent.com/assets/301291/17796043/739dcaf0-6572-11e6-87aa-1394f9b54e17.jpg)
 
 <!-- </article> -->
 
@@ -69,7 +71,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## 8. The container is going to be up and running
 
-![Container Up and Running](https://cloud.githubusercontent.com/assets/301291/17795203/3d8a9184-656b-11e6-8c26-1edf19ee5e49.png)
+![Container Up and Running](https://cloud.githubusercontent.com/assets/301291/17796073/b81288e2-6572-11e6-9e1e-2cd8d4ccc85c.jpg)
 
 <!-- </article> -->
 
