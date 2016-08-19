@@ -33,7 +33,12 @@ cd boilerplate-nodejs
 we link
   ```
 
-4. Now your container is ready to be used:
+4. Build the container:
+
+  ```text
+we build
+  ```
+5. Now your container is ready to be used:
 
   ```text
 http://nodejs.<projectID>.wedeploy.me
