@@ -71,7 +71,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## 8. The container is going to be up and running
 
-![Container Up and Running](https://cloud.githubusercontent.com/assets/301291/17796073/b81288e2-6572-11e6-9e1e-2cd8d4ccc85c.jpg)
+![Container Up and Running](https://cloud.githubusercontent.com/assets/301291/17796194/c6589d1e-6573-11e6-8a83-d372d71ed137.jpg)
 
 <!-- </article> -->
 
