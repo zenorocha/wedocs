@@ -2,7 +2,7 @@
 
 ###### In this section, you'll learn how to deploy an application using WeDeploy Dashboard.
 
-<!-- <article id="1-first-section"> -->
+<!-- <article id="1-create-an-account"> -->
 
 ## 1. Create an account
 
@@ -12,7 +12,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 <!-- </article> -->
 
-<!-- <article id="2-second-section"> -->
+<!-- <article id="2-access-your-dashboard"> -->
 
 ## 2. Access your dashboard
 
@@ -20,7 +20,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 <!-- </article> -->
 
-<!-- <article id="3-third-section"> -->
+<!-- <article id="3-create-a-new-project"> -->
 
 ## 3. Create a New Project
 
@@ -28,7 +28,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 <!-- </article> -->
 
-<!-- <article id="4-fourth-section"> -->
+<!-- <article id="4-open-your-project"> -->
 
 ## 4. Open your project
 
@@ -36,7 +36,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 <!-- </article> -->
 
-<!-- <article id="4-fourth-section"> -->
+<!-- <article id="5-click-in-install-container"> -->
 
 ## 5. Click in Install Container
 
@@ -44,7 +44,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 <!-- </article> -->
 
-<!-- <article id="4-fourth-section"> -->
+<!-- <article id="6-select-a-container-type"> -->
 
 ## 6. Select a Container type
 
@@ -52,7 +52,7 @@ In order to have access to WeDeploy functionalities you're going to receive an i
 
 <!-- </article> -->
 
-<!-- <article id="4-fourth-section"> -->
+<!-- <article id="7-fill-in-the-name-and-id-and-click-in-install-container"> -->
 
 ## 7. Fill in the name and ID and click in install container
 
