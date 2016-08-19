@@ -1,6 +1,6 @@
 # Using the API Client
 
-###### Make requests to WeDeploy using a standardize interface
+###### Make requests to WeDeploy using a standardize interface.
 
 <!-- <article id="installation"> -->
 
