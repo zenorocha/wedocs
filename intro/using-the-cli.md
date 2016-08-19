@@ -22,8 +22,9 @@ The availability of dependencies are tested just before its immediate use. If a 
 
 Install this tool with:
 
-`curl https://raw.githubusercontent.com/wedeploy/cli/master/install.sh -s | bash`
-
+```
+curl https://raw.githubusercontent.com/wedeploy/cli/master/install.sh -s | bash
+```
 or download from our [stable release channel](https://dl.equinox.io/wedeploy/cli/stable):
 
 To update this tool, just run `we update`.
