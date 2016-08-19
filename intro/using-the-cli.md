@@ -1,16 +1,22 @@
 # Using the CLI
 
-###### Sub Using the CLI
+###### The *WeDeploy™ Command-line interface (CLI)* is a tool that wraps the WeDeploy Platform API, providing support for things like creating, managing and scaling applications. It's generally installed in your local development operating system.
 
-<!-- <article id="1-first-section"> -->
+<!-- <article id="1-installing"> -->
 
-## 1. Consectetur adipisicing elit
+## 1. Installing
 
-*Lorem* ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quo ad, error nihil deserunt quia neque numquam atque debitis. Obcaecati [laudantium adipisci](#) deserunt eveniet, placeat repellendus ut qui `tempore` recusandae!
+Install this tool with
 
-```bash
-curl -X "GET" "/data/tasks"
-```
+`curl https://raw.githubusercontent.com/wedeploy/cli/master/install.sh -s | bash`
+
+or download from our stable release channel:
+
+<div class="guide-download">
+	<a href="https://dl.equinox.io/wedeploy/cli/stable" class="btn btn-accent btn-sm"><span class="icon-16-download"></span>Download Command-line</a>
+</div>
+
+To update this tool, just run `we update`.
 
 <!-- </article> -->
 
