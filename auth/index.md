@@ -120,7 +120,7 @@ WeDeploy
 
 <!-- </article> -->
 
-<!-- <article id="sign-in-with-github"> -->
+<!-- <article id="sign-in-with-providers”> -->
 
 ## Sign-in with GitHub
 
@@ -138,10 +138,6 @@ auth.onSignIn(function(user) {
 	// Fires when user is signed in after redirect.
 });
 ```
-
-<!-- </article> -->
-
-<!-- <article id="sign-in-with-google"> -->
 
 ## Sign-in with Google
 
