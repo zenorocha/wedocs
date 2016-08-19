@@ -100,26 +100,6 @@ After initialized the authentication service url, WeDeploy client stores its inf
 
 <!-- </article> -->
 
-<!-- <article id="sign-in-with-password"> -->
-
-## Sign-In with email and password
-
-You can use WeDeploy Authentication to let your users authenticate with WeDeploy using their email addresses and passwords.
-
-```js
-WeDeploy
-	.auth()
-	.signInWithEmailAndPassword("user@domain.com", "password")
-	.then(function(user) {
-		// User is signed in.
-	})
-	.catch(function(err) {  
-	  // User is not signed in.
-	});
-```
-
-<!-- </article> -->
-
 <!-- <article id="sign-out"> -->
 
 ## Sign-out
@@ -263,4 +243,4 @@ WeDeploy
 
 ## What's Next?
 
-* Now we're ready to start authenticating and grow our user base.
+* Now we're ready to start [authenticating and grow our user base](/docs/auth/sign-in-with-github.html).

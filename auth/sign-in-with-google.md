@@ -50,4 +50,4 @@ Create a client id and client secret by [registering your application](https://d
 
 ## What's Next?
 
-* Now we're ready to start authenticating and grow our user base.
+* Learn how to sign-up users using their [email and password into your app](/docs/auth/sign-in-with-email-and-password.html).
