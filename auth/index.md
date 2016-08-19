@@ -120,44 +120,6 @@ WeDeploy
 
 <!-- </article> -->
 
-<!-- <article id="sign-in-with-providers”> -->
-
-## Sign-in with GitHub
-
-You can let your users authenticate with WeDeploy using their GitHub accounts by integrating GitHub authentication into your app.
-
-```js
-var auth = WeDeploy.auth();
-
-var provider = new auth.provider.Github();
-provider.setProviderScope("user:email");
-
-auth.signInWithRedirect(provider);
-
-auth.onSignIn(function(user) {
-	// Fires when user is signed in after redirect.
-});
-```
-
-## Sign-in with Google
-
-You can let your users authenticate with WeDeploy using their Google Accounts by integrating Google Sign-In into your app. 
-
-```js
-var auth = WeDeploy.auth();
-
-var provider = new auth.provider.Google();
-provider.setProviderScope("email");
-
-auth.signInWithRedirect(provider);
-
-auth.onSignIn(function(user) {
-	// Fires when user is signed in after redirect.
-});
-```
-
-<!-- </article> -->
-
 <!-- <article id="sign-out"> -->
 
 ## Sign-out
