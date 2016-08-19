@@ -98,10 +98,10 @@ After initialized the authentication service url, WeDeploy client stores its inf
 WeDeploy
 	.auth()
 	.signInWithPassword("user@domain.com", "password")
-	.then(() => {
+	.then(function() {
 		// User is signed in.
 	})
-	.catch((err) -> {  
+	.catch(function(err) {  
 	  // User is not signed in.
 	});
 ```
@@ -116,7 +116,7 @@ provider.setProviderScope("user");
 
 auth.signInWithRedirect(provider);
 
-auth.onSignIn((user) => {
+auth.onSignIn(function(user) {
 	// Fires when user is signed in after redirect.
 });
 ```
@@ -131,7 +131,7 @@ provider.setProviderScope("profile");
 
 auth.signInWithRedirect(provider);
 
-auth.onSignIn((user) => {
+auth.onSignIn(function(user) {
 	// Fires when user is signed in after redirect.
 });
 ```
@@ -142,10 +142,10 @@ auth.onSignIn((user) => {
 WeDeploy
 	.auth()
 	.signOut()
-		.then(() => {
+		.then(function() {
 			// User is signed out.
 		})
-		.catch((err) -> {  
+		.catch(function(err) {  
 		  // User was signed out.
 		});
 ```
@@ -159,10 +159,10 @@ WeDeploy
 		email: 'user@domain.com',
 		password: 'abc'
 	})
-	.then((user) -> {  
+	.then(function(user) {  
 		// Successfully created.
 	})
-	.catch((err) -> {  
+	.catch(function(err) {  
 	  // Not created.
 	});
 ```
@@ -183,10 +183,10 @@ if (currentUser) {
 WeDeploy
 	.auth()
 	.getUser(userId)
-	.then((user) -> {
+	.then(function(user) {
 		// User found.
 	})
-	.catch((err) -> {  
+	.catch(function(err) {  
 		// User does not exists.
 	});
 ```
@@ -198,10 +198,10 @@ WeDeploy
 var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.deleteUser()
-	.then(() -> {  
+	.then(function() {  
 		// Successfully deleted.
 	})
-	.catch((err) -> {  
+	.catch(function(err) {  
 	  // Not deleted.
 	});
 ```
@@ -218,10 +218,10 @@ currentUser.updateUser({
 	name: "Eleven",
 	photoUrl: "https://hawkinslabs.com/011/profile.jpg"
 })
-.then(() -> {  
+.then(function() {  
 	// Successfully updated.
 })
-.catch((err) -> {  
+.catch(function(err) {  
   // Not updated.
 });
 ```
@@ -232,10 +232,10 @@ currentUser.updateUser({
 WeDeploy
 	.auth()
 	.sendPasswordResetEmail("user@domain.com")
-	.then(() => {
+	.then(function() {
 		// Email sent.
 	})
-	.catch((err) -> {  
+	.catch(function(err) {  
 	  // An error happened.
 	});
 ```
