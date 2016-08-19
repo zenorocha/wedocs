@@ -132,7 +132,7 @@ You can let your users authenticate with WeDeploy using their GitHub accounts by
 var auth = WeDeploy.auth();
 
 var provider = new auth.provider.Github();
-provider.setProviderScope("user");
+provider.setProviderScope("user:email");
 
 auth.signInWithRedirect(provider);
 
@@ -153,7 +153,7 @@ You can let your users authenticate with WeDeploy using their Google Accounts by
 var auth = WeDeploy.auth();
 
 var provider = new auth.provider.Google();
-provider.setProviderScope("profile");
+provider.setProviderScope("email");
 
 auth.signInWithRedirect(provider);
 
