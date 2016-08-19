@@ -1,12 +1,12 @@
 # Data
 
-###### Leverage a NoSQL database with search and realtime capabilities using *WeDeploy™ Data*.
+###### Leverage a NoSQL database with search and real-time capabilities using *WeDeploy™ Data*.
 
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies
 
-This section assumes that you already have the **WeDeploy CLI** installed and **Docker** is running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
+This section assumes you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
 
 <!-- </article> -->
 
@@ -90,7 +90,7 @@ This operation will return the newly created document, with the following genera
 }
 ```
 
-The URL we just created stored a new document in our app's service, inside the collection movies. More information on how to setup this datastore URL can be seen in the section Building APIs. For now, we only need to know that within the path where the data is mounted, the URL will be interpreted as a key that points to a stored resource like the one below:
+The URL we just created stored a new document in our app's service inside the "movies" collection. More information on how to set up this datastore URL can be seen in the section Building APIs. For now, we only need to know that within the path where the data is mounted. The URL will be interpreted as a key that points to a stored resource like the one below:
 
 ```text
 /collectionName/documentId/documentProperty/documentInnerProperty
@@ -102,7 +102,7 @@ For example, to reference the newly created Star Wars rating, we can use the pat
 http://data.datademo.wedeploy.me/movies/115992383516607958/rating
 ```
 
-From this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:
+At this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies')
@@ -113,7 +113,7 @@ WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .patch();
 ```
 
-Note in the example above the data was sent as request form attributes. The response is the modified document:
+Note in the example above, the data was sent as request form attributes. The response is the modified document:
 
 ```js
 {
@@ -125,7 +125,7 @@ Note in the example above the data was sent as request form attributes. The resp
 }
 ```
 
-To create a document with a custom ID, or override an existing one, we can use the PUT method at the document level. The following example creates a new entry with the custom ID star_wars_v:
+We can use the PUT method at the document level to create a document with a custom ID, or to override an existing one. The following example creates a new entry with the custom ID star_wars_v:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies')
@@ -142,7 +142,7 @@ WeDeploy.url('http://data.datademo.wedeploy.me/movies')
 
 To override an existing entry you would just specify the existing ID.
 
-To delete a field, document, or the entire collection, we just use the DELETE method:
+To delete a field, document, or the entire collection, we use the DELETE method:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies/star_wars_v/title').delete();
@@ -200,7 +200,7 @@ Requesting the entire movies collection using curl -X "GET" "http://data.datadem
 ]
 ```
 
-The result is ordered by the document id, as we can see in the list above. We can select the order we want the results to be in, by passing a sort parameter, using the following code:
+The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies')
@@ -222,7 +222,7 @@ As expected, the result would be the following list:
 ]
 ```
 
-Notice that Episode VII has no rating, as it was not released yet, thus it's sorted as the last document.
+Notice that because Episode VII has no rating (as it was not released yet), it's sorted as the last document.
 
 In addition to sorting the results, we can also apply filters using the following code:
 
@@ -233,7 +233,7 @@ WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .get();
 ```
 
-The result of the filters just used is the following entries:
+The following entries are the result of the above filters:
 
 ```js
 [
@@ -242,7 +242,7 @@ The result of the filters just used is the following entries:
 ]
 ```
 
-We can also paginate the result using the limit and offset properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
+We can also paginate the result using the 'limit' and 'offset' properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies')
@@ -253,7 +253,7 @@ WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .get();
 ```
 
-Notice that filtering by the year we only get episodes I, II, III and VII. Applying the rating sort will give us this same order. We also limited the result to show only 2 documents, and skipped the first one. The final result is the following entries:
+Notice that filtering by year only returns episodes I, II, III, and VII. Applying the 'rating' sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:
 
 ```js
 [
@@ -262,7 +262,7 @@ Notice that filtering by the year we only get episodes I, II, III and VII. Apply
 ]
 ```
 
-We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as any and none to filter elements in a list. We also give support for search operators, which we will see in more details in the section Search Data.
+We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as 'any' and 'none' to filter elements in a list. We also give support for search operators, which we will see in more detail in the section Search Data.
 
 <!-- </article> -->
 
@@ -270,9 +270,9 @@ We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as any
 
 ## Searching Data
 
-Well, we did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need to do more powerful queries with our documents? Well, in WeDeploy you can do a text search, handle user misspellings, show the number of documents by category with your data, and much more.
+We did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.
 
-First take a look at the text search. Its a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our match operator is just what we need to run the search.
+First take a look at the text search. It's a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough that it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our match operator is flexible enough for both.
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies')
@@ -307,9 +307,9 @@ Any search in the previous example results in the following match:
 [{"id":"star_wars_vii","title":"Star Wars: Episode VII - The Force Awakens","year":2015}]
 ```
 
-What we did with * can also be done with the prefix operator Filter.prefix('title', 'awake'). The fuzziness we added to wakens using ~, can also be done explicitly with the fuzzy operator Filter.fuzzy('title', 'wakens').
+What we did with * can also be done with the prefix operator Filter.prefix('title', 'awake'). The fuzziness we added to 'wakens' using ~, can also be done explicitly with the fuzzy operator Filter.fuzzy('title', 'wakens').
 
-So far we are still just filtering data with filters. We can do so much more than that! If we use query search instead of filter to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
+So far we are still just filtering data with filters. We can do so much more than that! If we use 'query search' instead of 'filter' to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies')
@@ -404,7 +404,7 @@ As you can see in the code below, our keywords are highlighted in the results:
 }
 ```
 
-The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? Well, we can do that with aggregations, using the following code:
+The third search feature is also quite simple, but can be applied to generate meaningful statistical information about our data. What if we need to compare the average rating the first three movies received, with the last three movies? We can do that with aggregations, using the following code:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/movies')
@@ -414,7 +414,7 @@ WeDeploy.url('http://data.datademo.wedeploy.me/movies')
    .get();
 ```
 
-The count we added to the query informed the server we are not interested in the documents themselves, but rather the number of matches and search metadata. The result in this case will be the following data:
+The count we added to the query informed the server thatwe are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:
 
 ```js
 {
@@ -448,7 +448,7 @@ Cool, right? Simply run another query for the newest movies, and then you'll hav
 }
 ```
 
-The last search feature we will cover here needs a little setup before we put our documents in the datastore, but it's not as complicated as it sounds. First, let's cover some basics on the datatypes we support. As we said before, we offer a JSON storage, thus we support all JSON types, with the restriction that arrays must be of elements of the same type. Once we put a new document in a collection, we can automatically derive the datatype of the fields added, and bind the fields to that datatype. So, if we try to run the following request:
+The last search feature we will cover here needs a little setup before we put our documents in the data store, but it's not as complicated as it sounds. First, let's cover some basics on the datatypes we support. As previously noted, we offer a JSON storage (we support all JSON types), with the restriction that arrays must be of elements of the same type. Once we put a new document in a collection, we can automatically derive the datatype of the added fields, and bind the fields to that datatype. So, if we try to run the following request:
 
 ```js
 WeDeploy
@@ -456,7 +456,7 @@ WeDeploy
   .put("bar");
 ```
 
-And then run the following request afterwards:
+And then run the following request:
 
 ```js
 WeDeploy
@@ -479,7 +479,7 @@ We will receive an error:
 }
 ```
 
-The error was triggered because we could not convert the given data to the datatype bounded to that field. Of course, we can do simple conversions, for instance between numbers and strings, but whenever we fail, we will inform you something is wrong.
+The error was triggered because we could not convert the given data to the data type bounded to that field. We can do simple conversions, such as between numbers and strings. However, whenever we fail, we will inform you something is wrong.
 
 To access those datatypes, request the root of your service with a "GET", and you'll receive something like the following result:
 
@@ -509,8 +509,8 @@ WeDeploy
 ]
 ```
 
-Notice to be able to read and write your service's root path you need to map it with an API endpoint with data flag active.
-If we want to inform the server of the datatype of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:
+Notice that in order to read and write your service's root path you need to map it with an API endpoint and data flag active.
+If we want to inform the server of the data type of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:
 
 ```js
 WeDeploy
@@ -575,7 +575,7 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 ## Watching Data Changes
 
-Well, we presented a lot of features for data filtering and search. You may be wondering where the realtime aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in realtime, all we need to do is change the WeDeploy API method we use to the watch method:
+We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the WeDeploy API method we use to the watch method:
 
 ```js
 WeDeploy.url('http://data.datademo.wedeploy.me/places')
@@ -586,11 +586,11 @@ WeDeploy.url('http://data.datademo.wedeploy.me/places')
    .on('fail', handleFailure);
 ```
 
-Now every time the storage detects changes that affects the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
+Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
 
 
 <!-- </article> -->
 
 ## What's Next?
 
-* Now we're ready to save and retrive data in real-time.
+* Now we're ready to save and retrieve data in real-time.
