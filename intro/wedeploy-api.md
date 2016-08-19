@@ -1,15 +1,15 @@
-# We Deploy API
+# Using the API Client
 
-###### Sub Quick Start
+###### Make requests to WeDeploy using a standardize interface
 
-<!-- <article id="1-first-section"> -->
+<!-- <article id="installation"> -->
 
-## 1. Authentication
+## Installation
 
-*Lorem* ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quo ad, error nihil deserunt quia neque numquam atque debitis. Obcaecati [laudantium adipisci](#) deserunt eveniet, placeat repellendus ut qui `tempore` recusandae!
+In order to send/receive requests to/from WeDeploy, we need to include the JavaScript API Client. This library provides a secure and reliable communication channel with WeDeploy. We can do that by simply adding a script tag in a HTML file:
 
-```bash
-curl -X "GET" "/data/tasks"
+```html
+<script src="https://cdn.rawgit.com/wedeploy/api.js/master/build/globals/api-min.js"></script>
 ```
 
 <!-- </article> -->
