@@ -6,7 +6,12 @@
 
 ## 1. Create an account
 
-In order to have access to WeDeploy functionalities you're going to receive an invite though email with the link to create a new account.
+
+The first thing you need to do to get started with WeDeploy is to [request an invitation](http://wedeploy.com/).
+
+At this moment, WeDeploy is only available to a restricted group of developers, but don't worry we're sending invites on a daily basis.
+
+You're going to receive an invite though email with the link to create a new account.
 
 ![SignUp](https://cloud.githubusercontent.com/assets/301291/17795864/bfc70c4a-6570-11e6-94f8-2b9cf3c45998.jpg)
 

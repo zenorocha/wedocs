@@ -25,19 +25,17 @@ With WeDeploy, you are able to quickly and efficiently respond to user demand:
 
 ## 2. Why should I use WeDeploy?
 
-Even though WeDeploy provides a lot of tools you need to develop high-quality app, there are always news scenarios that would benefit from automated management.
-
-In order to focus on development, you can leave the hard work of infrastructure and scalability of your services. We cover the major essentials features in order to allow you to monetize your business and focus on your users.
+When building a high scalable application there are many things you need to consider: performance bottlenecks, database resiliency and scalability, authentication, authorization, and static hosting to name a few. WeDeploy is a new dynamic Liferay initiative, allowing you to handle all of your back-end challenges in one place. Focus on creating amazing user experiences, and WeDeploy will take care of the rest.
 
 This is why WeDeploy was also designed to serve as a platform for building an manageable ecosystem of components and tools to make it easier to deploy and scale any application.
 
 <!-- </article> -->
 
 
-<!-- <article id="4-fourth-section"> -->
+<!-- <article id="3-how"> -->
 
-## 4. How WeDeploy will help me to deploy from simple to advanced applications?
+## 3. How WeDeploy will help me to deploy from simple to advanced applications?
 
-WeDeploy provides a large amou
+From a simple application to an advanced group of microservices, WeDeploy will provide the tools to manage the visibility, scale and DNS for your application. WeDeploy provides an infrastructure to deploy micro-services in a managed cloud infrastructure.
 
 <!-- </article> -->
