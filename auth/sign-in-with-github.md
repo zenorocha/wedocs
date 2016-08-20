@@ -28,7 +28,7 @@ auth.onSignIn(function(user) {
 
 ## Setup app client id and secret
 
-Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub. After retrieving the client id and client secret you can configure it as environment variables of the authentication `container.json`.
+Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub. After retrieving the client id and client secret you can configure them as environment variables of the authentication `container.json`.
 
 ```json
 {
