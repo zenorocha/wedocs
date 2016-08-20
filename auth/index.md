@@ -1,12 +1,12 @@
 # Auth
 
-###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook and Twitter, and more using *WeDeploy™ Auth*.
+###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, Twitter, and more using *WeDeploy™ Auth*.
 
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies
 
-This section assumes that you already have the **WeDeploy CLI** installed and **Docker** is running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
+This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
 
 <!-- </article> -->
 
@@ -97,7 +97,7 @@ WeDeploy.auth('http://auth.<projectID>.wedeploy.me');
 
 After initialized the authentication service url, WeDeploy client stores its information for future calls.
 
-Note that if you are initializing auth service pointing to the Cloud you should use the proper domain:
+Note that if you are initializing an auth service pointing to the Cloud you should use the proper domain:
 
 ```js
 WeDeploy.auth('http://auth.<projectID>.wedeploy.io');
@@ -107,4 +107,4 @@ WeDeploy.auth('http://auth.<projectID>.wedeploy.io');
 
 ## What's Next?
 
-* Now we're ready to start [authenticating and grow our user base](/docs/auth/sign-in-with-github.html).
+* Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/sign-in-with-github.html).
