@@ -53,7 +53,7 @@ WeDeploy
 		// User found.
 	})
 	.catch(function(err) {  
-		// User does not exists.
+		// User does not exist.
 	});
 ```
 
