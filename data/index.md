@@ -63,4 +63,4 @@ http://datademo.wedeploy.io
 
 ## Next Steps
 
-Now that you have *WeDeploy™ Data* API settled up, you can interact [saving new data](/data/saving-data.html).
+Now that you have *WeDeploy™ Data* API settled up, you can interact [saving new data](/docs/data/saving-data.html).
