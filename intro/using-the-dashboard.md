@@ -110,8 +110,8 @@ Every time you send a new commit to its github repository, WeDeploy will build a
 
 <!-- <article id="12-access-the-url-generated"> -->
 
-## 12. Access the url generated for your container
-Now that you installed the boilerplate, in the container screen is possible to see the status of the container and its URL. Click on the url to copy to your clipboard and open that in a new tab in your browser.
+## 12. Access the URL generated for your container
+Now that you installed the boilerplate, in the container screen is possible to see the status of the container and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
 ![URL Generated](https://cloud.githubusercontent.com/assets/301291/17795316/424b3a2e-656c-11e6-8023-904b83b091f5.png)
 
 <!-- </article> -->
