@@ -33,7 +33,7 @@ This operation will return the newly created document, with the following genera
 ```
 <!-- </article> -->
 
-<!-- <article id="insert-data"> -->
+<!-- <article id="url-scope-structure"> -->
 
 ## URL Scope structure
 
@@ -99,6 +99,7 @@ WeDeploy.url('http://data.datademo.wedeploy.me/movies').delete();
 
 <!-- </article> -->
 
-## What's Next?
 
-* That's it! Now we're ready to start sending emails to our users.
+## Next Steps
+
+Now that you have learned how to create data, you can interact [retrieving data](/docs/data/retrieving-data.html).

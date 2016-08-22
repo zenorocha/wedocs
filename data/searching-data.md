@@ -307,7 +307,6 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 <!-- </article> -->
 
+## Next Steps
 
-## What's Next?
-
-* Now we're ready to save and retrieve data in real-time.
+Now that you have learned how to retrieve data, you can interact with [real-time feeds](/docs/data/real-time-feeds.html).

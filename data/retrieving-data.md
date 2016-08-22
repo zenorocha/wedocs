@@ -115,3 +115,7 @@ Notice that filtering by year only returns episodes I, II, III, and VII. Applyin
 We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as 'any' and 'none' to filter elements in a list. We also give support for search operators, which we will see in more detail in the section Search Data.
 
 <!-- </article> -->
+
+## Next Steps
+
+Now that you have learned how to retrieve data, you can interact [searching data](/docs/data/searching-data.html).
