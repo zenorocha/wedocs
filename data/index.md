@@ -61,6 +61,6 @@ http://datademo.wedeploy.io
 <!-- </article> -->
 
 
-## What's Next?
+## Next Steps
 
-* Now we're ready to save and retrieve data in real-time.
+Now that you have *WeDeploy™ Data* API settled up, you can interact [saving new data](/data/saving-data.html).
