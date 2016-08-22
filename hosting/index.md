@@ -6,7 +6,7 @@
 
 ## Install Dependencies
 
-This section assumes that you already have the **WeDeploy CLI** installed and **Docker** is running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
+This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
 
 <!-- </article> -->
 

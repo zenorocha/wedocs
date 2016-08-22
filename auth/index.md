@@ -69,7 +69,7 @@ Easily add a complete sign-in system to your application. WeDeploy provides a re
 
 **Email and password**
 
-Authenticate users with their email addresses and passwords. Provides methods to create and manage users that use their email addresses and passwords to sign in, also handles sending password reset emails.
+Authenticate users with their email addresses and passwords. Provides methods to create and manage users that use their email addresses and passwords to sign in, and sending password reset emails.
 
 **GitHub**
 
@@ -77,11 +77,11 @@ Create a client id and client secret by [registering your application](https://g
 
 **Google**
 
-Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google. 
+Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google.
 
 **Manage Users**
 
-Create, delete or update users by a simple api.
+Create, delete or update users with a simple API.
 
 <!-- </article> -->
 
@@ -89,13 +89,13 @@ Create, delete or update users by a simple api.
 
 ## Initializing auth service
 
-By using WeDeploy api client you can initialize the authentication service by referencing its url, like in the example below.
+By using WeDeploy API client you can initialize the authentication service by referencing its URL, like in the example below.
 
 ```js
 WeDeploy.auth('http://<containerID>.<projectID>.wedeploy.me');
 ```
 
-After initializing the authentication service url, WeDeploy client stores its information for future calls.
+After initializing the authentication service URL, WeDeploy client stores its information for future calls.
 
 Note that if you are initializing an auth service pointing to the Cloud you should use the proper domain:
 
