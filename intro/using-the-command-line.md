@@ -1,6 +1,6 @@
 # Using the CLI
 
-The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support to things like creating, managing, and scaling applications.
+###### The WeDeploy Command-Line Interface is a tool for helping you to use the WeDeploy platform by providing support to things like creating, managing, and scaling applications.
 
 <!-- <article id="1-dependencies"> -->
 
