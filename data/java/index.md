@@ -2,6 +2,12 @@
 
 ###### Leverage a NoSQL database with search and real-time capabilities using *WeDeploy™ Data*.
 
+<div class="guide-btn-cta">
+  <a class="btn btn-accent btn-sm" href="http://datajava.boilerplate.wedeploy.io">
+    <span class="icon-16-circle-arrow"></span>See Live Demo
+  </a>
+</div>
+
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies

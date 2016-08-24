@@ -2,6 +2,12 @@
 
 ###### Allow users to authenticate using passwords, popular federated identity providers like Google, Facebook, GitHub, and more using *WeDeploy™ Auth*.
 
+<div class="guide-btn-cta">
+  <a class="btn btn-accent btn-sm" href="http://authjs.boilerplate.wedeploy.io">
+    <span class="icon-16-circle-arrow"></span>See Live Demo
+  </a>
+</div>
+
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies

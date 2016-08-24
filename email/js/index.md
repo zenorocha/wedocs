@@ -2,6 +2,12 @@
 
 ###### Send emails asynchronously and check their status using *WeDeploy™ Email*.
 
+<div class="guide-btn-cta">
+  <a class="btn btn-accent btn-sm" href="http://emailjs.boilerplate.wedeploy.io">
+    <span class="icon-16-circle-arrow"></span>See Live Demo
+  </a>
+</div>
+
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies
