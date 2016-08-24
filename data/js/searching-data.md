@@ -2,9 +2,9 @@
 
 ###### Searching Data Intro
 
-<!-- <article id="searching-data"> -->
+<!-- <article id="search-data"> -->
 
-## Searching Data
+## Search Data
 
 We did some great stuff with basic HTTP methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with filter, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.
 

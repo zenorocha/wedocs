@@ -2,9 +2,9 @@
 
 ###### Retrieving Data Intro
 
-<!-- <article id="retrieving-data"> -->
+<!-- <article id="get-data"> -->
 
-## Retrieving Data
+## Get Data
 
 Reading data from our storage takes only 3 lines of code.
 
