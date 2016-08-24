@@ -3,8 +3,8 @@
 ###### Send emails asynchronously and check their status using *WeDeploy™ Email*.
 
 <div class="guide-btn-cta">
-  <a class="btn btn-accent btn-sm" href="http://emailjs.boilerplate.wedeploy.io">
-    <span class="icon-16-circle-arrow"></span>See Live Demo
+  <a class="btn btn-accent btn-sm" href="http://emailjs.boilerplate.wedeploy.io" target="_blank">
+    <span class="icon-16-external"></span>See Live Demo
   </a>
 </div>
 
