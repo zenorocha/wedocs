@@ -100,7 +100,7 @@ we remote add staging office-cloud.internal
 You can fetch projects and container logs with
 
 ```text
-we logs <project id> <container id>
+we log <project id> <container id>
 ```
 
 ### Examples:
@@ -108,18 +108,18 @@ we logs <project id> <container id>
 See the logs for the last 20min for the data container on the wechat project:
 
 ```text
-we logs wechat data --since 20min
+we log wechat data --since 20min
 ```
 
 Watch for logs on the wechat project:
 ```text
-we logs wechat --watch
+we log wechat --watch
 ```
 
 Watch for logs on the wechat project on the production (remote) cloud:
 
 ```text
-we logs wechat --remote production
+we log wechat --remote production
 ```
 
 <!-- </article> -->
