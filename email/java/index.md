@@ -14,6 +14,8 @@
 
 This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
 
+We also feature code snippets using the API Client, [visit this guide](/docs/intro/using-the-api-client.html) in order to start using it.
+
 <!-- </article> -->
 
 <!-- <article id="running-locally"> -->
