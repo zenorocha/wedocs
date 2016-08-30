@@ -1,6 +1,6 @@
 # Saving data
 
-###### The create() method creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.
+###### The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.
 
 <!-- <article id="inserting-new-data"> -->
 
@@ -12,7 +12,7 @@ Writing new data is as simple as sending a JSON.
 
 ```js
 
-client = WeDeploy.data('http://data.datademo.wedeploy.me');
+client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.create('movies', {
   "title": "Star Wars IV",
@@ -45,7 +45,7 @@ With the same method you're able to create multiple data instead using the metho
 You just need to use an array instead an object as the second param.
 
 ```js
-client = WeDeploy.data('http://data.datademo.wedeploy.me');
+client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.create('movies', [
   {
@@ -91,7 +91,7 @@ This operation will return the newly created array of documents, with the follow
 WeDeploy Data service is really flexible in therms of data structure. You're able to insert new fiels in a collection by adding the new key in the object param.
 
 ```js
-client = WeDeploy.data('http://data.datademo.wedeploy.me');
+client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.create('movies', [
   {

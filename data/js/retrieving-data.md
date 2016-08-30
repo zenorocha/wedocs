@@ -1,6 +1,6 @@
 # Retrieving data
 
-###### Retrieving Data Intro
+###### The get() function retrieve an existing field, document or collection in the database.
 
 <!-- <article id="get-data"> -->
 
@@ -9,9 +9,9 @@
 Reading data from our storage takes only 3 lines of code.
 
 ```js
-WeDeploy
-  .url('http://data.datademo.wedeploy.me/movies/star_wars_v')
-  .get();
+WeDeploy.data('http://data.datademo.wedeploy.me')
+  .get('movies/star_wars_v')
+  .then(response => console.log(response));
 ```
 
 The response body is the stored JSON document:
@@ -29,8 +29,9 @@ We can also get any field value using the full path:
 
 ```js
 WeDeploy
-  .url('http://data.datademo.wedeploy.me/movies/star_wars_v/title')
-  .get();
+  .data('http://data.datademo.wedeploy.me')
+  .get('movies/star_wars_v/title')
+  .then(response => console.log(response));
 ```
 
 The full path returns the raw content in the response body:
@@ -49,13 +50,20 @@ Requesting the entire movies collection using curl -X "GET" "http://data.datadem
   {"id":"star_wars_vii", "title":"Star Wars: Episode VII - The Force Awakens", "year":2015}
 ]
 ```
+<!-- </article> -->
+
+<!-- <article id="sorting-data"> -->
+
+## Sorting Data
 
 The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:
 
 ```js
-WeDeploy.url('http://data.datademo.wedeploy.me/movies')
-   .sort('rating', 'desc')
-   .get();
+client = WeDeploy.data('http://data.datademo.wedeploy.me')
+
+client.orderBy('rating', 'desc')
+  .get('movies')
+  .then(response => console.log(response));
 ```
 
 As expected, the result would be the following list:
@@ -74,13 +82,20 @@ As expected, the result would be the following list:
 
 Notice that because Episode VII has no rating (as it was not released yet), it's sorted as the last document.
 
+<!-- </article> -->
+
+<!-- <article id="applying-filters"> -->
+
+## Applying filters
+
 In addition to sorting the results, we can also apply filters using the following code:
 
 ```js
-WeDeploy.url('http://data.datademo.wedeploy.me/movies')
-   .filter('year', '<', 2000)
-   .filter('rating', '>', 8.5)
-   .get();
+WeDeploy.data('http://data.datademo.wedeploy.me')
+   .where('year', '<', 2000)
+   .where('rating', '>', 8.5)
+   .get('movies')
+   .then(response => console.log(response));
 ```
 
 The following entries are the result of the above filters:
@@ -92,12 +107,18 @@ The following entries are the result of the above filters:
 ]
 ```
 
+<!-- </article> -->
+
+<!-- <article id="applying-filters"> -->
+
+## Pagination
+
 We can also paginate the result using the 'limit' and 'offset' properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
 
 ```js
-WeDeploy.url('http://data.datademo.wedeploy.me/movies')
-   .filter('year', '>', 2000)
-   .sort('rating')
+WeDeploy.data('http://data.datademo.wedeploy.me')
+   .where('year', '>', 2000)
+   .orderBy('rating')
    .limit(2)
    .offset(1)
    .get();
