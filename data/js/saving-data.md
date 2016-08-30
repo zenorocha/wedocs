@@ -1,36 +1,122 @@
 # Saving data
 
-###### To add new data to the WeDeploy Data,
+###### The create() method creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.
 
-<!-- <article id="insert-data"> -->
+<!-- <article id="inserting-new-data"> -->
 
-## Insert data
+## Inserting new data
+
+> By default, all the operation access to your database are restricted so only authenticated users can manipulate data. To get started without setting up Authentication, you can configure your rules for public access. To learn more about rules, see [configuring rules](/docs/data/configuring-rules.html) section.
 
 Writing new data is as simple as sending a JSON.
 
 ```js
-WeDeploy
-  .url('http://data.datademo.wedeploy.me/movies')
-  .post({
-    "title": "Star Wars IV",
-    "year": 1977,
-    "rating": 8.7
-  })
-  .then(function(clientResponse) {
-    console.log(clientResponse.body())
-  });
+
+client = WeDeploy.data('http://data.datademo.wedeploy.me')
+
+client.create('movies', {
+  "title": "Star Wars IV",
+  "year": 1977,
+  "rating": 8.7
+}).then(function(response) {
+  console.log(response);
+});
+
 ```
+As you can see, the data api uses Promises to help you to make async requests.
 
 This operation will return the newly created document, with the following generated ID:
 
 ```js
 {
-  "title": "Star Wars",
   "id":" 115992383516607958",
+  "title": "Star Wars IV",
   "year": 1977,
   "rating": 8.7
 }
 ```
+<!-- </article> -->
+
+<!-- <article id="inserting-multiple-data"> -->
+
+## Inserting multiple data
+
+With the same method you're able to create multiple data instead using the method `.create` multiple times.
+You just need to use an array instead an object as the second param.
+
+```js
+client = WeDeploy.data('http://data.datademo.wedeploy.me')
+
+client.create('movies', [
+  {
+    "title": "Star Wars III",
+    "year": 2005,
+    "rating": 8.0
+  },
+  {
+    "title": "Star Wars II",
+    "year": 2002,
+    "rating": 8.6
+  }
+]).then(function(response) {
+  console.log(response);
+});
+
+```
+
+This operation will return the newly created array of documents, with the following generated IDs:
+
+```js
+[
+  {
+    "id":" 115992383516607959",
+    "title": "Star Wars III",
+    "year": 2005,
+    "rating": 8.0
+  },
+  {
+    "id":" 115992383516607954",
+    "title": "Star Wars II",
+    "year": 2002,
+    "rating": 8.6
+  }
+]
+```
+<!-- </article> -->
+
+<!-- <article id="inserting-new-fields-in-an-existing-collection"> -->
+
+## Inserting new fields in an existing collection
+
+WeDeploy Data service is really flexible in therms of data structure. You're able to insert new fiels in a collection by adding the new key in the object param.
+
+```js
+client = WeDeploy.data('http://data.datademo.wedeploy.me')
+
+client.create('movies', [
+  {
+    "title": "Star Wars I",
+    "year": 1999,
+    "rating": 9.0
+  }
+]).then(function(response) {
+  console.log(response);
+});
+
+```
+
+This operation will return the newly created document, with the following generated ID:
+
+
+```js
+{
+  "id":" 115992383516607958",
+  "title": "Star Wars IV",
+  "year": 1977,
+  "rating": 8.7
+}
+```
+
 <!-- </article> -->
 
 <!-- <article id="url-scope-structure"> -->
@@ -48,58 +134,8 @@ For example, to reference the newly created Star Wars rating, we can use the pat
 ```text
 http://data.datademo.wedeploy.me/movies/115992383516607958/rating
 ```
-
-At this point, update and delete operations can be performed at any level of the resource. For example, we can update the existing document by adding a new field:
-
-```js
-WeDeploy.url('http://data.datademo.wedeploy.me/movies')
-   .path('115992383516607958')
-   .form('stars', 'Mark Hamill')
-   .form('stars', 'Harrison Ford')
-   .form('stars', 'Carrie Fisher')
-   .patch();
-```
-
-Note in the example above, the data was sent as request form attributes. The response is the modified document:
-
-```js
-{
-  "title": "Star Wars",
-  "id": "115992383516607958",
-  "year": 1977,
-  "rating": 8.7,
-  "stars": ["Mark Hamill", "Harrison Ford", "Carrie Fisher"]
-}
-```
-
-We can use the PUT method at the document level to create a document with a custom ID, or to override an existing one. The following example creates a new entry with the custom ID star_wars_v:
-
-```js
-WeDeploy.url('http://data.datademo.wedeploy.me/movies')
-  .path('star_wars_v')
-  .put({
-    "title":"Star Wars: Episode V - The Empire Strikes Back",
-    "year":1980,
-    "rating":8.8
-  })
-  .then(function() {
-    console.log('Data saved');
-  });
-```
-
-To override an existing entry you would just specify the existing ID.
-
-To delete a field, document, or the entire collection, we use the DELETE method:
-
-```js
-WeDeploy.url('http://data.datademo.wedeploy.me/movies/star_wars_v/title').delete();
-WeDeploy.url('http://data.datademo.wedeploy.me/movies/star_wars_v').delete();
-WeDeploy.url('http://data.datademo.wedeploy.me/movies').delete();
-```
-
 <!-- </article> -->
-
 
 ## Next Steps
 
-Now that you have learned how to create data, you can interact [retrieving data](/docs/data/retrieving-data.html).
+Now that you have learned how to create data, you can interact [updating data](/docs/data/updating-data.html).
