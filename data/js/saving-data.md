@@ -96,6 +96,7 @@ client = WeDeploy.data('http://data.datademo.wedeploy.me')
 client.create('movies', [
   {
     "title": "Star Wars I",
+    "obs": "First in ABC order",
     "year": 1999,
     "rating": 9.0
   }
@@ -107,13 +108,13 @@ client.create('movies', [
 
 This operation will return the newly created document, with the following generated ID:
 
-
 ```js
 {
-  "id":" 115992383516607958",
-  "title": "Star Wars IV",
-  "year": 1977,
-  "rating": 8.7
+  "id":" 115992383516607954",
+  "title": "Star Wars I",
+  "obs": "First in ABC order",
+  "year": 1999,
+  "rating": 9.0
 }
 ```
 
