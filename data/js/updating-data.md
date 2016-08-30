@@ -38,4 +38,4 @@ This operation will return the updated document with the new rating:
 
 ## Next Steps
 
-Now that you have learned how to update data, you can interact [deleting data](/docs/data/updating-data.html).
+Now that you have learned how to update data, you can interact [deleting data](/docs/data/deleting-data.html).

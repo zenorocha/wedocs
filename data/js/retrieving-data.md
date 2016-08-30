@@ -9,7 +9,7 @@
 Reading data from our storage takes only 3 lines of code.
 
 ```js
-WeDeploy.data('http://data.datademo.wedeploy.me')
+WeDeploy.data('http://datademo.wedeploy.io')
   .get('movies/star_wars_v')
   .then(response => console.log(response));
 ```
@@ -29,7 +29,7 @@ We can also get any field value using the full path:
 
 ```js
 WeDeploy
-  .data('http://data.datademo.wedeploy.me')
+  .data('http://datademo.wedeploy.io')
   .get('movies/star_wars_v/title')
   .then(response => console.log(response));
 ```
@@ -37,7 +37,7 @@ WeDeploy
 The full path returns the raw content in the response body:
 
 Star Wars: Episode V - The Empire Strikes Back
-Requesting the entire movies collection using curl -X "GET" "http://data.datademo.wedeploy.me/movies" results in the first 10 documents stored:
+Requesting the entire movies collection using curl -X "GET" "http://datademo.wedeploy.io/movies" results in the first 10 documents stored:
 
 ```js
 [
@@ -59,7 +59,7 @@ Requesting the entire movies collection using curl -X "GET" "http://data.datadem
 The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:
 
 ```js
-client = WeDeploy.data('http://data.datademo.wedeploy.me')
+client = WeDeploy.data('http://datademo.wedeploy.io')
 
 client.orderBy('rating', 'desc')
   .get('movies')
@@ -91,7 +91,7 @@ Notice that because Episode VII has no rating (as it was not released yet), it's
 In addition to sorting the results, we can also apply filters using the following code:
 
 ```js
-WeDeploy.data('http://data.datademo.wedeploy.me')
+WeDeploy.data('http://datademo.wedeploy.io')
    .where('year', '<', 2000)
    .where('rating', '>', 8.5)
    .get('movies')
@@ -116,7 +116,7 @@ The following entries are the result of the above filters:
 We can also paginate the result using the 'limit' and 'offset' properties. Combining all the tools we've learned so far, we can run a detailed query on our data:
 
 ```js
-WeDeploy.data('http://data.datademo.wedeploy.me')
+WeDeploy.data('http://datademo.wedeploy.io')
    .where('year', '>', 2000)
    .orderBy('rating')
    .limit(2)
