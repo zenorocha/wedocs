@@ -9,20 +9,21 @@
 We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the *WeDeploy™* API method we use to the `watch` method:
 
 ```js
-WeDeploy.url('http://data.datademo.wedeploy.me/places')
-   .filter(Filter.any('category', 'cinema'))
-   .filter(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
-   .watch()
-   .on('changes', doSomethingWithReceivedData)
-   .on('fail', handleFailure);
+WeDeploy
+    .data('http://data.datademo.wedeploy.io')
+    .where(Filter.any('category', 'cinema'))
+    .where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
+    .watch('movies')
+    .on('changes', doSomethingWithReceivedData)
+    .on('fail', handleFailure);
 
-   function doSomethingWithReceivedData(data) {
-     console.log(data);
-   }
+    function doSomethingWithReceivedData(data) {
+      console.log(data);
+    }
 
-   function handleFailure(error) {
-     console.log(error);
-   }
+    function handleFailure(error) {
+      console.log(error);
+    }
 ```
 
 Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
