@@ -92,10 +92,10 @@ In addition to sorting the results, we can also apply filters using the followin
 
 ```js
 WeDeploy.data('http://datademo.wedeploy.io')
-   .where('year', '<', 2000)
-   .where('rating', '>', 8.5)
-   .get('movies')
-   .then(response => console.log(response));
+  .where('year', '<', 2000)
+  .or('rating', '>', 8.5)
+  .get('movies')
+  .then(response => console.log(response));
 ```
 
 The following entries are the result of the above filters:
@@ -117,11 +117,11 @@ We can also paginate the result using the 'limit' and 'offset' properties. Combi
 
 ```js
 WeDeploy.data('http://datademo.wedeploy.io')
-   .where('year', '>', 2000)
-   .orderBy('rating')
-   .limit(2)
-   .offset(1)
-   .get();
+  .where('year', '>', 2000)
+  .orderBy('rating')
+  .limit(2)
+  .offset(1)
+  .get();
 ```
 
 Notice that filtering by year only returns episodes I, II, III, and VII. Applying the 'rating' sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:
