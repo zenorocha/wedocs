@@ -1,6 +1,6 @@
-# Maven
+# Node.js
 
-###### Launch a Maven application in few steps.
+###### Launch a Node.js application in few steps.
 
 <!-- <article id="install-dependencies"> -->
 
@@ -23,8 +23,8 @@ we run
 2. Clone this repository:
 
   ```text
-git clone https://github.com/wedeploy/boilerplate-maven.git
-cd boilerplate-maven
+git clone https://github.com/wedeploy/boilerplate-nodejs.git
+cd boilerplate-nodejs
   ```
 
 3. Link this container with the local infrastructure:
@@ -38,11 +38,10 @@ we link
   ```text
 we build
   ```
-
 5. Now your container is ready to be used:
 
   ```text
-http://maven.<projectID>.wedeploy.me
+http://nodejs.<projectID>.wedeploy.me
   ```
 
 <!-- </article> -->
@@ -51,7 +50,7 @@ http://maven.<projectID>.wedeploy.me
 
 ## Deploying to the Cloud
 
-1. [Fork this repository](https://github.com/wedeploy/boilerplate-maven/fork).
+1. [Fork this repository](https://github.com/wedeploy/boilerplate-nodejs/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.io).
 3. [Create a project](http://dashboard.wedeploy.io/projects/create).
 4. In the sidebar, click on *GitHub Integration*.
@@ -61,11 +60,11 @@ http://maven.<projectID>.wedeploy.me
 8. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
-http://maven.<projectID>.wedeploy.io
+http://nodejs.<projectID>.wedeploy.io
   ```
 
 <!-- </article> -->
 
 ## What's Next?
 
-* Now you can start building your Maven based application.
+* Now you can start building your Node.js based application.
