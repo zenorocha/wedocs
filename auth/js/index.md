@@ -115,4 +115,4 @@ WeDeploy.auth('http://<containerID>.<projectID>.wedeploy.io');
 
 ## What's Next?
 
-* Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/js/sign-in-with-facebook.html).
+* Now we're ready to [start managing your users](/docs/auth/js/manage-users.html).

@@ -15,10 +15,10 @@ WeDeploy
 		email: 'user@domain.com',
 		password: 'abc'
 	})
-	.then(function(user) {  
+	.then(function(user) {
 		// Successfully created.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // Not created.
 	});
 ```
@@ -52,7 +52,7 @@ WeDeploy
 	.then(function(user) {
 		// User found.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 		// User does not exist.
 	});
 ```
@@ -69,10 +69,10 @@ You can delete a user account with the delete method. For example:
 var currentUser = WeDeploy.auth().currentUser;
 
 currentUser.deleteUser()
-	.then(function() {  
+	.then(function() {
 		// Successfully deleted.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // Not deleted.
 	});
 ```
@@ -95,10 +95,10 @@ currentUser.updateUser({
 	name: "Eleven",
 	photoUrl: "https://hawkinslabs.com/011/profile.jpg"
 })
-.then(function() {  
+.then(function() {
 	// Successfully updated.
 })
-.catch(function(err) {  
+.catch(function(err) {
   // Not updated.
 });
 ```
@@ -118,7 +118,7 @@ WeDeploy
 	.then(function() {
 		// Email sent.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // An error happened.
 	});
 ```
@@ -136,7 +136,7 @@ WeDeploy
 	.then(function() {
 		// User is signed out.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // User was signed out.
 	});
 ```
@@ -145,4 +145,4 @@ WeDeploy
 
 ## What's Next?
 
-* Now you can start building your apps with authentication.
+* Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/js/sign-in-with-facebook.html).

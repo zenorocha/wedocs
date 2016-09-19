@@ -25,4 +25,4 @@ WeDeploy
 
 ## What's Next?
 
-* Now we're ready to [start managing your users](/docs/auth/js/manage-users.html).
+* Now you can start building your apps with authentication.
