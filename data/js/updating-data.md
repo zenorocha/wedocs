@@ -11,7 +11,6 @@
 Updating existing data is as simple as sending a JSON.
 
 ```js
-
 var client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.update('movies/115992383516607958', {
