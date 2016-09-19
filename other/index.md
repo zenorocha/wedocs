@@ -1,6 +1,6 @@
-# Node.js
+# Liferay
 
-###### Launch a Node.js application in few steps.
+###### Launch a Liferay application in few steps.
 
 <!-- <article id="install-dependencies"> -->
 
@@ -23,8 +23,8 @@ we run
 2. Clone this repository:
 
   ```text
-git clone https://github.com/wedeploy/boilerplate-nodejs.git
-cd boilerplate-nodejs
+git clone https://github.com/wedeploy/boilerplate-liferay.git
+cd boilerplate-liferay
   ```
 
 3. Link this container with the local infrastructure:
@@ -41,7 +41,7 @@ we build
 5. Now your container is ready to be used:
 
   ```text
-http://nodejs.<projectID>.wedeploy.me
+http://liferay.<projectID>.wedeploy.me
   ```
 
 <!-- </article> -->
@@ -50,7 +50,7 @@ http://nodejs.<projectID>.wedeploy.me
 
 ## Deploying to the Cloud
 
-1. [Fork this repository](https://github.com/wedeploy/boilerplate-nodejs/fork).
+1. [Fork this repository](https://github.com/wedeploy/boilerplate-liferay/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.io).
 3. [Create a project](http://dashboard.wedeploy.io/projects/create).
 4. In the sidebar, click on *GitHub Integration*.
@@ -60,11 +60,11 @@ http://nodejs.<projectID>.wedeploy.me
 8. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
-http://nodejs.<projectID>.wedeploy.io
+http://liferay.<projectID>.wedeploy.io
   ```
 
 <!-- </article> -->
 
 ## What's Next?
 
-* Now you can start building your Node.js based application.
+* Now you can start building your liferay based application.

@@ -11,7 +11,6 @@
 Writing new data is as simple as sending a JSON.
 
 ```js
-
 var client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.create('movies', {
