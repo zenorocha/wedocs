@@ -284,4 +284,4 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 ## Next Steps
 
-Now that you have learned how to retrieve data, you can interact with [real-time feeds](/docs/data/real-time-feeds.html).
+Now that you have learned how to retrieve data, you can interact with [real-time feeds](/docs/data/js/real-time-feeds.html).
