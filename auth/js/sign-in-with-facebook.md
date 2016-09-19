@@ -50,4 +50,4 @@ Create a client id and client secret by [registering your application](https://d
 
 ## What's Next?
 
-* Now we're ready to start [enabling other login providers into your app](/docs/auth/sign-in-with-github.html).
+* Now we're ready to start [enabling other login providers into your app](/docs/auth/js/sign-in-with-github.html).

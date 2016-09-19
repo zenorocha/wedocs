@@ -16,7 +16,7 @@ WeDeploy
 	.then(function(user) {
 		// User is signed in.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // User is not signed in.
 	});
 ```
@@ -25,4 +25,4 @@ WeDeploy
 
 ## What's Next?
 
-* Now we're ready to [start managing your users](/docs/auth/manage-users.html).
+* Now we're ready to [start managing your users](/docs/auth/js/manage-users.html).
