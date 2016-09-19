@@ -12,7 +12,7 @@ To delete a field, document, or the entire collection, we use the DELETE method:
 
 ```js
 
-client = WeDeploy.data('http://datademo.wedeploy.io');
+var client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.delete('movies/star_wars_v/title');
 

@@ -12,12 +12,12 @@ Updating existing data is as simple as sending a JSON.
 
 ```js
 
-client = WeDeploy.data('http://datademo.wedeploy.io');
+var client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.update('movies/115992383516607958', {
   "rating": 9.1
-}).then(function(response) {
-  console.log(response);
+}).then(function(movie) {
+  console.log(movie);
 });
 
 ```

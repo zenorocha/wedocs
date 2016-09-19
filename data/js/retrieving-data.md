@@ -11,7 +11,9 @@ Reading data from our storage takes only 3 lines of code.
 ```js
 WeDeploy.data('http://datademo.wedeploy.io')
   .get('movies/star_wars_v')
-  .then(response => console.log(response));
+  .then(function(movie) {
+    console.log(movie);
+  });
 ```
 
 The response body is the stored JSON document:
@@ -31,7 +33,9 @@ We can also get any field value using the full path:
 WeDeploy
   .data('http://datademo.wedeploy.io')
   .get('movies/star_wars_v/title')
-  .then(response => console.log(response));
+  .then(function(title) {
+    console.log(title);
+  });
 ```
 
 The full path returns the raw content in the response body:
@@ -59,11 +63,13 @@ Requesting the entire movies collection using curl -X "GET" "http://datademo.wed
 The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:
 
 ```js
-client = WeDeploy.data('http://datademo.wedeploy.io')
+var client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.orderBy('rating', 'desc')
   .get('movies')
-  .then(response => console.log(response));
+  .then(function(movies) {
+    console.log(movies);
+  });
 ```
 
 As expected, the result would be the following list:
@@ -95,7 +101,9 @@ WeDeploy.data('http://datademo.wedeploy.io')
   .where('year', '<', 2000)
   .or('rating', '>', 8.5)
   .get('movies')
-  .then(response => console.log(response));
+  .then(function(movies) {
+    console.log(movies);
+  });
 ```
 
 The following entries are the result of the above filters:
@@ -121,7 +129,10 @@ WeDeploy.data('http://datademo.wedeploy.io')
   .orderBy('rating')
   .limit(2)
   .offset(1)
-  .get();
+  .get('movies')
+  .then(function(movies) {
+    console.log(movies);
+  });
 ```
 
 Notice that filtering by year only returns episodes I, II, III, and VII. Applying the 'rating' sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:

@@ -14,7 +14,10 @@ First take a look at the text search. It's a simple, yet very powerful way to fi
 WeDeploy
   .data()
   .match('title', "Sith's revenge")
-  .get('movies');
+  .get('movies')
+  .then(function(movies) {
+    console.log(movies);
+  });
   ```
 
 The result of the match operator query is the following entry:
@@ -30,19 +33,28 @@ We can also use simple text operators in our match:
 WeDeploy
   .data()
   .match('title', '(jedi | force) -return')
-  .get('movies');
+  .get('movies')
+  .then(function(movies) {
+    console.log(movies);
+  });
 
 // or this
 WeDeploy
   .data()
   .match('title', 'awake*')
-  .get('movies');
+  .get('movies')
+  .then(function(movies) {
+    console.log(movies);
+  });
 
 // or even this
 WeDeploy
   .data()
   .match('title', 'wakens~')
-  .get('movies');
+  .get('movies')
+  .then(function(movies) {
+    console.log(movies);
+  });
   ```
 
 Any search in the previous example results in the following match:
@@ -59,8 +71,10 @@ So far we are still just filtering data with filters. We can do so much more tha
 WeDeploy
   .data()
   .similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!')
-  .onSearch()
-  .get('movies');
+  .search('movies')
+  .then(function(movies) {
+    console.log(movies);
+  });
   ```
 
 We receive not only the documents that match the filter, but also search metadata:
@@ -108,9 +122,11 @@ Want more? Well, let's make things even easier for the user! Adding one entry to
   ```js
 WeDeploy.data()
   .similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!')
-  .onSearch()
   .highlight('title')
-  .get('movies');
+  .search('movies')
+  .then(function(movies) {
+    console.log(movies);
+  });
   ```
 
 As you can see in the code below, our keywords are highlighted in the results:
@@ -159,7 +175,10 @@ WeDeploy
   .lt('year', 1990)
   .aggregate('Old Movies', 'rating', 'avg')
   .count()
-  .get('movies');
+  .get('movies')
+  .then(function(aggregation) {
+    console.log(aggregation);
+  });
   ```
 
 The count we added to the query informed the server that we are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:
@@ -219,7 +238,10 @@ WeDeploy
   .data()
   .any('category', 'cinema')
   .distance('location', '51.5031653,-0.1123051', '1mi')
-  .get('places');
+  .get('places')
+  .then(function(places) {
+    console.log(places);
+  });
 ```
 
 Our result is the following matches:
