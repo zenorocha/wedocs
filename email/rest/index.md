@@ -74,23 +74,62 @@ Sends an email asynchronously and returns its ID.
 
 ###### Options
 
-Parameter    | Type    | Description
------------- | ------- | ------------
-bcc          | string  | Bcc recipient email address. Multiple addresses should be defined in multiple parameters.
-cc           | string  | Cc recipient email address. Multiple addresses should be defined in multiple parameters.
-from         | string  | Sender email address.
-message      | string  | HTML content of your email message. Up to 5MB.
-priority     | number  | Used by email clients to define a message's importance. From 1 to 5 where '1' is highest and '5' is the lowest priority.
-replyTo      | string  | Append a reply-to address to your email message.
-subject      | string  | Subject of your email. Up to 1MB.
-to           | string  | Recipient email address. Multiple addresses should be defined in multiple parameters.
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bcc</td>
+      <td>string</td>
+      <td>Bcc recipient email address. Multiple addresses should be defined in multiple parameters.</td>
+    </tr>
+    <tr>
+      <td>cc</td>
+      <td>string</td>
+      <td>Cc recipient email address. Multiple addresses should be defined in multiple parameters.</td>
+    </tr>
+    <tr>
+      <td>from</td>
+      <td>string</td>
+      <td>Sender email address.</td>
+    </tr>
+    <tr>
+      <td>message</td>
+      <td>string</td>
+      <td>HTML content of your email message. Up to 5MB.</td>
+    </tr>
+    <tr>
+      <td>priority</td>
+      <td>number</td>
+      <td>Used by email clients to define a message's importance. From 1 to 5 where '1' is highest and '5' is the lowest priority.</td>
+    </tr>
+    <tr>
+      <td>replyTo</td>
+      <td>string</td>
+      <td>Append a reply-to address to your email message.</td>
+    </tr>
+    <tr>
+      <td>subject</td>
+      <td>string</td>
+      <td>Subject of your email. Up to 1MB.</td>
+    </tr>
+    <tr>
+      <td>to</td>
+      <td>string</td>
+      <td>Recipient email address. Multiple addresses should be defined in multiple parameters.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### `GET /emails/:id/status`
 
-
-```
 
 <!-- </article> -->
 
