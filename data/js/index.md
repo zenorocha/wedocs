@@ -54,17 +54,25 @@ http://datademo.wedeploy.me
 ## Deploying to the Cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-data/fork).
-2. Go to the [Dashboard](http://dashboard.wedeploy.io).
-3. [Create a project](http://dashboard.wedeploy.io/projects/create).
-4. In the sidebar, click on *GitHub Integration*.
-5. Type your repository URL and `js` branch.
-6. Click on *Update Project*.
-7. Click on *Build All Repos* and wait a few seconds.
-8. Once you see it in the Dashboard, your container will be ready to be used.
+2. Go to the [Dashboard](http://dashboard.wedeploy.com).
+3. [Create a project](http://dashboard.wedeploy.com/projects/create).
+4. In the sidebar, click on *Deployment*.
+5. Using your local machine, clone your Github fork:
+  ```text
+git clone -b js https://github.com/{your_github_username}/boilerplate-data
+  ```
+6. Get into the folder: `cd boilerplate-data`.
+7. Using the content on *Deployment* page. Add the WeDeploy remote url:
+  ```text
+git remote add wedeploy http://git.wedeploy.com/<projectID>.git
+  ```
+8. Push your data to wedeploy git server: `git push wedeploy js:master`.
+9. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
 http://datademo.wedeploy.io
   ```
+
 
 <!-- </article> -->
 
