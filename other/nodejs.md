@@ -9,7 +9,7 @@
 </div>
 
 <div class="guide-aux-cta">
-  Or read the <a href="https://github.com/wedeploy/boilerplate-nodejs" target="_blank">source code</a>.
+  or read the <a href="https://github.com/wedeploy/boilerplate-nodejs" target="_blank">source code</a>.
 </div>
 
 <!-- <article id="install-dependencies"> -->
