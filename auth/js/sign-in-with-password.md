@@ -13,12 +13,12 @@ To sign in by email and password, call `signInWithEmailAndPassword`:
 var auth = WeDeploy.auth();
 
 auth.signInWithEmailAndPassword("user@domain.com", "password")
-	.then(function(user) {
-		// User is signed in.
-	})
-	.catch(function(err) {
-	  // User is not signed in.
-	});
+.then(function(user) {
+	// User is signed in.
+})
+.catch(function(err) {
+  // User is not signed in.
+});
 ```
 
 <!-- </article> -->

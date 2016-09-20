@@ -12,18 +12,18 @@ We presented a lot of features for data filtering and search. You may be wonderi
 var data = WeDeploy.data('http://datademo.wedeploy.io');
 
 data.where(Filter.any('category', 'cinema'))
-  .where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
-  .watch('movies')
-  .on('changes', doSomethingWithReceivedData)
-  .on('fail', handleFailure);
+.where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
+.watch('movies')
+.on('changes', doSomethingWithReceivedData)
+.on('fail', handleFailure);
 
-  function doSomethingWithReceivedData(data) {
-    console.log(data);
-  }
+function doSomethingWithReceivedData(data) {
+  console.log(data);
+}
 
-  function handleFailure(error) {
-    console.log(error);
-  }
+function handleFailure(error) {
+  console.log(error);
+}
 ```
 
 Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.

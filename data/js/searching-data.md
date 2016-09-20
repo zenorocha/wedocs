@@ -14,10 +14,10 @@ First take a look at the text search. It's a simple, yet very powerful way to fi
 var data = WeDeploy.data('http://datademo.wedeploy.io');
 
 data.match('title', "Sith's revenge")
-  .get('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.get('movies')
+.then(function(movies) {
+  console.log(movies);
+});
   ```
 
 The result of the match operator query is the following entry:
@@ -31,30 +31,30 @@ We can also use simple text operators in our match:
   ```js
 // we can run this
 WeDeploy
-  .data()
-  .match('title', '(jedi | force) -return')
-  .get('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.data()
+.match('title', '(jedi | force) -return')
+.get('movies')
+.then(function(movies) {
+  console.log(movies);
+});
 
 // or this
 WeDeploy
-  .data()
-  .match('title', 'awake*')
-  .get('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.data()
+.match('title', 'awake*')
+.get('movies')
+.then(function(movies) {
+  console.log(movies);
+});
 
 // or even this
 WeDeploy
-  .data()
-  .match('title', 'wakens~')
-  .get('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.data()
+.match('title', 'wakens~')
+.get('movies')
+.then(function(movies) {
+  console.log(movies);
+});
   ```
 
 Any search in the previous example results in the following match:
@@ -69,12 +69,12 @@ So far we are still just filtering data with filters. We can do so much more tha
 
   ```js
 WeDeploy
-  .data()
-  .similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!')
-  .search('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.data()
+.similar('title', 'The attack an awaken Jedi uses to strike a Sith is pure force!')
+.search('movies')
+.then(function(movies) {
+  console.log(movies);
+});
   ```
 
 We receive not only the documents that match the filter, but also search metadata:
@@ -121,12 +121,12 @@ Want more? Well, let's make things even easier for the user! Adding one entry to
 
   ```js
 WeDeploy.data()
-  .similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!')
-  .highlight('title')
-  .search('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.similar('title', 'The attack an awakened Jedi uses to strike a Sith is pure force!')
+.highlight('title')
+.search('movies')
+.then(function(movies) {
+  console.log(movies);
+});
   ```
 
 As you can see in the code below, our keywords are highlighted in the results:
@@ -171,14 +171,14 @@ The third search feature is also quite simple, but can be applied to generate me
 
   ```js
 WeDeploy
-  .data()
-  .lt('year', 1990)
-  .aggregate('Old Movies', 'rating', 'avg')
-  .count()
-  .get('movies')
-  .then(function(aggregation) {
-    console.log(aggregation);
-  });
+.data()
+.lt('year', 1990)
+.aggregate('Old Movies', 'rating', 'avg')
+.count()
+.get('movies')
+.then(function(aggregation) {
+  console.log(aggregation);
+});
   ```
 
 The count we added to the query informed the server that we are not interested in the documents themselves, but rather the number of matches and search metadata. The result, in this case, will be the following data:
@@ -221,12 +221,12 @@ If we want to inform the server of the data type of a collection field before it
 
   ```js
 WeDeploy
-  .url('http://data.datademo.wedeploy.me/')
-  .post({
-     "places": {
-       "location": "geo_point"
-     }
-  });
+.url('http://data.datademo.wedeploy.me/')
+.post({
+   "places": {
+     "location": "geo_point"
+   }
+});
   ```
 
 We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.
@@ -235,13 +235,13 @@ So, we mapped a field called location, in the collection places, as representing
 
 ```js
 WeDeploy
-  .data()
-  .any('category', 'cinema')
-  .distance('location', '51.5031653,-0.1123051', '1mi')
-  .get('places')
-  .then(function(places) {
-    console.log(places);
-  });
+.data()
+.any('category', 'cinema')
+.distance('location', '51.5031653,-0.1123051', '1mi')
+.get('places')
+.then(function(places) {
+  console.log(places);
+});
 ```
 
 Our result is the following matches:

@@ -12,9 +12,9 @@ Reading data from our storage takes only 3 lines of code.
 var data = WeDeploy.data('http://datademo.wedeploy.io');
 
 data.get('movies/star_wars_v')
-  .then(function(movie) {
-    console.log(movie);
-  });
+.then(function(movie) {
+  console.log(movie);
+});
 ```
 
 The response body is the stored JSON document:
@@ -32,11 +32,11 @@ We can also get any field value using the full path:
 
 ```js
 WeDeploy
-  .data('http://datademo.wedeploy.io')
-  .get('movies/star_wars_v/title')
-  .then(function(title) {
-    console.log(title);
-  });
+.data('http://datademo.wedeploy.io')
+.get('movies/star_wars_v/title')
+.then(function(title) {
+  console.log(title);
+});
 ```
 
 The full path returns the raw content in the response body:
@@ -67,10 +67,10 @@ The result is ordered by document id, as we can see in the list above. We can se
 var client = WeDeploy.data('http://datademo.wedeploy.io');
 
 client.orderBy('rating', 'desc')
-  .get('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.get('movies')
+.then(function(movies) {
+  console.log(movies);
+});
 ```
 
 As expected, the result would be the following list:
@@ -99,12 +99,12 @@ In addition to sorting the results, we can also apply filters using the followin
 
 ```js
 WeDeploy.data('http://datademo.wedeploy.io')
-  .where('year', '<', 2000)
-  .or('rating', '>', 8.5)
-  .get('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.where('year', '<', 2000)
+.or('rating', '>', 8.5)
+.get('movies')
+.then(function(movies) {
+  console.log(movies);
+});
 ```
 
 The following entries are the result of the above filters:
@@ -126,14 +126,14 @@ We can also paginate the result using the 'limit' and 'offset' properties. Combi
 
 ```js
 WeDeploy.data('http://datademo.wedeploy.io')
-  .where('year', '>', 2000)
-  .orderBy('rating')
-  .limit(2)
-  .offset(1)
-  .get('movies')
-  .then(function(movies) {
-    console.log(movies);
-  });
+.where('year', '>', 2000)
+.orderBy('rating')
+.limit(2)
+.offset(1)
+.get('movies')
+.then(function(movies) {
+  console.log(movies);
+});
 ```
 
 Notice that filtering by year only returns episodes I, II, III, and VII. Applying the 'rating' sort will give us this same order. We also limited the result to show only two documents and skip the first one. The final result is the following entries:
