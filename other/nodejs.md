@@ -2,6 +2,12 @@
 
 ###### Launch a Node.js application in few steps.
 
+<div class="guide-btn-cta">
+  <a class="btn btn-accent btn-sm" href="http://nodejs-demo.wedeploy.io" target="_blank">
+    <span class="icon-16-external"></span>See Live Demo
+  </a>
+</div>
+
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies
