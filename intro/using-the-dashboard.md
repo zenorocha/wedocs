@@ -33,7 +33,7 @@ As the main page, the dashboard will list all your projects and status of availa
 
 You are able to organize your services by project. Select a project name and ID and click in Create Project.
 
-![New Project](https://cloud.githubusercontent.com/assets/301291/18655366/1dabe674-7e9d-11e6-8474-6b6060bbbcec.png)
+![New Project](https://cloud.githubusercontent.com/assets/301291/18656444/0409e49c-7ea6-11e6-8961-eeccd4deab43.png)
 
 <!-- </article> -->
 
@@ -43,7 +43,7 @@ You are able to organize your services by project. Select a project name and ID 
 
 Open your project by clicking in the Project name.
 
-![Project Container List](https://cloud.githubusercontent.com/assets/301291/18655425/94669afc-7e9d-11e6-8d34-45bf3c34085b.png)
+![Project Container List](https://cloud.githubusercontent.com/assets/301291/18656506/7e3d873c-7ea6-11e6-945b-2da9ba801c3e.png)
 
 <!-- </article> -->
 
@@ -62,7 +62,7 @@ Projects can have more than one service. In this example we're going to deploy a
 ## 6. Select a Service type
 In this tutorial we're going to use the WeDeploy Hosting in order to host a static project.
 
-![Select a Container Type](https://cloud.githubusercontent.com/assets/301291/18655473/f1201fac-7e9d-11e6-89d5-ce50b2b2abbe.png)
+![Select a Container Type](https://cloud.githubusercontent.com/assets/301291/18656521/9f3392b0-7ea6-11e6-9d05-29c68a657f6d.png)
 
 <!-- </article> -->
 
@@ -70,7 +70,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## 7. Fill in the ID click on install service
 
-![Install Container Form](https://cloud.githubusercontent.com/assets/301291/18655496/3334c168-7e9e-11e6-987e-2f76808cba99.png)
+![Install Container Form](https://cloud.githubusercontent.com/assets/301291/18656546/cac3682e-7ea6-11e6-8e24-354a1df99ea0.png)
 
 <!-- </article> -->
 
@@ -78,7 +78,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## 8. The container is going to be up and running
 
-![Container Up and Running](https://cloud.githubusercontent.com/assets/301291/18655518/750ee06e-7e9e-11e6-9912-053352921a01.png)
+![Container Up and Running](https://cloud.githubusercontent.com/assets/301291/18656561/f076a57c-7ea6-11e6-9d9d-aa288ca72135.png)
 
 <!-- </article> -->
 
@@ -86,7 +86,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 ## 9. Access the URL generated for your service
 Now that you installed the boilerplate, in the service screen is possible to see the status of the service and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
-![URL Generated](https://cloud.githubusercontent.com/assets/301291/18655597/16f28f84-7e9f-11e6-8e81-e1d8ccd29fa2.png)
+![URL Generated](https://cloud.githubusercontent.com/assets/301291/18656570/0e5adc7a-7ea7-11e6-8dd8-74f3697b520f.png)
 
 <!-- </article> -->
 
