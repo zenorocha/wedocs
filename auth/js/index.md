@@ -54,13 +54,20 @@ http://authdemo.wedeploy.me
 ## Deploying to the Cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-auth/fork).
-2. Go to the [Dashboard](http://dashboard.wedeploy.io).
-3. [Create a project](http://dashboard.wedeploy.io/projects/create).
-4. In the sidebar, click on *GitHub Integration*.
-5. Type your repository URL and `js` branch.
-6. Click on *Update Project*.
-7. Click on *Build All Repos* and wait a few seconds.
-8. Once you see it in the Dashboard, your container will be ready to be used.
+2. Go to the [Dashboard](http://dashboard.wedeploy.com).
+3. [Create a project](http://dashboard.wedeploy.com/projects/create).
+4. In the sidebar, click on *Deployment*.
+5. Using your local machine, clone your Github fork:
+  ```text
+git clone https://github.com/{your_github_username}/boilerplate-auth
+  ```
+6. Get into the folder: `cd boilerplate-auth`.
+7. Using the content on *Deployment* page. Add the WeDeploy remote url:
+  ```text
+git remote add wedeploy http://git.wedeploy.com/<projectID>.git
+  ```
+8. Push your data to wedeploy git server: `git push wedeploy master`.
+9. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
 http://authdemo.wedeploy.io
@@ -72,20 +79,24 @@ http://authdemo.wedeploy.io
 
 ## Key capabilities
 
-Easily add a complete sign-in system to your application. WeDeploy provides a ready-to-use auth solution that handles the UI flows for signing in users with email addresses and passwords, Google Sign-In, and GitHub Login.
+Easily add a complete sign-in system to your application. WeDeploy provides a ready-to-use auth solution that handles the UI flows for signing in users with email addresses and passwords, Google Sign-In, GitHub and Facebook Login.
 
 
 **Email and password**
 
 Authenticate users with their email addresses and passwords. Provides methods to create and manage users that use their email addresses and passwords to sign in, and sending password reset emails.
 
+**Google**
+
+Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google.
+
 **GitHub**
 
 Create a client id and client secret by [registering your application](https://github.com/settings/applications/new) on GitHub.
 
-**Google**
+**Facebook**
 
-Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google.
+Create an app ID by [registering your application](https://developers.facebook.com/docs/apps/register) on Facebook.
 
 **Manage Users**
 

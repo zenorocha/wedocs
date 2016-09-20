@@ -4,58 +4,55 @@
 
 <!-- <article id="create-user"> -->
 
-## Create user
+## Create an user
 
-You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
+You create a new user in your WeDeploy project.
 
-```js
-WeDeploy
-	.auth()
-	.createUser({
-		email: 'user@domain.com',
-		password: 'abc'
-	})
-	.then(function(user) {  
-		// Successfully created.
-	})
-	.catch(function(err) {  
-	  // Not created.
-	});
-```
+#### `POST /users`
+
+Options:
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>email*</td>
+      <td>string</td>
+      <td>User Email</td>
+    </tr>
+    <tr>
+      <td>password*</td>
+      <td>string</td>
+      <td>User Password</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td>User Name</td>
+    </tr>
+    <tr>
+      <td>photoUrl</td>
+      <td>string</td>
+      <td>User Photo URL</td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- </article> -->
 
-<!-- <article id="get-current-user"> -->
-
-## Get current user
-
-```js
-var currentUser = WeDeploy.auth().currentUser;
-
-if (currentUser) {
-	// User is signed in.
-} else {
-	// No user is signed in.
-}
-```
-
-<!-- </article> -->
 
 <!-- <article id="get-user"> -->
 
 ## Get user
 
-```js
-WeDeploy
-	.auth()
-	.getUser(userId)
-	.then(function(user) {
-		// User found.
-	})
-	.catch(function(err) {  
-		// User does not exist.
-	});
-```
+#### `GET /users/1`
+
 
 <!-- </article> -->
 
@@ -63,19 +60,9 @@ WeDeploy
 
 ## Delete user
 
+#### `DELETE /users/1`
+
 You can delete a user account with the delete method. For example:
-
-```js
-var currentUser = WeDeploy.auth().currentUser;
-
-currentUser.deleteUser()
-	.then(function() {  
-		// Successfully deleted.
-	})
-	.catch(function(err) {  
-	  // Not deleted.
-	});
-```
 
 
 <!-- </article> -->
@@ -86,22 +73,41 @@ currentUser.deleteUser()
 
 You can update a user's basic information. For example:
 
-```js
-var currentUser = WeDeploy.auth().currentUser;
+#### `PATH /users/1`
 
-currentUser.updateUser({
-	password: "password",
-	email: "eleven@hawkinslabs.com",
-	name: "Eleven",
-	photoUrl: "https://hawkinslabs.com/011/profile.jpg"
-})
-.then(function() {  
-	// Successfully updated.
-})
-.catch(function(err) {  
-  // Not updated.
-});
-```
+Options:
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>email</td>
+      <td>string</td>
+      <td>User Email</td>
+    </tr>
+    <tr>
+      <td>password</td>
+      <td>string</td>
+      <td>User Password</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td>User Name</td>
+    </tr>
+    <tr>
+      <td>photoUrl</td>
+      <td>string</td>
+      <td>User Photo URL</td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- </article> -->
 
@@ -118,7 +124,7 @@ WeDeploy
 	.then(function() {
 		// Email sent.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // An error happened.
 	});
 ```
@@ -136,7 +142,7 @@ WeDeploy
 	.then(function() {
 		// User is signed out.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // User was signed out.
 	});
 ```
