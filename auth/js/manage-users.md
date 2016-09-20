@@ -9,9 +9,9 @@
 You create a new user in your WeDeploy project by calling the `createUser` method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login.
 
 ```js
-var client = WeDeploy.auth();
+var auth = WeDeploy.auth();
 
-client.createUser({
+auth.createUser({
 		email: 'user@domain.com',
 		password: 'abc'
 	})
