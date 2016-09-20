@@ -9,9 +9,9 @@
 We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the *WeDeploy™* API method we use to the `watch` method:
 
 ```js
-WeDeploy
-  .data('http://data.datademo.wedeploy.io')
-  .where(Filter.any('category', 'cinema'))
+var data = WeDeploy.data('http://datademo.wedeploy.io');
+
+data.where(Filter.any('category', 'cinema'))
   .where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
   .watch('movies')
   .on('changes', doSomethingWithReceivedData)

@@ -11,9 +11,9 @@ We did some great stuff with basic data methods, like create, update, and delete
 First take a look at the text search. It's a simple, yet very powerful way to filter our results by a text query. Using the movie database we created before, let's search for a Star Wars movie by the episode title, like "Revenge of the Sith". We are not interested if the letter is in upper or lower case, since we are using English connectors like "of" and "the". We want something flexible enough that it will also work for texts like "The revenge of the Sith", or "Sith's revenge". Our match operator is flexible enough for both.
 
   ```js
-WeDeploy
-  .data()
-  .match('title', "Sith's revenge")
+var data = WeDeploy.data('http://datademo.wedeploy.io');
+
+data.match('title', "Sith's revenge")
   .get('movies')
   .then(function(movies) {
     console.log(movies);

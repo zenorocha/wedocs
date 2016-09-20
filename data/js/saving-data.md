@@ -11,9 +11,9 @@
 Writing new data is as simple as sending a JSON.
 
 ```js
-var client = WeDeploy.data('http://datademo.wedeploy.io');
+var data = WeDeploy.data('http://datademo.wedeploy.io');
 
-client.create('movies', {
+data.create('movies', {
   "title": "Star Wars IV",
   "year": 1977,
   "rating": 8.7
@@ -44,9 +44,7 @@ With the same method you're able to create multiple data instead using the metho
 You just need to use an array instead an object as the second param.
 
 ```js
-var client = WeDeploy.data('http://datademo.wedeploy.io');
-
-client.create('movies', [
+WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
   {
     "title": "Star Wars III",
     "year": 2005,
@@ -90,9 +88,7 @@ This operation will return the newly created array of documents, with the follow
 WeDeploy Data service is really flexible in therms of data structure. You're able to insert new fiels in a collection by adding the new key in the object param.
 
 ```js
-var client = WeDeploy.data('http://datademo.wedeploy.io');
-
-client.create('movies', [
+WeDeploy.data('http://datademo.wedeploy.io').create('movies', [
   {
     "title": "Star Wars I",
     "obs": "First in ABC order",

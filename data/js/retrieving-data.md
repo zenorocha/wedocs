@@ -9,8 +9,9 @@
 Reading data from our storage takes only 3 lines of code.
 
 ```js
-WeDeploy.data('http://datademo.wedeploy.io')
-  .get('movies/star_wars_v')
+var data = WeDeploy.data('http://datademo.wedeploy.io');
+
+data.get('movies/star_wars_v')
   .then(function(movie) {
     console.log(movie);
   });

@@ -10,9 +10,9 @@ To sign in by email and password, call `signInWithEmailAndPassword`:
 
 
 ```js
-WeDeploy
-	.auth()
-	.signInWithEmailAndPassword("user@domain.com", "password")
+var auth = WeDeploy.auth();
+
+auth.signInWithEmailAndPassword("user@domain.com", "password")
 	.then(function(user) {
 		// User is signed in.
 	})
