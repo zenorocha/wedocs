@@ -2,6 +2,16 @@
 
 ###### Serve static files easily using *WeDeploy™ Hosting*.
 
+<div class="guide-btn-cta">
+  <a class="btn btn-accent btn-sm" href="http://boilerplate-hosting.wedeploy.io" target="_blank">
+    <span class="icon-16-external"></span>See Live Demo
+  </a>
+</div>
+
+<div class="guide-aux-cta">
+  Or read the <a href="https://github.com/wedeploy/boilerplate-hosting" target="_blank">source code</a>.
+</div>
+
 <!-- <article id="install-dependencies"> -->
 
 ## Install Dependencies
