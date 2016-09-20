@@ -3,9 +3,13 @@
 ###### Send emails asynchronously and check their status using *WeDeploy™ Email*.
 
 <div class="guide-btn-cta">
-  <a class="btn btn-accent btn-sm" href="http://email-demo.wedeploy.io" target="_blank">
+  <a class="btn btn-accent btn-sm" href="http://boilerplate-email.wedeploy.io" target="_blank">
     <span class="icon-16-external"></span>See Live Demo
   </a>
+</div>
+
+<div class="guide-aux-cta">
+  Or read the <a href="https://github.com/wedeploy/boilerplate-email" target="_blank">source code</a>.
 </div>
 
 <!-- <article id="install-dependencies"> -->
