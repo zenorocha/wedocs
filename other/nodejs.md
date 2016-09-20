@@ -9,7 +9,7 @@
 </div>
 
 <div class="guide-aux-cta">
-  or read the <a href="https://github.com/wedeploy/boilerplate-nodejs/tree/js" target="_blank">source code</a>.
+  or read the <a href="https://github.com/wedeploy/boilerplate-nodejs/" target="_blank">source code</a>.
 </div>
 
 <!-- <article id="install-dependencies"> -->
@@ -66,7 +66,7 @@ http://nodejs.<projectID>.wedeploy.me
 4. In the sidebar, click on *Deployment*.
 5. Using your local machine, clone your Github fork:
   ```text
-git clone https://github.com/{your_github_username}/boilerplate-nodejs
+git clone https://github.com/<username>/boilerplate-nodejs
   ```
 6. Get into the folder: `cd boilerplate-nodejs`.
 7. Using the content on *Deployment* page. Add the WeDeploy remote url:

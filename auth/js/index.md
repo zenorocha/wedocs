@@ -63,7 +63,7 @@ http://authdemo.wedeploy.me
 4. In the sidebar, click on *Deployment*.
 5. Using your local machine, clone your Github fork:
   ```text
-git clone -b js https://github.com/{your_github_username}/boilerplate-auth
+git clone -b js https://github.com/<username>/boilerplate-auth
   ```
 6. Get into the folder: `cd boilerplate-auth`.
 7. Using the content on *Deployment* page. Add the WeDeploy remote url:

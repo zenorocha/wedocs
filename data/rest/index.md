@@ -53,7 +53,7 @@ http://datademo.wedeploy.me
 4. In the sidebar, click on *Deployment*.
 5. Using your local machine, clone your Github fork:
   ```text
-git clone -b js https://github.com/{your_github_username}/boilerplate-data
+git clone -b js https://github.com/<username>/boilerplate-data
   ```
 6. Get into the folder: `cd boilerplate-data`.
 7. Using the content on *Deployment* page. Add the WeDeploy remote url:
