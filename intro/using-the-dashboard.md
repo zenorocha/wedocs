@@ -82,7 +82,7 @@ In this tutorial we're going to use the WeDeploy Hosting in order to host a stat
 
 <!-- </article> -->
 
-<!-- <article id="10-access-the-url-generated"> -->
+<!-- <article id="9-access-the-url-generated"> -->
 
 ## 9. Access the URL generated for your service
 Now that you installed the boilerplate, in the service screen is possible to see the status of the service and its URL. Click on the URL to copy to your clipboard and open that in a new tab in your browser.
@@ -90,7 +90,7 @@ Now that you installed the boilerplate, in the service screen is possible to see
 
 <!-- </article> -->
 
-<!-- <article id="11-it-works"> -->
+<!-- <article id="10-it-works"> -->
 
 ## 10. It works!
 That's it! Using a sofisticated Loadbalancer system and service discovering, WeDeploy automatically creates a URL and points that to your container.
