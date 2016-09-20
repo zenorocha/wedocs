@@ -78,22 +78,8 @@ http://hosting.<projectID>.wedeploy.me
 
 <!-- </article> -->
 
-<!-- <article id="5-using-remotes"> -->
 
-## Using remotes
-To use the CLI tool with the WeDeploy cloud you need to add remotes first.
-
-The commands here are pretty similar to git's remote commands.
-
-Watch for logs on the wechat project:
-```text
-we remote add staging office-cloud.internal
-```
-
-<!-- </article> -->
-
-
-<!-- <article id="6-fetching-logs"> -->
+<!-- <article id="5-fetching-logs"> -->
 
 ## Fetching project and container logs
 
@@ -116,15 +102,9 @@ Watch for logs on the wechat project:
 we log wechat --watch
 ```
 
-Watch for logs on the wechat project on the production (remote) cloud:
-
-```text
-we log wechat --remote production
-```
-
 <!-- </article> -->
 
-<!-- <article id="7-list"> -->
+<!-- <article id="6-list"> -->
 
 ## Listing projects and containers
 

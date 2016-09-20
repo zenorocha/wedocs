@@ -48,7 +48,7 @@ we link
 4. Now your container is ready to be used:
 
   ```text
-http://datademo.wedeploy.me
+http://boilerplate-data.wedeploy.me
   ```
 
 <!-- </article> -->
@@ -74,9 +74,8 @@ git remote add wedeploy http://git.wedeploy.com/<projectID>.git
 9. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
-http://datademo.wedeploy.io
+http://boilerplate-data.wedeploy.io
   ```
-
 
 <!-- </article> -->
 

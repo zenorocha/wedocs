@@ -16,7 +16,7 @@
 
 ## Install Dependencies
 
-This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-cli.html) if you need help setting that up.
+This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
 
 We also feature code snippets using the API Client, [visit this guide](/docs/intro/using-the-api-client.html) in order to start using it.
 
@@ -63,18 +63,18 @@ http://authdemo.wedeploy.me
 4. In the sidebar, click on *Deployment*.
 5. Using your local machine, clone your Github fork:
   ```text
-git clone https://github.com/{your_github_username}/boilerplate-auth
+git clone -b js https://github.com/{your_github_username}/boilerplate-auth
   ```
 6. Get into the folder: `cd boilerplate-auth`.
 7. Using the content on *Deployment* page. Add the WeDeploy remote url:
   ```text
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git
   ```
-8. Push your data to wedeploy git server: `git push wedeploy master`.
+8. Push your data to wedeploy git server: `git push wedeploy js:master`.
 9. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
-http://authdemo.wedeploy.io
+http://boilerplate-auth.wedeploy.io
   ```
 
 <!-- </article> -->

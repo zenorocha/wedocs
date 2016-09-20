@@ -38,7 +38,7 @@ WeDeploy is highly available and makes it easy for your services to be highly av
 
 Mission-critical services require health monitoring, self-healing, and fault tolerance both for themselves and the platform and infrastructure they run on. WeDeploy gives you multiple layers of protection.
 
-To achieve self-healing, WeDeploy services are monitored by Docker Swarm and restarted when they fail. Even legacy services that don’t support distribution or replication can be automatically restarted by Docker Swarm to maximize uptime and reduce service interruption.
+To achieve self-healing, WeDeploy services are monitored and restarted when they fail. Even legacy services that don’t support distribution or replication can be automatically restarted to maximize uptime and reduce service interruption.
 
 <!-- </article> -->
 

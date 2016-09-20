@@ -89,17 +89,17 @@ In order to send emails, we have to make a `POST` request to `/emails` passing s
 
 ```js
 WeDeploy
-	.url('http://<containerID>.<projectID>.wedeploy.io/emails')
-	.form('from', 'from@domain.com')
-	.form('to', 'to@domain.com')
-	.form('subject', 'Hi there!')
-	.post()
-	.then(function(response) {
-		console.log('Email ID:', response.body());
-	})
-	.catch(function(error) {
-		// Some error has happened
-	});
+.url('http://<containerID>.<projectID>.wedeploy.io/emails')
+.form('from', 'from@domain.com')
+.form('to', 'to@domain.com')
+.form('subject', 'Hi there!')
+.post()
+.then(function(response) {
+	console.log('Email ID:', response.body());
+})
+.catch(function(error) {
+	// Some error has happened
+});
 ```
 
 > For the full list of parameters, check this container's README in the [Dashboard](http://dashboard.wedeploy.io/).
@@ -116,14 +116,14 @@ In order to check if an email was sent or not, we can use the email ID from the 
 
 ```js
 WeDeploy
-	.url('http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status')
-	.get()
-	.then(function(response) {
-		console.log('Email status:', response.body());
-	})
-	.catch(function(error) {
-		// Some error has happened
-	});
+.url('http://<containerID>.<projectID>.wedeploy.io/emails/<emailID>/status')
+.get()
+.then(function(response) {
+	console.log('Email status:', response.body());
+})
+.catch(function(error) {
+	// Some error has happened
+});
 ```
 
 <!-- </article> -->
