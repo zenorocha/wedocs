@@ -8,11 +8,11 @@
 
 The following external software dependencies are necessary to correctly run some commands:
 
-a) [Git](https://git-scm.com/) (download for [Linux](https://git-scm.com/download/linux), [Mac OS X](https://git-scm.com/download/mac), [Windows](https://git-scm.com/download/win))
+a) [Git](https://git-scm.com/) (download for [Linux](https://git-scm.com/download/linux), [macOS](https://git-scm.com/download/mac), [Windows](https://git-scm.com/download/win))
 
-b) [Docker](https://www.docker.com/) (download for [Mac OS X](https://download.docker.com/mac/stable/Docker.dmg), [Linux](https://docs.docker.com/engine/installation/linux/), [Windows](https://download.docker.com/win/stable/InstallDocker.msi))
+b) [Docker](https://www.docker.com/) (download for [Linux](https://docs.docker.com/engine/installation/linux/), [macOS](https://download.docker.com/mac/stable/Docker.dmg), [Windows](https://download.docker.com/win/stable/InstallDocker.msi))
 
-An useful error message feedback is given and the process is terminated, if a required dependency is not available when it is necessary.
+Docker version 1.12.0 or later is required. If you use macOS, install the Docker for Mac. If you use Windows, please install Docker for Windows. Docker Toolbox, still available for earlier Mac and Windows systems is not supported.
 
 <!-- </article> -->
 
