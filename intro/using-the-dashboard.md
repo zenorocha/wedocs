@@ -31,7 +31,7 @@ As the main page, the dashboard will list all your projects and status of availa
 
 ## 3. Create a new project
 
-You are able to organize your services by project. Select a project name and ID and click in Create Project.
+You are able to organize your services by project. Select a project ID and click in Create Project.
 
 ![New Project](https://cloud.githubusercontent.com/assets/301291/18656444/0409e49c-7ea6-11e6-8961-eeccd4deab43.png)
 
@@ -41,7 +41,7 @@ You are able to organize your services by project. Select a project name and ID 
 
 ## 4. Open your project
 
-Open your project by clicking in the Project name.
+Open your project by clicking on your project domain.
 
 ![Project Container List](https://cloud.githubusercontent.com/assets/301291/18656506/7e3d873c-7ea6-11e6-945b-2da9ba801c3e.png)
 
