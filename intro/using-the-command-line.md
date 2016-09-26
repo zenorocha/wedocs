@@ -34,7 +34,7 @@ curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
 
 ## Creating projects locally
 
-You are able to organize your services by projects. Inside it, you can create services (called containers here), like static hosting, data API, Auth service, etc.
+You are able to organize your services by project. Inside each project you can create services (called containers here), like static hosting, data API, Auth service, etc.
 
 Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers might be created one directory above a project for your convenience.
 
@@ -80,19 +80,35 @@ we link --project demo
 <!-- <article id=“5-login-and-remotes”> -->
 
 ## Remotes and friendly host style
-Many commands need --project, --container, or --remote attributes. To make things easier for you, you can use the following patterns:
+Many commands requires --project, --container, or --remote flags. You can use the following patterns for passing these values:
 
 ```text
 we <command> --project <project> --container <container>
 ```
 
-and
+and the friendly host style:
 
 ```text
 we <command> <container>.<project>.<remote address>
 ```
 
-Remote address is optional and you can use the host style with project and container and still use the --remote directly, if you don't know the remote address for a given remote.
+or even
+
+```text
+we <command> <container>.<project> --remote <remote>
+```
+
+For the local cloud, just don't add a --remote or <remote address> value like in:
+
+```text
+we log public.chat
+```
+
+or to list all logs by containers on the project "chat":
+
+```text
+we log chat
+```
 
 Remotes can be managed in a similar fashion as git's remote command:
 
@@ -101,9 +117,11 @@ $ we remote -v
 wedeploy       	wedeploy.io
 ```
 
+If you know how to use `git remote` you already know how to use `we remote`.
+
 For your convenience we include the wedeploy cloud remote by default once you log in on the CLI app with `we login` (requested when necessary).
 
-All commands that support --project, --container, and / or --remote support this host style.
+All commands that support --project, --container, and / or --remote support this host style as well.
 
 <!-- </article> -->
 
