@@ -21,13 +21,11 @@ An useful error message feedback is given and the process is terminated, if a re
 
 ## Installing
 
-Install this tool with:
+Open your Terminal and run:
 
 ```text
-curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -s | bash
+curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
 ```
-
-The tool verifies daily if new updates are available and let the user know when it is. To update, just run `we update`.
 
 <!-- </article> -->
 
@@ -36,13 +34,13 @@ The tool verifies daily if new updates are available and let the user know when 
 
 ## Creating projects locally
 
-On the WeDeploy platform you create projects. Each project might have many containers, for handling static hosting, data API, email sending, etc.
+You are able to organize your services by project. Inside each project you can create services (called containers here), like static hosting, data API, Auth service, etc.
 
-Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers are usually created from inside projects and are stored on the first subdirectory of its project.
+Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers might be created one directory above a project for your convenience.
 
 ```text
 Usage:
-  we create <project/container id>
+  we create --project <project> --container <container>
 ```
 
 <!-- </article> -->
@@ -50,6 +48,8 @@ Usage:
 <!-- <article id="4-running-projects-locally"> -->
 
 ## Running projects locally
+
+For this demo we are going to use the hosting boilerplate.
 
 1. Start local infrastructure:
 
@@ -64,29 +64,82 @@ git clone https://github.com/wedeploy/boilerplate-hosting.git
 cd boilerplate-hosting
   ```
 
-3. Link this container with the local infrastructure:
+3. Link this container to a new project named demo:
 
   ```text
-we link
+we link --project demo
   ```
 
-4. Now your container is ready at:
+4. Now your container should be accessible from [http://hosting.demo.wedeploy.me](http://hosting.demo.wedeploy.me)
 
-  ```text
-http://hosting.<projectID>.wedeploy.me
-  ```
+*On the first first time it might take a few minutes while downloading the hosting image on the background.*
 
 <!-- </article> -->
 
 
-<!-- <article id="5-fetching-logs"> -->
+<!-- <article id=“5-login-and-remotes”> -->
+
+## Remotes and friendly host style
+Many commands requires --project, --container, or --remote flags. You can use the following patterns for passing these values:
+
+```text
+we <command> --project <project> --container <container>
+```
+
+and the friendly host style:
+
+```text
+we <command> <container>.<project>.<remote address>
+```
+
+or even
+
+```text
+we <command> <container>.<project> --remote <remote>
+```
+
+For the local cloud, just don't add a --remote or <remote address> value like in:
+
+```text
+we log public.chat
+```
+
+or to list all logs by containers on the project "chat":
+
+```text
+we log chat
+```
+
+Remotes can be managed in a similar fashion as git's remote command:
+
+```text
+$ we remote -v
+wedeploy       	wedeploy.io
+```
+
+If you know how to use `git remote` you already know how to use `we remote`.
+
+For your convenience we include the wedeploy cloud remote by default once you log in on the CLI app with `we login` (requested when necessary).
+
+All commands that support --project, --container, and / or --remote support this host style as well.
+
+<!-- </article> -->
+
+
+<!-- <article id=“6-fetching-logs"> -->
 
 ## Fetching project and container logs
 
 You can fetch projects and container logs with
 
 ```text
-we log <project id> <container id>
+we log --project <project> --container <container>
+```
+
+or with a friendly host style like
+
+```text
+we log <container>.<project>.wedeploy.me
 ```
 
 ### Examples:
@@ -94,17 +147,17 @@ we log <project id> <container id>
 See the logs for the last 20min for the data container on the wechat project:
 
 ```text
-we log wechat data --since 20min
+we log --project wechat --container data --since 20min
 ```
 
-Watch for logs on the wechat project:
+Watch for logs on the hosting container on the demo project:
 ```text
-we log wechat --watch
+we log hosting.demo.wedeploy.me --watch
 ```
 
 <!-- </article> -->
 
-<!-- <article id="6-list"> -->
+<!-- <article id=“7-list"> -->
 
 ## Listing projects and containers
 
@@ -113,14 +166,14 @@ Watch the listing of all projects running locally:
 we list --watch
 ```
 
-List all projects on a given cloud:
+List all your projects running on the WeDeploy cloud:
 ```text
-we list --remote <remote>
+we list wedeploy.io
 ```
 
-List the containers of the project "ci" on the cloud "staging":
+or
 ```text
-we list ci --remote staging
+we list --remote wedeploy
 ```
 
 <!-- </article> -->
