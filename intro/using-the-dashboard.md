@@ -6,7 +6,7 @@
 
 ## 1. Create an account
 
-First you need to create a WeDeploy account by signing up though the dashboard [signup page](http://dashboard.wedeploy.com/signup).
+First you need to create a WeDeploy account by signing up through the dashboard [signup page](http://dashboard.wedeploy.com/signup).
 
 ![SignUp](https://cloud.githubusercontent.com/assets/301291/18884345/e5bd302e-849b-11e6-9be7-552acda97a31.png)
 
