@@ -58,20 +58,19 @@ http://authdemo.wedeploy.me
 ## Deploying to the Cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-auth/fork).
-2. Go to the [Dashboard](http://dashboard.wedeploy.com).
-3. [Create a project](http://dashboard.wedeploy.com/projects/create).
-4. In the sidebar, click on *Deployment*.
-5. Using your local machine, clone your Github fork:
+2. Go to the [Dashboard](http://dashboard.wedeploy.com) and create a project.
+3. In the sidebar, click on *Deployment*.
+4. Using your local machine, clone your Github fork:
   ```text
 git clone -b js https://github.com/<username>/boilerplate-auth
   ```
-6. Get into the folder: `cd boilerplate-auth`.
-7. Using the content on *Deployment* page. Add the WeDeploy remote url:
+5. Get into the folder: `cd boilerplate-auth`.
+6. Using the content on *Deployment* page. Add the WeDeploy remote url:
   ```text
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git
   ```
-8. Push your data to wedeploy git server: `git push wedeploy js:master`.
-9. Once you see it in the Dashboard, your container will be ready to be used.
+7. Push your data to wedeploy git server: `git push wedeploy js:master`.
+8. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
 http://boilerplate-auth.wedeploy.io
