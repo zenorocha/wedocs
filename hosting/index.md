@@ -14,6 +14,10 @@
 
 <!-- <article id="install-dependencies"> -->
 
+
+The ideal services to host your personal, organization, or project pages using fast static file hosting architecture.
+
+
 ## Install Dependencies
 
 This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
@@ -23,6 +27,8 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 <!-- <article id="running-locally"> -->
 
 ## Running Locally
+
+WeDeploy™ provides a way to run your project locally using a sandbox system.
 
 1. Start local infrastructure:
 
@@ -49,34 +55,43 @@ we link
 http://hosting.<projectID>.wedeploy.me
   ```
 
+Inside this project folder, you can find a `container.json` with the container ID used in this case: `hosting`.
+
 <!-- </article> -->
 
 <!-- <article id="deploying-to-the-cloud"> -->
 
 ## Deploying to the Cloud
 
-
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-hosting/fork).
-2. Go to the [Dashboard](http://dashboard.wedeploy.com).
-3. [Create a project](http://dashboard.wedeploy.com/projects/create).
-4. In the sidebar, click on *Deployment*.
-5. Using your local machine, clone your Github fork:
+2. Go to the [Dashboard](http://dashboard.wedeploy.com) and create a project.
+3. In the sidebar, click on *Deployment*.
+4. Using your local machine, clone your Github fork:
   ```text
-git clone https://github.com/<username>/boilerplate-hosting
+git clone -b js https://github.com/<username>/boilerplate-hosting
   ```
-6. Get into the folder: `cd boilerplate-hosting`.
-7. Using the content on *Deployment* page. Add the WeDeploy remote url:
+5. Get into the folder: `cd boilerplate-hosting`.
+6. Using the content on *Deployment* page. Add the WeDeploy remote url:
   ```text
 git remote add wedeploy http://git.wedeploy.com/<projectID>.git
   ```
-8. Push your data to wedeploy git server: `git push wedeploy master`.
-9. Once you see it in the Dashboard, your container will be ready to be used.
+7. Push your data to wedeploy git server: `git push wedeploy master`.
+8. Once you see it in the Dashboard, your container will be ready to be used.
 
   ```text
 http://hosting.<projectID>.wedeploy.io
   ```
 
 <!-- </article> -->
+
+<!-- <article id="error-pages"> -->
+
+## Error Pages
+
+Files put into the special directory `/_error` are mapped as the error files to be served in case of an error. They must take the form of `<error code>.html`.
+
+<!-- </article> -->
+
 
 ## What's Next?
 
