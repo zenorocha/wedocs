@@ -14,10 +14,6 @@
 
 <!-- <article id="install-dependencies"> -->
 
-
-The ideal services to host your personal, organization, or project pages using fast static file hosting architecture.
-
-
 ## Install Dependencies
 
 This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
@@ -68,7 +64,7 @@ Inside this project folder, you can find a `container.json` with the container I
 3. In the sidebar, click on *Deployment*.
 4. Using your local machine, clone your Github fork:
   ```text
-git clone -b js https://github.com/<username>/boilerplate-hosting
+git clone https://github.com/<username>/boilerplate-hosting
   ```
 5. Get into the folder: `cd boilerplate-hosting`.
 6. Using the content on *Deployment* page. Add the WeDeploy remote url:
