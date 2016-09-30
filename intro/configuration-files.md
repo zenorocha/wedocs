@@ -12,7 +12,7 @@ WeDeploy uses this json file to reference to project in case it's already create
 
 **Supported fields:**
 
-```
+```text
 id: Project uniq id.
 
 name: Project name.
@@ -54,7 +54,7 @@ WeDeploy uses this json file to reference to service in case it's already create
 
 **Supported fields:**
 
-```
+```text
 id: Service uniq id.
 
 type: Service stack/image type.
