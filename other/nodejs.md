@@ -37,17 +37,18 @@ git clone https://github.com/wedeploy/boilerplate-nodejs.git
 cd boilerplate-nodejs
   ```
 
-3. Link this container with the local infrastructure:
+3. Build the container:
+
+  ```text
+we build
+  ```
+
+4. Link this container with the local infrastructure:
 
   ```text
 we link --project <projectID>
   ```
 
-4. Build the container:
-
-  ```text
-we build
-  ```
 5. Now your container is ready to be used:
 
   ```text
