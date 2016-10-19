@@ -22,7 +22,7 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 * 3) Click in Update Project.
 
-* 4) Update the domain DNS to point to the `Project WeDeploy Domain` (<projectID>.wedeploy.io).
+* 4) Update the domain DNS to point to the `Project WeDeploy Domain` (`<projectID>.wedeploy.io`).
 
 <!-- </article> -->
 
