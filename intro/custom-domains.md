@@ -29,10 +29,21 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 After configuring the custom domains on the Project Settings, you must point your DNS provider to the `Project WeDeploy Domain`. You may configure the DNS as a new CNAME record with your DNS provider. Consult with your DNS provider for specific instructions to create CNAME records.
 
-| `CNAME` | www        | project1.wedeploy.io. |
-| `CNAME` | subdomain1 | project1.wedeploy.io. |
-| `CNAME` | subdomain2 | project2.wedeploy.io. |
-| `CNAME` | subdomain3 | project3.wedeploy.io. |
+
+<table>
+  <tr>
+    <td>`CNAME`</td> <td>www</td> <td>project1.wedeploy.io.</td>
+  </tr>
+  <tr>
+    <td>`CNAME`</td> <td>subdomain1</td> <td>project1.wedeploy.io.</td>
+  </tr>
+  <tr>
+    <td>`CNAME`</td> <td>subdomain2</td> <td>project2.wedeploy.io.</td>
+  </tr>
+  <tr>
+    <td>`CNAME`</td> <td>subdomain3</td> <td>project3.wedeploy.io.</td>
+  </tr>
+</table>
 
 <!-- </article> -->
 
@@ -53,14 +64,28 @@ ex: `service1.project1.wedeploy.io => service1.mydomain.com`
 
 Since you can have multiple services inside a project and Wdeploy automatically creates a subdomain for each service. Wildcard domains allow you to map any of all generated subdomains from the services with a single record.
 
-| `CNAME` | *        | project.wedeploy.io. |
+<table>
+  <tr>
+    <td>`CNAME`</td> <td>*</td> <td>project.wedeploy.io.</td>
+  </tr>
+</table>
 
 Result:
 
-| service1.project.wedeploy.io | service1.mydomain.com |
-| service2.project.wedeploy.io | service2.mydomain.com |
-| service3.project.wedeploy.io | service3.mydomain.com |
-| service4.project.wedeploy.io | service4.mydomain.com |
+<table>
+  <tr>
+    <td>service1.project.wedeploy.io</td> <td>service1.mydomain.com</td>
+  </tr>
+  <tr>
+    <td>service2.project.wedeploy.io</td> <td>service2.mydomain.com</td>
+  </tr>
+  <tr>
+    <td>service3.project.wedeploy.io</td> <td>service3.mydomain.com</td>
+  </tr>
+  <tr>
+    <td>service4.project.wedeploy.io</td> <td>service4.mydomain.com</td>
+  </tr>
+</table>
 
 <!-- </article> -->
 
