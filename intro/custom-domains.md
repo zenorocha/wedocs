@@ -33,7 +33,10 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 After configuring the custom domains on the Project Settings, you must point your DNS provider to the `Project WeDeploy Domain`. You may configure the DNS as a new CNAME record with your DNS provider. Consult with your DNS provider for specific instructions to create CNAME records.
 
 
-<table class="table no-header">
+<table class="table">
+  <tr>
+    <th>Record</th> <th>Subdomain</th> <th>Project Target Domain</th>
+  </tr>
   <tr>
     <td>`CNAME`</td> <td>www</td> <td>project1.wedeploy.io.</td>
   </tr>
@@ -56,7 +59,10 @@ After configuring the custom domains on the Project Settings, you must point you
 
 Since you can have multiple services inside a project and WeDeploy automatically creates a subdomain for each service. Wildcard domains allow you to map any of all generated subdomains from the services with a single record.
 
-<table class="table no-header">
+<table class="table">
+  <tr>
+    <th>Record</th> <th>Subdomain</th> <th>Project Target Domain</th>
+  </tr>
   <tr>
     <td>`CNAME`</td> <td>*</td> <td>project.wedeploy.io.</td>
   </tr>
@@ -64,7 +70,10 @@ Since you can have multiple services inside a project and WeDeploy automatically
 
 Result:
 
-<table class="table no-header">
+<table class="table">
+  <tr>
+    <th>WeDeploy Domain</th> <th>Custom Domain</th>
+  </tr>
   <tr>
     <td>service1.project.wedeploy.io</td> <td>service1.mydomain.com</td>
   </tr>
