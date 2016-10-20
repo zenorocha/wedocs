@@ -68,7 +68,11 @@ Since you can have multiple services inside a project and WeDeploy automatically
   </tr>
 </table>
 
+<br>
+
 Result:
+
+<br>
 
 <table class="table">
   <tr>
