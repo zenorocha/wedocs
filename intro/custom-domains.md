@@ -50,22 +50,11 @@ After configuring the custom domains on the Project Settings, you must point you
 
 <!-- </article> -->
 
-<!-- <article id="configuring-dns-for-custom-domains"> -->
-
-## Custom domains for services
-
-If you need to use a custom domain with the same services name, you just need to create a custom domain with the same name of the service, after configuring a custom domain for your project.
-
-ex: `service1.project1.wedeploy.io => service1.mydomain.com`
-
-<!-- </article> -->
-
-
 <!-- <article id="wildcard-domain"> -->
 
 ## Wildcard domain
 
-Since you can have multiple services inside a project and Wdeploy automatically creates a subdomain for each service. Wildcard domains allow you to map any of all generated subdomains from the services with a single record.
+Since you can have multiple services inside a project and WeDeploy automatically creates a subdomain for each service. Wildcard domains allow you to map any of all generated subdomains from the services with a single record.
 
 <table class="table no-header">
   <tr>
@@ -89,6 +78,16 @@ Result:
     <td>service4.project.wedeploy.io</td> <td>service4.mydomain.com</td>
   </tr>
 </table>
+
+<!-- </article> -->
+
+<!-- <article id="configuring-dns-for-custom-domains"> -->
+
+## Custom domains for services
+
+If you need to use a custom domain with the same services name, you just need to create a custom domain with the same name of the service, after configuring a custom domain for your project.
+
+ex: `service1.project1.wedeploy.io => service1.mydomain.com`
 
 <!-- </article> -->
 
