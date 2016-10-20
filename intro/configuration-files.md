@@ -34,7 +34,7 @@ WeDeploy uses this json file to reference to project in case it's already create
 
 **id**: The id must be uniq, and you may get an error message in case someone else is already using this project id.
 
-**customDomain**: The custom domain must be uniq, and you may get an error message in case someone else is already using this custom domain.
+**customDomains**: The custom domain must be uniq, and you may get an error message in case someone else is already using this custom domain.
 
 
 **Usage:**
