@@ -6,7 +6,7 @@
 
 ## Introduction
 
-In order to make your app accessible right away, WeDeploy makes any project accessible via its WeDeploy Domain, which has the form `<serviceID>.<projectID>.wedeploy.io`. For example, you're able to access a project named `project1` with a service named `web` with `web.project1.wedeploy.io`.
+In order to make your app accessible right away, WeDeploy makes any project accessible via its project domain, wich looks like `<serviceID>.<projectID>.wedeploy.io`. Let's say you have a project named `project` with a service named `web` the WeDeploy project domain would be `web.project.wedeploy.io`. Every project in WeDeploy supports one or many custom domains.
 
 <!-- </article> -->
 
@@ -16,40 +16,12 @@ In order to make your app accessible right away, WeDeploy makes any project acce
 
 To make a project accessible via one or more non-WeDeploy domain names, you must add custom domain(s) to your project configuration as described below.
 
-* 1) After create a project on the dashboard. Go to the Project Settings Page.
-
-* 2) On custom domain session, add the custom domains related to the project.
-
-* 3) Click in Update Project.
-
-* 4) Update the domain DNS to point to the `Project WeDeploy Domain` (`<projectID>.wedeploy.io`).
-
-<!-- </article> -->
-
-<!-- <article id="configuring-dns-for-custom-domains"> -->
-
-## Configuring DNS for custom Domains
-
-After configuring the custom domains on the Project Settings, you must point your DNS provider to the `Project WeDeploy Domain`. You may configure the DNS as a new CNAME record with your DNS provider. Consult with your DNS provider for specific instructions to create CNAME records.
-
-
-<table class="table">
-  <tr>
-    <th>Record</th> <th>Subdomain</th> <th>Project Target Domain</th>
-  </tr>
-  <tr>
-    <td>`CNAME`</td> <td>www</td> <td>project1.wedeploy.io.</td>
-  </tr>
-  <tr>
-    <td>`CNAME`</td> <td>subdomain1</td> <td>project1.wedeploy.io.</td>
-  </tr>
-  <tr>
-    <td>`CNAME`</td> <td>subdomain2</td> <td>project2.wedeploy.io.</td>
-  </tr>
-  <tr>
-    <td>`CNAME`</td> <td>subdomain3</td> <td>project3.wedeploy.io.</td>
-  </tr>
-</table>
+<ul class="list list--numeric">
+  <li>After create a project on the <a href="http://dashboard.wedeploy.com">dashboard</a>. Go to the project settings page.</li>
+  <li>On custom domain session, add the custom domains related to the project.</li>
+  <li>Click in Update Project.</li>
+  <li>Update the domain DNS to point to the project WeDeploy domain (`<projectID>.wedeploy.io`).</li>
+</ul>
 
 <!-- </article> -->
 
@@ -73,6 +45,7 @@ Point the A/CNAME entry for your root domain to the DNS Target, just as you woul
 
 In some DNS Providers such as Google domains, it just allow you to configure IPs for root domains. In this case you can:
 
+
 1) Go to your terminal and type `host <projectID>.wedeploy.io`.
 
 ```text
@@ -83,6 +56,33 @@ wedeploy.com has address 111.111.111.111
 <br>
 
 2) Use the API provided from `wedeploy.com` (111.111.111.111).
+
+<!-- </article> -->
+
+
+<!-- <article id="configuring-dns-for-custom-domains"> -->
+
+## Configuring DNS for custom domains
+
+After configuring the custom domains on the Project Settings, you must point your DNS to the project WeDeploy domain. You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure your subdomain as a CNAME record, visit your DNS provider documentation page.
+
+<table class="table">
+  <tr>
+    <th>Record</th> <th>Subdomain</th> <th>Project Target Domain</th>
+  </tr>
+  <tr>
+    <td>`CNAME`</td> <td>**www**.mydomain.com</td> <td>project1.wedeploy.io.</td>
+  </tr>
+  <tr>
+    <td>`CNAME`</td> <td>**subdomain1**.mydomain.com</td> <td>project1.wedeploy.io.</td>
+  </tr>
+  <tr>
+    <td>`CNAME`</td> <td>**subdomain2**.mydomain.com</td> <td>project2.wedeploy.io.</td>
+  </tr>
+  <tr>
+    <td>`CNAME`</td> <td>**subdomain3**.mydomain.com</td> <td>project3.wedeploy.io.</td>
+  </tr>
+</table>
 
 <!-- </article> -->
 
@@ -125,24 +125,5 @@ Result:
     <td>service4.project.wedeploy.io</td> <td>service4.mydomain.com</td>
   </tr>
 </table>
-
-<!-- </article> -->
-
-<!-- <article id="custom-domains-for-services"> -->
-
-## Custom domains for services
-
-If you need to use a custom domain with the same services name, you just need to create a custom domain with the same name of the service, after configuring a custom domain for your project.
-
-ex: `service1.project1.wedeploy.io => service1.mydomain.com`
-
-<!-- </article> -->
-
-<!-- <article id="rules-on-adding-custom-domains"> -->
-
-## Rules on adding custom domains
-
-* A domain should be used just in one project.
-* A single project can have any number of domains.
 
 <!-- </article> -->
