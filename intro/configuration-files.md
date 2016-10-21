@@ -17,7 +17,7 @@ WeDeploy uses this json file to reference to project in case it's already create
     <th>Field</th> <th>Description</th>
   </tr>
   <tr>
-    <td>id</td> <td>Project uniq id.</td>
+    <td>id</td> <td>Project unique id.</td>
   </tr>
   <tr>
     <td>name</td> <td>Project name.</td>
@@ -34,9 +34,9 @@ WeDeploy uses this json file to reference to project in case it's already create
 
 **Validations:**
 
-**id**: The id must be uniq, and you may get an error message in case someone else is already using this project id.
+**id**: The id must be unique, and you may get an error message in case someone else is already using this project id.
 
-**customDomains**: The custom domain must be uniq, and you may get an error message in case someone else is already using this custom domain.
+**customDomains**: The custom domain must be unique, and you may get an error message in case someone else is already using this custom domain.
 
 <br>
 

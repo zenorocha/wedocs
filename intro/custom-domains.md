@@ -25,19 +25,21 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 ![settings](https://cloud.githubusercontent.com/assets/301291/19607402/73aca3b6-977e-11e6-82d6-e3374d3aa6ed.png)
 
-
-
 <!-- </article> -->
 
 <!-- <article id="configuring-dns-for-root-domains"> -->
 
 ## Configuring DNS for root domains
 
-Root domains doesn't have subdomain on its structure. You can add root domains on the same Project Settings Page used for domains with subdomains.
+<!-- ##### Fix that -->
+Root domains doesn't have subdomain on its structure. You can add root domains on the same project settings page used for domains with subdomains.
 Configuring your DNS provider for a root domain is similar to configuring a DNS provider for a CNAME. In this case, the type of record depends on the DNS provider.
 
+(use IP instead) #
 Point the A/CNAME entry for your root domain to the DNS Target, just as you would with a CNAME record:
 
+
+<!-- Check domain IP -->
 <table class="table">
   <tr>
     <th>Record</th> <th>Name</th> <th>Project Target Domain</th>
@@ -46,6 +48,8 @@ Point the A/CNAME entry for your root domain to the DNS Target, just as you woul
     <td>`ALIAS` or `CNAME`</td> <td>`<empty>` or `@`</td> <td>project1.wedeploy.io.</td>
   </tr>
 </table>
+
+<br>
 
 In some DNS Providers such as Google domains, it just allow you to configure IPs for root domains. In this case you can:
 
@@ -66,7 +70,7 @@ wedeploy.com has address 111.111.111.111
 
 <!-- <article id="configuring-dns-for-custom-domains"> -->
 
-## Configuring DNS for custom domains
+## Configuring DNS for subdomains
 
 After configuring the custom domains on the Project Settings, you must point your DNS to the project WeDeploy domain. You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure your subdomain as a CNAME record, visit your DNS provider documentation page.
 
@@ -76,15 +80,6 @@ After configuring the custom domains on the Project Settings, you must point you
   </tr>
   <tr>
     <td>`CNAME`</td> <td>**www**.mydomain.com</td> <td>project1.wedeploy.io.</td>
-  </tr>
-  <tr>
-    <td>`CNAME`</td> <td>**subdomain1**.mydomain.com</td> <td>project1.wedeploy.io.</td>
-  </tr>
-  <tr>
-    <td>`CNAME`</td> <td>**subdomain2**.mydomain.com</td> <td>project2.wedeploy.io.</td>
-  </tr>
-  <tr>
-    <td>`CNAME`</td> <td>**subdomain3**.mydomain.com</td> <td>project3.wedeploy.io.</td>
   </tr>
 </table>
 
