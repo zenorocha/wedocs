@@ -53,6 +53,38 @@ After configuring the custom domains on the Project Settings, you must point you
 
 <!-- </article> -->
 
+<!-- <article id="configuring-dns-for-root-domains"> -->
+
+## Configuring DNS for root domains
+
+Root domains doesn't have subdomain on its structure. You can add root domains in the same Project Settings Page used for domains with subdomains.
+Configuring your DNS provider for a root domain is similar to configuring a DNS provider for a CNAME. In this case, the type of record depends on the DNS provider.
+
+Point the A/CNAME entry for your root domain to the DNS Target, just as you would with a CNAME record:
+
+<table class="table">
+  <tr>
+    <th>Record</th> <th>Name</th> <th>Project Target Domain</th>
+  </tr>
+  <tr>
+    <td>`ALIAS` or `CNAME`</td> <td>`<empty>` or `@`</td> <td>project1.wedeploy.io.</td>
+  </tr>
+</table>
+
+In some DNS Providers such as Google domains, it just allow you to configure IPs for root domains. In this case you can:
+
+* Go to your terminal and type `host <projectID>.wedeploy.io`.
+
+```
+<projectID>.wedeploy.io is an alias for wedeploy.com.
+wedeploy.com has address 111.111.111.111
+```
+
+* Use the API provided from `wedeploy.com` (111.111.111.111).
+
+<!-- </article> -->
+
+
 <!-- <article id="wildcard-domain"> -->
 
 ## Wildcard domain
@@ -94,7 +126,7 @@ Result:
 
 <!-- </article> -->
 
-<!-- <article id="configuring-dns-for-custom-domains"> -->
+<!-- <article id="custom-domains-for-services"> -->
 
 ## Custom domains for services
 
