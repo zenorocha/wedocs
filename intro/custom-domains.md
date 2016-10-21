@@ -75,7 +75,7 @@ In some DNS Providers such as Google domains, it just allow you to configure IPs
 
 * Go to your terminal and type `host <projectID>.wedeploy.io`.
 
-```
+```text
 <projectID>.wedeploy.io is an alias for wedeploy.com.
 wedeploy.com has address 111.111.111.111
 ```
