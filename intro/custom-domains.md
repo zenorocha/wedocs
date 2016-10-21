@@ -102,7 +102,7 @@ Since you can have multiple services inside a project and WeDeploy automatically
     <th>Record</th> <th>Subdomain</th> <th>Project Target Domain</th>
   </tr>
   <tr>
-    <td>`CNAME`</td> <td>*</td> <td>project.wedeploy.io.</td>
+    <td>`CNAME`</td> <td>*.mydomain.com</td> <td>project.wedeploy.io.</td>
   </tr>
 </table>
 
