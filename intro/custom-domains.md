@@ -29,6 +29,7 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 <!-- </article> -->
 
 <!-- <article id="configuring-dns-for-root-domains"> -->
+
 ## Configuring DNS for root domains
 
 A root domain is the highest level of hierarchy for the website you control, ex: `wedeploy.com`. When you register a domain name, you are registering a root domain. This means you have the access to create subdomains and file structures all branching from that root domain.
@@ -56,7 +57,6 @@ In some DNS Providers, it just allows you to configure IPs for root domains. In 
 </table>
 
 <!-- </article> -->
-
 
 <!-- <article id="configuring-dns-for-custom-domains"> -->
 
