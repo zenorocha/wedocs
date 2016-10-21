@@ -16,12 +16,12 @@ In order to make your app accessible right away, WeDeploy makes any project acce
 
 To make a project accessible via one or more non-WeDeploy domain names, you must add custom domain(s) to your project configuration as described below.
 
-<ul class="list list--numeric">
+<ol class="list list--numeric">
   <li>After create a project on the <a href="http://dashboard.wedeploy.com">dashboard</a>. Go to the project settings page.</li>
   <li>On custom domain session, add the custom domains related to the project.</li>
   <li>Click in Update Project.</li>
   <li>Update the domain DNS to point to the project WeDeploy domain (`<projectID>.wedeploy.io`).</li>
-</ul>
+</ol>
 
 <!-- </article> -->
 
