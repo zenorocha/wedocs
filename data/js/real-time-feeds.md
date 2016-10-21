@@ -31,7 +31,7 @@ Now every time the storage detects changes that affect the query you're watching
 
 ## Getting the latest changes
 
-The data service uses a query limit by default. In order to get always the latest new record, you would need to limit the query by 1 and order by `id desc`.
+The data service uses a query limit by default. In order to always get the latest new record, you would need to limit the query by `1` and order by `id desc`.
 
 ```js
 var data = WeDeploy.data('http://datademo.wedeploy.io');
