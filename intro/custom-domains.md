@@ -73,14 +73,14 @@ Point the A/CNAME entry for your root domain to the DNS Target, just as you woul
 
 In some DNS Providers such as Google domains, it just allow you to configure IPs for root domains. In this case you can:
 
-* Go to your terminal and type `host <projectID>.wedeploy.io`.
+* 1) Go to your terminal and type `host <projectID>.wedeploy.io`.
 
 ```text
 <projectID>.wedeploy.io is an alias for wedeploy.com.
 wedeploy.com has address 111.111.111.111
 ```
 
-* Use the API provided from `wedeploy.com` (111.111.111.111).
+* 2) Use the API provided from `wedeploy.com` (111.111.111.111).
 
 <!-- </article> -->
 
