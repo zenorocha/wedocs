@@ -57,7 +57,7 @@ After configuring the custom domains on the Project Settings, you must point you
 
 ## Configuring DNS for root domains
 
-Root domains doesn't have subdomain on its structure. You can add root domains in the same Project Settings Page used for domains with subdomains.
+Root domains doesn't have subdomain on its structure. You can add root domains on the same Project Settings Page used for domains with subdomains.
 Configuring your DNS provider for a root domain is similar to configuring a DNS provider for a CNAME. In this case, the type of record depends on the DNS provider.
 
 Point the A/CNAME entry for your root domain to the DNS Target, just as you would with a CNAME record:
