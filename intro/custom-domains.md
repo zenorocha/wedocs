@@ -6,7 +6,7 @@
 
 ## Introduction
 
-To make your app accessible right away, WeDeploy makes any project accessible via its project domain; wich looks like `<serviceID>.<projectID>.wedeploy.io`. Let's say you have a project named `project` with a service named `web` the WeDeploy project domain would be `web.project.wedeploy.io`. Every project in WeDeploy supports one or many custom domains.
+To make your app accessible right away, WeDeploy makes any project accessible via its project domain, which looks like `<serviceID>.<projectID>.wedeploy.io`. Let's say you have a project named `project` with a service named `web` the WeDeploy project domain would be `web.project.wedeploy.io`. Every project in WeDeploy supports one or many custom domains.
 
 <!-- </article> -->
 
@@ -32,7 +32,7 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 ## Configuring DNS for root domains
 
-A root domain is the highest level of hierarchy for the website you control, ex: `wedeploy.com`. When you register a domain name, you are registering a root domain. This means you have the access to create subdomains and file structures all branching from that root domain.
+A root domain is the highest level of hierarchy for the website you control, ex: `mydomain.com`. When you register a domain name, you are registering a root domain. This means you have the access to create subdomains and file structures all branching from that root domain.
 
 If your DNS provider allow you to use CNAME for root domains, you just need to Point the ALIAS (A) entry for your root domain as described below:
 
