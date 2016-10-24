@@ -6,7 +6,26 @@
 
 ## Watching Data Changes
 
-We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the *WeDeploy™* API method we use to the `watch` method:
+We presented a lot of features for data filtering and search. You may be wondering where the real-time aspect is in all of this. Well, it's throughout the features we just presented to you. To access our data in real-time, all we need to do is change the *WeDeploy™* API  `get` method we use to the `watch` method:
+
+```js
+var data = WeDeploy.data('http://datademo.wedeploy.io');
+
+data.where('category', 'cinema')
+.watch('movies')
+.on('changes', function(data){
+   console.log(data);
+})
+.on('fail', function(error){
+   console.log(error);
+});
+```
+
+Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
+
+## Watching with Advanced Filters
+
+To present data using advanced search is simple as performing normal queries. You just would need to keep using the `watch` method and use any Filter you desire.
 
 ```js
 var data = WeDeploy.data('http://datademo.wedeploy.io');
@@ -14,19 +33,13 @@ var data = WeDeploy.data('http://datademo.wedeploy.io');
 data.where(Filter.any('category', 'cinema'))
 .where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
 .watch('movies')
-.on('changes', doSomethingWithReceivedData)
-.on('fail', handleFailure);
-
-function doSomethingWithReceivedData(data) {
-  console.log(data);
-}
-
-function handleFailure(error) {
-  console.log(error);
-}
+.on('changes', function(data){
+   console.log(data);
+})
+.on('fail', function(error){
+   console.log(error);
+});
 ```
-
-Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
 
 ## Getting the latest changes
 
@@ -35,21 +48,16 @@ The data service uses a query limit `500` by default. In order to always get the
 ```js
 var data = WeDeploy.data('http://datademo.wedeploy.io');
 
-data.where(Filter.any('category', 'cinema'))
-.where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
+data.where('category', 'cinema')
 .limit(1)
 .orderBy('id', 'desc')
 .watch('movies')
-.on('changes', doSomethingWithReceivedData)
-.on('fail', handleFailure);
-
-function doSomethingWithReceivedData(data) {
-  console.log(data);
-}
-
-function handleFailure(error) {
-  console.log(error);
-}
+.on('changes', function(data){
+   console.log(data);
+})
+.on('fail', function(error){
+   console.log(error);
+});
 ```
 
 <!-- </article> -->
