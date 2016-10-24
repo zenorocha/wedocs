@@ -1,12 +1,12 @@
 # Custom Domains
 
-###### This is an overview of how WeDeploy manage custom domains for your projects.
+###### This is an overview of how WeDeploy manages custom domains for your projects.
 
 <!-- <article id="introduction"> -->
 
 ## Introduction
 
-In order to make your app accessible right away, WeDeploy makes any project accessible via its project domain, wich looks like `<serviceID>.<projectID>.wedeploy.io`. Let's say you have a project named `project` with a service named `web` the WeDeploy project domain would be `web.project.wedeploy.io`. Every project in WeDeploy supports one or many custom domains.
+To make your app accessible right away, WeDeploy makes any project accessible via its project domain, which looks like `<serviceID>.<projectID>.wedeploy.io`. Let's say you have a project named `project` with a service named `web` the WeDeploy project domain would be `web.project.wedeploy.io`. Every project in WeDeploy supports one or many custom domains.
 
 <!-- </article> -->
 
@@ -14,7 +14,8 @@ In order to make your app accessible right away, WeDeploy makes any project acce
 
 ## Configuring custom domains
 
-To make a project accessible via one or more non-WeDeploy domain names, you must add custom domain(s) to your project configuration as described below.
+WeDeploy can help you to configure your own custom domain, like `http://mydomain.com` or `http://www.mydomain.com`.
+To make a project accessible via one or more non-WeDeploy domain names, you must add custom domain(s) to your project configuration as described below:
 
 <ol class="list list--numeric">
   <li>After create a project on the <a href="http://dashboard.wedeploy.com">dashboard</a>. Go to the project settings page.</li>
@@ -31,15 +32,10 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 ## Configuring DNS for root domains
 
-<!-- ##### Fix that -->
-Root domains doesn't have subdomain on its structure. You can add root domains on the same project settings page used for domains with subdomains.
-Configuring your DNS provider for a root domain is similar to configuring a DNS provider for a CNAME. In this case, the type of record depends on the DNS provider.
+A root domain is the highest level of hierarchy for the website you control, ex: `mydomain.com`. When you register a domain name, you are registering a root domain. This means you have the access to create subdomains and file structures all branching from that root domain.
 
-(use IP instead) #
-Point the A/CNAME entry for your root domain to the DNS Target, just as you would with a CNAME record:
+If your DNS provider allow you to use CNAME for root domains, you just need to Point the ALIAS (A) entry for your root domain as described below:
 
-
-<!-- Check domain IP -->
 <table class="table">
   <tr>
     <th>Record</th> <th>Name</th> <th>Project Target Domain</th>
@@ -49,24 +45,18 @@ Point the A/CNAME entry for your root domain to the DNS Target, just as you woul
   </tr>
 </table>
 
-<br>
+In some DNS Providers, it just allows you to configure IPs for root domains. In that case, you can use the static IP provided by WeDeploy:
 
-In some DNS Providers such as Google domains, it just allow you to configure IPs for root domains. In this case you can:
-
-
-1) Go to your terminal and type `host <projectID>.wedeploy.io`.
-
-```text
-<projectID>.wedeploy.io is an alias for wedeploy.com.
-wedeploy.com has address 111.111.111.111
-```
-
-<br>
-
-2) Use the API provided from `wedeploy.com` (111.111.111.111).
+<table class="table">
+  <tr>
+    <th>Record</th> <th>Name</th> <th>Project Target Domain</th>
+  </tr>
+  <tr>
+    <td>`ALIAS`</td> <td>`<empty>` or `@`</td> <td>`173.196.61.238`</td>
+  </tr>
+</table>
 
 <!-- </article> -->
-
 
 <!-- <article id="configuring-dns-for-custom-domains"> -->
 
@@ -88,7 +78,7 @@ After configuring the custom domains on the Project Settings, you must point you
 
 <!-- <article id="wildcard-domain"> -->
 
-## Wildcard domain
+## Configuring DNS for Wildcard domain
 
 Since you can have multiple services inside a project and WeDeploy automatically creates a subdomain for each service. Wildcard domains allow you to map any of all generated subdomains from the services with a single record.
 
