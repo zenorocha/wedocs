@@ -28,7 +28,6 @@ function handleFailure(error) {
 
 Now every time the storage detects changes that affect the query you're watching, you will receive a changes notification with the response body you'd receive if you had done an HTTP GET instead. Furthermore, every time this change leads to an HTTP error response, you'll receive the error object in a fail notification on the client.
 
-
 ## Getting the latest changes
 
 The data service uses a query limit `500` by default. In order to always get the latest new record, you would need to limit the query by `1` and order by `id` `desc`.
