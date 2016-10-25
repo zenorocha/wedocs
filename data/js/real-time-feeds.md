@@ -11,8 +11,7 @@ We presented a lot of features for data filtering and search. You may be wonderi
 ```js
 var data = WeDeploy.data('http://datademo.wedeploy.io');
 
-data.where('category', 'cinema')
-.watch('movies')
+data.watch('movies')
 .on('changes', function(data){
    console.log(data);
 })
@@ -28,9 +27,8 @@ Now every time the storage detects changes that affect the query you're watching
 To present data using advanced search is simple as performing normal queries. You just would need to keep using the `watch` method and use any Filter you desire.
 
 ```js
-var data = WeDeploy.data('http://datademo.wedeploy.io');
-
-data.where(Filter.any('category', 'cinema'))
+WeDeploy.data('http://datademo.wedeploy.io')
+.where(Filter.any('category', 'cinema'))
 .where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
 .watch('movies')
 .on('changes', function(data){
@@ -46,9 +44,8 @@ data.where(Filter.any('category', 'cinema'))
 The data service uses a query limit `500` by default. In order to always get the latest new record, you would need to limit the query by `1` and order by `id` `desc`.
 
 ```js
-var data = WeDeploy.data('http://datademo.wedeploy.io');
-
-data.where('category', 'cinema')
+WeDeploy.data('http://datademo.wedeploy.io')
+.where('category', 'cinema')
 .limit(1)
 .orderBy('id', 'desc')
 .watch('movies')
