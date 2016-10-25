@@ -24,12 +24,12 @@ Now every time the storage detects changes that affect the query you're watching
 
 ## Watching with Advanced Filters
 
-To present data using advanced search is simple as performing normal queries. You just would need to keep using the `watch` method and use any Filter you desire.
+To present data using advanced search is simple as performing normal queries. You just would need to keep using the `watch` method and apply any filter you desire.
 
 ```js
 WeDeploy.data('http://datademo.wedeploy.io')
-.where(Filter.any('category', 'cinema'))
-.where(Filter.distance('location', '51.5031653,-0.1123051', '1mi'))
+.where('category', 'cinema')
+.or('category', 'cartoon')
 .watch('movies')
 .on('changes', function(data){
    console.log(data);
@@ -45,7 +45,6 @@ The data service uses a query limit `500` by default. In order to always get the
 
 ```js
 WeDeploy.data('http://datademo.wedeploy.io')
-.where('category', 'cinema')
 .limit(1)
 .orderBy('id', 'desc')
 .watch('movies')
