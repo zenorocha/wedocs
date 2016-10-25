@@ -1,4 +1,4 @@
-# Understanding configuration files
+# Understanding Configuration Files
 
 ###### This is an overview of how WeDeploy uses json files to help you to configure your project.
 
@@ -103,7 +103,6 @@ WeDeploy uses this json file to reference to service in case it's already create
   }
 }
 ```
-
 
 <!-- </article> -->
 

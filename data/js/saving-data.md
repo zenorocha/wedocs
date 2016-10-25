@@ -1,4 +1,4 @@
-# Saving data
+# Saving Data
 
 ###### The create() function creates a new record in the database using the current attributes. It then returns the newly saved object in the Promise response.
 
@@ -117,7 +117,7 @@ This operation will return the newly created document, with the following genera
 
 <!-- <article id="url-scope-structure"> -->
 
-## URL Scope structure
+## URL scope structure
 
 The URL we just created stored a new document in our app's service inside the "movies" collection. More information on how to set up this datastore URL can be seen in the section Building APIs. For now, we only need to know that within the path where the data is mounted. The URL will be interpreted as a key that points to a stored resource like the one below:
 
@@ -132,6 +132,6 @@ http://data.datademo.wedeploy.me/movies/115992383516607958/rating
 ```
 <!-- </article> -->
 
-## Next Steps
+## What's next?
 
 Now that you have learned how to create data, you can interact [updating data](/docs/data/js/updating-data.html).

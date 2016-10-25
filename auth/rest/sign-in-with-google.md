@@ -48,6 +48,6 @@ Create a client id and client secret by [registering your application](https://d
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Learn how to sign-up users using their [email and password into your app](/docs/auth/sign-in-with-password.html).

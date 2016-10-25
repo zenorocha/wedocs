@@ -16,13 +16,13 @@ WeDeploy
 	.then(function(user) {
 		// User is signed in.
 	})
-	.catch(function(err) {  
+	.catch(function(err) {
 	  // User is not signed in.
 	});
 ```
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now we're ready to [start managing your users](/docs/auth/manage-users.html).

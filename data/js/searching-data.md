@@ -1,10 +1,10 @@
-# Searching data
+# Searching Data
 
-###### Searching Data Intro
+###### Advanced queries using search.
 
 <!-- <article id="search-data"> -->
 
-## Search Data
+## Search data
 
 We did some great stuff with basic data methods, like create, update, and delete JSON documents. We also learned how to retrieve documents with where, sort, and pagination. What if we need more powerful queries with our documents? In WeDeploy you can do a text search, handle user misspellings, and show the number of documents by category with your data, and much more.
 
@@ -282,6 +282,6 @@ Now we can plug a map to our app, and let users see and filter places, with just
 
 <!-- </article> -->
 
-## Next Steps
+## What's next?
 
 Now that you have learned how to retrieve data, you can interact with [real-time feeds](/docs/data/js/real-time-feeds.html).

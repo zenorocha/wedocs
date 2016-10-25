@@ -78,7 +78,7 @@ After configuring the custom domains on the Project Settings, you must point you
 
 <!-- <article id="wildcard-domain"> -->
 
-## Configuring DNS for Wildcard domain
+## Configuring DNS for wildcard domain
 
 Since you can have multiple services inside a project and WeDeploy automatically creates a subdomain for each service. Wildcard domains allow you to map any of all generated subdomains from the services with a single record.
 

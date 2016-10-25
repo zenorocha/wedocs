@@ -149,6 +149,6 @@ WeDeploy
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now you can start building your apps with authentication.

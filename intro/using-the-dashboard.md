@@ -44,7 +44,7 @@ Open your project by clicking on your project domain.
 
 <!-- <article id="5-click-in-install-service"> -->
 
-## 5. Click on Install Service
+## 5. Click on install service
 
 Projects can have more than one service. In this example we're going to deploy a static website.
 
@@ -54,7 +54,7 @@ Projects can have more than one service. In this example we're going to deploy a
 
 <!-- <article id="6-select-a-service-type"> -->
 
-## 6. Select a Service type
+## 6. Select a service type
 In this tutorial we're going to use the WeDeploy Hosting in order to host a static project.
 
 ![Select a Container Type](https://cloud.githubusercontent.com/assets/301291/18656521/9f3392b0-7ea6-11e6-9d05-29c68a657f6d.png)

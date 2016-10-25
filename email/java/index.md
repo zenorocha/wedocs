@@ -117,6 +117,6 @@ WeDeploy
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * That's it! Now we're ready to start sending emails to our users.

@@ -4,7 +4,7 @@
 
 <!-- <article id="zero-downtime-upgrades"> -->
 
-## Zero Downtime Upgrades
+## Zero downtime upgrades
 
 WeDeploy provides automation for updating services and the systems with zero downtime.
 
@@ -14,7 +14,7 @@ WeDeploy services can all be updated with rolling, blue-green, or canary deploym
 
 <!-- <article id="service-discovery-and-load-balancing"> -->
 
-## Service Discovery and Load Balancing
+## Service discovery and load balancing
 
 WeDeploy includes several options for automating service discovery and load balancing.
 
@@ -24,7 +24,7 @@ Distributed services create distributed problems, but you don’t have to solve 
 
 <!-- <article id="service-visibility"> -->
 
-## Service Visibility
+## Service visibility
 
 WeDeploy provides an option for you to specify whether your service is going to be public or private for public access.
 
@@ -32,7 +32,7 @@ WeDeploy provides an option for you to specify whether your service is going to 
 
 <!-- <article id="high-availability"> -->
 
-## High Availability
+## High availability
 
 WeDeploy is highly available and makes it easy for your services to be highly available too.
 
@@ -44,7 +44,7 @@ To achieve self-healing, WeDeploy services are monitored and restarted when they
 
 <!-- <article id="elastic-scalability"> -->
 
-## Elastic Scalability
+## Elastic scalability
 
 WeDeploy gives you the power to easily scale your services up and down with the turn of a dial.
 
@@ -54,7 +54,7 @@ Horizontal scaling is trivial in Docker Swarm, as long as your service supports 
 
 <!-- <article id="user-interfaces"> -->
 
-## User Interfaces
+## User interfaces
 
 WeDeploy offers two interfaces to make it easy to monitor and manage the projects and its services.
 

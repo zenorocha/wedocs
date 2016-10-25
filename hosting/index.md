@@ -14,7 +14,7 @@
 
 <!-- <article id="install-dependencies"> -->
 
-## Install Dependencies
+## Install dependencies
 
 This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
 
@@ -22,7 +22,7 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 <!-- <article id="running-locally"> -->
 
-## Running Locally
+## Running locally
 
 WeDeploy™ provides a way to run your project locally using a sandbox system.
 
@@ -57,7 +57,7 @@ Inside this project folder, you can find a `container.json` with the container I
 
 <!-- <article id="deploying-to-the-cloud"> -->
 
-## Deploying to the Cloud
+## Deploying to the cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-hosting/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.com) and create a project.
@@ -82,13 +82,13 @@ http://hosting.<projectID>.wedeploy.io
 
 <!-- <article id="error-pages"> -->
 
-## Error Pages
+## Error pages
 
 Files put into the special directory `/_error` are mapped as the error files to be served in case of an error. They must take the form of `<error code>.html`.
 
 <!-- </article> -->
 
 
-## What's Next?
+## What's next?
 
 * Now you can start adding new static files and grow your application.

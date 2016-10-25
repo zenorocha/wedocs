@@ -1,4 +1,4 @@
-# Updating data
+# Updating Data
 
 ###### The update() function updates an existing record in the database using the current attributes. It then returns the newly updated object in the Promise response.
 
@@ -34,6 +34,6 @@ This operation will return the updated document with the new rating:
 ```
 <!-- </article> -->
 
-## Next Steps
+## What's next?
 
 Now that you have learned how to update data, you can interact [deleting data](/docs/data/js/deleting-data.html).

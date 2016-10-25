@@ -4,7 +4,7 @@
 
 <!-- <article id="sign-in"> -->
 
-## Sign-in with Facebook
+## Sign-in with facebook
 
 To sign in by redirecting to the sign-in page, call `signInWithRedirect`:
 
@@ -48,6 +48,6 @@ Create a client id and client secret by [registering your application](https://d
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now we're ready to start [enabling other login providers into your app](/docs/auth/js/sign-in-with-github.html).

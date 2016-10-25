@@ -23,6 +23,6 @@ auth.signInWithEmailAndPassword("user@domain.com", "password")
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now you can start building your apps with authentication.

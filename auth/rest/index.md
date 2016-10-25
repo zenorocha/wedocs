@@ -98,6 +98,6 @@ Create, delete or update users with a simple API.
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now we're ready to [start managing your users](/docs/auth/rest/manage-users.html).

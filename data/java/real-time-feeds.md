@@ -31,6 +31,6 @@ Now every time the storage detects changes that affect the query you're watching
 <!-- </article> -->
 
 
-## What's Next?
+## What's next?
 
 * Now we're ready to save and retrieve data in real-time.

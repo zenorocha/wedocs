@@ -1,4 +1,4 @@
-# Deleting data
+# Deleting Data
 
 ###### The delete() function destroys an existing field, document or collection in the database.
 
@@ -24,6 +24,6 @@ data.delete('movies');
 <!-- </article> -->
 
 
-## Next Steps
+## What's next?
 
 Now that you have learned how to update data, you can interact [retrieving data](/docs/data/js/retrieving-data.html).

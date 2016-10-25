@@ -14,7 +14,7 @@
 
 <!-- <article id="install-dependencies"> -->
 
-## Install Dependencies
+## Install dependencies
 
 This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
 
@@ -24,7 +24,7 @@ We also feature code snippets using the API Client, [visit this guide](/docs/int
 
 <!-- <article id="running-locally"> -->
 
-## Running Locally
+## Running locally
 
 1. Start local infrastructure:
 
@@ -55,7 +55,7 @@ http://emaildemo.wedeploy.me
 
 <!-- <article id="deploying-to-the-cloud"> -->
 
-## Deploying to the Cloud
+## Deploying to the cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-email/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.com).
@@ -81,7 +81,7 @@ http://emaildemo.wedeploy.io
 
 <!-- <article id="sending-an-email"> -->
 
-## Sending an Email
+## Sending an email
 
 Now that we have our container up and running, it's time to start sending some emails. We can use the API Client to facilitate the process of sending requests to WeDeploy.
 
@@ -110,7 +110,7 @@ As a result, we'll receive an email ID. This doesn't indicate that the email was
 
 <!-- <article id="checking-email-status"> -->
 
-## Checking an Email Status
+## Checking an email status
 
 In order to check if an email was sent or not, we can use the email ID from the previous example, e.g. `123`, and send a `GET` request to `/emails/123/status`.
 
@@ -128,6 +128,6 @@ WeDeploy
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * That's it! Now we're ready to start sending emails to our users.

@@ -14,7 +14,7 @@
 
 <!-- <article id="install-dependencies"> -->
 
-## Install Dependencies
+## Install dependencies
 
 This section assumes that you already have the **WeDeploy CLI** installed and **Docker** running. Make sure to [visit the installation guide](/docs/intro/using-the-command-line.html) if you need help setting that up.
 
@@ -22,7 +22,7 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 <!-- <article id="running-locally"> -->
 
-## Running Locally
+## Running locally
 
 1. Start local infrastructure:
 
@@ -60,7 +60,7 @@ http://ruby.<projectID>.wedeploy.me
 
 <!-- <article id="deploying-to-the-cloud"> -->
 
-## Deploying to the Cloud
+## Deploying to the cloud
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-ruby/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.com).
@@ -84,6 +84,6 @@ http://ruby.<projectID>.wedeploy.io
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now you can start building your ruby based application.

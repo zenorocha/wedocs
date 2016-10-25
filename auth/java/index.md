@@ -113,6 +113,6 @@ WeDeploy.auth('http://<containerID>.<projectID>.wedeploy.io');
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now we're ready to start [authenticating accounts and growing our user base](/docs/auth/sign-in-with-github.html).

@@ -48,6 +48,6 @@ Create a client id and client secret by [registering your application](https://g
 
 <!-- </article> -->
 
-## What's Next?
+## What's next?
 
 * Now we're ready to start [enabling other login providers into your app](/docs/auth/sign-in-with-google.html).

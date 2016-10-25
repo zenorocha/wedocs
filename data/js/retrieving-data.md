@@ -4,7 +4,7 @@
 
 <!-- <article id="get-data"> -->
 
-## Get Data
+## Get data
 
 Reading data from our storage takes only 3 lines of code.
 
@@ -59,7 +59,7 @@ Requesting the entire movies collection using curl -X "GET" "http://datademo.wed
 
 <!-- <article id="sorting-data"> -->
 
-## Sorting Data
+## Sorting data
 
 The result is ordered by document id, as we can see in the list above. We can select the order of the results by passing a sort parameter, using the following code:
 
@@ -149,6 +149,6 @@ We support all basic SQL-like operators (=, !=, >, >=, <, <=, ~), as well as 'an
 
 <!-- </article> -->
 
-## Next Steps
+## What's next?
 
 Now that you have learned how to retrieve data, you can interact [searching data](/docs/data/js/searching-data.html).
