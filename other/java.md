@@ -85,4 +85,4 @@ http://java.<projectID>.wedeploy.io
 
 ## What's next?
 
-* Now you can start building your Node.js based application.
+* Now you can start building your Java based application.
