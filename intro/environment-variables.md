@@ -8,7 +8,7 @@
 
 A project may have numerous environments: a production app, a staging app, and any number of test and local environments maintained by many different developers. However, the code is the same. In order to make it happen, each environment would have specific configurations.
 
-A good example would be credentials for the database, where each environment has its own database. The ideal scenario for handling this scenario, would be using Environment variables, in order to set up different configurations for different environemnts using the same code. In a traditional development proccess, you would speciffy the environemnt configurations in different files. On WeDeploy you can take advantage of Environment Variables using the dashboard.
+A good example would be credentials for the database, where each environment has its own database. The ideal scenario for handling this scenario, would be using Environment variables, in order to set up different configurations for different environment using the same code. In a traditional development proccess, you would speciffy the environemnt configurations in different files. On WeDeploy you can take advantage of Environment Variables using the dashboard.
 
 <!-- </article> -->
 
