@@ -12,7 +12,7 @@ A good example would be credentials for the database, where each environment has
 
 <!-- </article> -->
 
-<!-- <article id="configuring-custom-domains"> -->
+<!-- <article id="configuring-environment-variables"> -->
 
 ## Configuring environment variables
 
