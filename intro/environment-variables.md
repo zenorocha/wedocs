@@ -22,7 +22,7 @@ WeDeploy can help you to configure environment variables for your services. Each
 <ol class="list list--numeric">
   <li>After create a project and installing a service on the <a href="http://dashboard.wedeploy.com">dashboard</a>. Go to the service page.</li>
   <li>Click on Environment Vars.</li>
-  <li>Click in Update Service.</li>
+  <li>Click on Update Service.</li>
 </ol>
 
 ![envvar](https://cloud.githubusercontent.com/assets/301291/19909475/27d9d6f0-a045-11e6-9483-54d76a164384.png)
