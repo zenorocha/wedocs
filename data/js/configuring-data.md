@@ -12,8 +12,6 @@ These files are used to help you manage features such as path validation, authen
 
 The api JSON files are located at the same path of the `./container.json` and are used following the ordering filesystem.
 
-By the default, if you don't add any api.json file all the collections are going to be exposed.
-
 <!-- </article> -->
 
 <!-- <article id="json-attributes"> -->
@@ -36,18 +34,18 @@ After understanding how the api configuration files work, it's time to learn wha
     <td>description</td> <td>Used to describe the behavior of an endpoint.</td>
   </tr>
   <tr>
-    <td>auth</td> <td>Used to define authentication rules for the collection.</td>
+    <td>auth</td> <td>Used to define authentication rules for the endpoint.</td>
   </tr>
   <tr>
     <td>method</td> <td>HTTP method allowed for the request.</td>
   </tr>
   <tr>
-    <td>parameters</td> <td>Params and validation rules for the collection.</td>
+    <td>parameters</td> <td>Parameters and validation rules for the collection.</td>
   </tr>
 </table>
 
 **path**
-A path represents the collection used to store your project data.
+A path represents the resource used to store your project data.
 
 ex:
 
@@ -158,6 +156,76 @@ The path `/*` tells the data service to allow any request to the base path of th
 
 <!-- </article> -->
 
+
+
+<!-- <article id="validating-resources"> -->
+
+## Validating resources
+
+The Validator script will be executed in an environment where several request and server data will be available. In this environment, there are several global variables available to you that can be used to validate the request parameter, body, or even to authorize the request.
+
+The validator can be used as an integration with the Auth service:
+
+```
+{
+  "path": "/movies/*",
+  "auth": {
+    "validator": "$auth != null"
+  }
+}
+```
+
+The global variables are:
+
+
+<table class="table">
+  <tr>
+    <th>Variable</th> <th>Description</th>
+  </tr>
+  <tr>
+    <td>$auth</td> <td>The authenticated user of this request. If the request was not authenticated, it will be null.</td>
+  </tr>
+  <tr>
+    <td>$config</td> <td>The raw JSON data stored in the service's config.json file.</td>
+  </tr>
+  <tr>
+    <td>$session</td> <td>All stored session data. If the request had no session cookie, it will be an empty map for the new session created for this request.</td>
+  </tr>
+  <tr>
+    <td>$params</td> <td>The request params as they were loaded from url query and request body. All query and form parameters will be strings here.</td>
+  </tr>
+  <tr>
+    <td>$values</td> <td>The parsed request params, as they are used for parameter validation. All query and form parameters will be parsed to JSON values.</td>
+  </tr>
+  <tr>
+    <td>$body</td> <td>The parsed request body, according to the request Content-Type.</td>
+  </tr>
+  <tr>
+    <td>$data</td> <td>The data view for this request, if a data path is mounted in the API path, and the request path represents a key to access any data resource (collection, document or inner field from a document). It will be null otherwise.</td>
+  </tr>
+
+</table>
+
+
+Some common validators are:
+
+1) Authenticated users only:
+
+`$auth !== null`
+
+2) Mixed with dynamic values:
+
+`$auth.id === $params.id`
+
+3) Validate new data value agains old one:
+
+`$body.timestamp > $data.timestamp`
+
+4) Multiple contitional validation:
+
+`$auth !== null && $auth.id === $params.id`
+
+<!-- </article> -->
 
 ## What's next?
 
