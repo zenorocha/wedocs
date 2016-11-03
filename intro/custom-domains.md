@@ -34,7 +34,7 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 A root domain is the highest level of hierarchy for the website you control, ex: `mydomain.com`. When you register a domain name, you are registering a root domain. This means you have the access to create subdomains and file structures all branching from that root domain.
 
-If your DNS provider allow you to use CNAME for root domains, you just need to Point the ALIAS (A) entry for your root domain as described below:
+If your DNS provider allows you to use CNAME for root domains, you just need to Point the ALIAS entry for your root domain as described below:
 
 <table class="table">
   <tr>
@@ -45,14 +45,14 @@ If your DNS provider allow you to use CNAME for root domains, you just need to P
   </tr>
 </table>
 
-In some DNS Providers, it just allows you to configure IPs for root domains. In that case, you can use the static IP provided by WeDeploy:
+In some DNS Providers, it just allows you to configure IPs for root domains. In that case, you can use the static IP provided by WeDeploy as the target for the Address Record (A):
 
 <table class="table">
   <tr>
     <th>Record</th> <th>Name</th> <th>Project Target Domain</th>
   </tr>
   <tr>
-    <td>`ALIAS`</td> <td>`<empty>` or `@`</td> <td>`173.196.61.238`</td>
+    <td>`A`</td> <td>`<empty>` or `@`</td> <td>`173.196.61.238`</td>
   </tr>
 </table>
 
