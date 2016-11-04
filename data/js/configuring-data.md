@@ -72,7 +72,7 @@ You can create endpoints just for validation, in this case, data is used to fini
 ]
 ```
 
-##### `description`
+##### description
 
 Used to describe the behavior of an endpoint.
 
@@ -86,7 +86,7 @@ Used to describe the behavior of an endpoint.
 ]
 ```
 
-##### `auth`
+##### auth
 
 You can unauthorized applications and users to access any endpoint by using the auth field. The example below verify if the application is authenticated in order to perform the request:
 
@@ -101,7 +101,7 @@ You can unauthorized applications and users to access any endpoint by using the 
 ]
 ```
 
-##### `method`
+##### method
 
 Specifies the HTTP method used for the request. In the example bellow, it allows a GET request and if you try to do a PUT or DELETE the route will not be recognized and will fail.
 
@@ -115,7 +115,7 @@ Specifies the HTTP method used for the request. In the example bellow, it allows
 ]
 ```
 
-##### `parameters`
+##### parameters
 
 You generally would use `parameters` to force validation in order to make sure that the params sent to a collection follow predefined rules.
 
