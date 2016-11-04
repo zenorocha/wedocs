@@ -65,12 +65,14 @@ You can create endpoints just for validation, in this case, data is used to fini
 
 ex:
 
+```
 [
   {
     "path": "/fruits/*",
     "data": true
   }
 ]
+```
 
 **description**
 
@@ -78,6 +80,7 @@ Used to describe the behavior of an endpoint.
 
 ex:
 
+```
 [
   {
     "description": "Returns actors of a movie",
@@ -85,6 +88,7 @@ ex:
     "method": "GET"
   }
 ]
+```
 
 
 **auth**
@@ -93,12 +97,16 @@ You can unauthorized applications and users to access any endpoint by using the 
 
 ex:
 
-{
-  "path": "/movies/*",
-  "auth": {
-    "validator": "$auth != null"
+```
+[
+  {
+    "path": "/movies/*",
+    "auth": {
+      "validator": "$auth != null"
+    }
   }
-},
+]
+```
 
 
 **method**
@@ -107,6 +115,7 @@ Specifies the HTTP method used for the request. In the example bellow, it allows
 
 ex:
 
+```
 [
   {
     "path": "/moives/:movieId",
@@ -114,6 +123,7 @@ ex:
     "method": "GET"
   }
 ]
+```
 
 **parameters**
 
@@ -121,6 +131,7 @@ You generally would use `parameters` to force validation in order to make sure t
 
 ex:
 
+```
 [
   {
     "description": "Creates a new movie",
@@ -134,6 +145,7 @@ ex:
     "data": true
   }
 ]
+```
 
 <!-- </article> -->
 
