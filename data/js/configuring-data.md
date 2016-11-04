@@ -44,26 +44,24 @@ After understanding how the api configuration files work, it's time to learn wha
   </tr>
 </table>
 
-**path**
-A path represents the resource used to store your project data.
+##### path
 
-ex:
+A path represents the resource used to store your project data.
 
 ```
 [
   {
-    "path": "/movies/:movieId",
+    "path": "/movies/:movieId"
   },
   {
-    "path": "/fruits/*",
+    "path": "/fruits/*"
   }
 ]
 ```
 
-**data**
-You can create endpoints just for validation, in this case, data is used to finish the request in case you just need a validation or want to store the request in the collection.
+##### data
 
-ex:
+You can create endpoints just for validation, in this case, data is used to finish the request in case you just need a validation or want to store the request in the collection.
 
 ```
 [
@@ -74,11 +72,9 @@ ex:
 ]
 ```
 
-**description**
+##### `description`
 
 Used to describe the behavior of an endpoint.
-
-ex:
 
 ```
 [
@@ -90,12 +86,9 @@ ex:
 ]
 ```
 
-
-**auth**
+##### `auth`
 
 You can unauthorized applications and users to access any endpoint by using the auth field. The example below verify if the application is authenticated in order to perform the request:
-
-ex:
 
 ```
 [
@@ -108,12 +101,9 @@ ex:
 ]
 ```
 
-
-**method**
+##### `method`
 
 Specifies the HTTP method used for the request. In the example bellow, it allows a GET request and if you try to do a PUT or DELETE the route will not be recognized and will fail.
-
-ex:
 
 ```
 [
@@ -125,11 +115,9 @@ ex:
 ]
 ```
 
-**parameters**
+##### `parameters`
 
 You generally would use `parameters` to force validation in order to make sure that the params sent to a collection follow predefined rules.
-
-ex:
 
 ```
 [
@@ -168,8 +156,6 @@ The path `/*` tells the data service to allow any request to the base path of th
 
 <!-- </article> -->
 
-
-
 <!-- <article id="validating-resources"> -->
 
 ## Validating resources
@@ -188,7 +174,6 @@ The validator can be used as an integration with the Auth service:
 ```
 
 The global variables are:
-
 
 <table class="table">
   <tr>
@@ -218,24 +203,31 @@ The global variables are:
 
 </table>
 
-
 Some common validators are:
 
 1) Authenticated users only:
 
-`$auth !== null`
+```
+$auth !== null
+```
 
 2) Mixed with dynamic values:
 
-`$auth.id === $params.id`
+```
+$auth.id === $params.id
+```
 
 3) Validate new data value agains old one:
 
-`$body.timestamp > $data.timestamp`
+```
+$body.timestamp > $data.timestamp
+```
 
 4) Multiple contitional validation:
 
-`$auth !== null && $auth.id === $params.id`
+```
+$auth !== null && $auth.id === $params.id
+```
 
 <!-- </article> -->
 
