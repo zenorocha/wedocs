@@ -82,4 +82,4 @@ http://boilerplate-data.wedeploy.io
 
 ## What's next?
 
-Now that you have *WeDeploy™ Data* API settled up, you can interact [saving data](/docs/data/js/saving-data.html).
+Now that you have *WeDeploy™ Data* API settled up, you can interact [configuring the data service](/docs/data/js/configuring-data.html).
