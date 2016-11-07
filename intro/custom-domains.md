@@ -6,7 +6,7 @@
 
 ## Introduction
 
-To make your app accessible right away, WeDeploy makes any project accessible via its project domain, which looks like `<serviceID>.<projectID>.wedeploy.io`. Let's say you have a project named `project` with a service named `web` the WeDeploy project domain would be `web.project.wedeploy.io`. Every project in WeDeploy supports one or many custom domains.
+To make your app accessible right away, WeDeploy makes any project accessible via its project domain, which looks like `<serviceID>.<projectID>.wedeploy.io`. If you have a project named `project` with a service named `web`, the WeDeploy project domain would be `web.project.wedeploy.io`. Every project in WeDeploy supports one or more custom domains.
 
 <!-- </article> -->
 
@@ -34,7 +34,7 @@ To make a project accessible via one or more non-WeDeploy domain names, you must
 
 A root domain is the highest level of hierarchy for the website you control, ex: `mydomain.com`. When you register a domain name, you are registering a root domain. This means you have the access to create subdomains and file structures all branching from that root domain.
 
-If your DNS provider allows you to use CNAME for root domains, you just need to Point the ALIAS entry for your root domain as described below:
+If your DNS provider allows you to either use CNAME or ALIAS records for root domains, you just need to point the CNAME/ALIAS entry for your root domain as described below:
 
 <table class="table">
   <tr>
@@ -45,7 +45,7 @@ If your DNS provider allows you to use CNAME for root domains, you just need to 
   </tr>
 </table>
 
-In some DNS Providers, it just allows you to configure IPs for root domains. In that case, you can use the static IP provided by WeDeploy as the target for the Address Record (A):
+In many DNS Providers, you are only allowed to use Address Records (A) for your root domain. In that case, you can use the static IP provided by WeDeploy as the target for the Address Record (A):
 
 <table class="table">
   <tr>
@@ -62,7 +62,7 @@ In some DNS Providers, it just allows you to configure IPs for root domains. In 
 
 ## Configuring DNS for subdomains
 
-After configuring the custom domains on the Project Settings, you must point your DNS to the project WeDeploy domain. You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure your subdomain as a CNAME record, visit your DNS provider documentation page.
+After configuring the custom domains on the Project Settings, you must point your DNS record to the project WeDeploy domain. You can configure your subdomain as a new CNAME record with your DNS provider. If you're not sure about how to configure CNAME records for subdomains, visit your DNS provider's documentation page.
 
 <table class="table">
   <tr>
@@ -80,7 +80,7 @@ After configuring the custom domains on the Project Settings, you must point you
 
 ## Configuring DNS for wildcard domain
 
-Since you can have multiple services inside a project and WeDeploy automatically creates a subdomain for each service. Wildcard domains allow you to map any of all generated subdomains from the services with a single record.
+WeDeploy automatically creates a subdomain for each service. Since you typically will have multiple services inside a project, you will either need multiple records, or a single Wildcard record. A wildcard record allows you to map all subdomains to your wedeploy project with a single record.
 
 <table class="table">
   <tr>
