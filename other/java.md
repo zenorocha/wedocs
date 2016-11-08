@@ -83,6 +83,39 @@ http://java.<projectID>.wedeploy.io
 
 <!-- </article> -->
 
+<!-- <article id="notes-about-java-development"> -->
+
+## Notes about Java development
+
+WeDeploy runs your Java application on [OpenJDK 8](http://openjdk.java.net/).
+
+Our boilerplate Java image contains an example built with [Spring Boot](https://projects.spring.io/spring-boot/). Of course, you are allowed to use any Java web application framework or server. Just build the project however you usually do, and that's it.
+
+WeDeploy Java image comes with the following build tools installed:
+
++ [Gradle](https://gradle.org/)
++ [Maven](https://maven.apache.org/)
++ [Ant](http://ant.apache.org/)
++ [Ivy](http://ant.apache.org/ivy/)
+
+You can use any of those to build your web application. There is just one thing your build definition _must_ have: a task named `run` that _start_ the whole application. WeDeploy will execute this task when container starts. Sometimes, this task is already availiable by default or within some plugin that your build is using. When the task is not availiable, you have to define it manually; for example, in Gradle, you can do something like this for the Spring Boot application:
+
+  ```groovy
+task run(dependsOn: ':bootRun')
+  ```
+
+Until now we assumed that `run` task also triggers the build of the application (e.g. by having task dependency). If this is not a case, you have to specify the build command in `container.json`:
+
+  ```json
+  "hooks": {
+    "build": "./gradlew clean build installDist -x test"
+  },
+  ```
+
+This hook tells WeDeploy how to build and pack the application, so it can be run by executing the `run` task. Again, you have to do this only if the `run` task does not do it already.
+
+<!-- </article> -->
+
 ## What's next?
 
 * Now you can start building your Java based application.
