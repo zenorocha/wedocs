@@ -80,7 +80,7 @@ After configuring the custom domains on the Project Settings, you must point you
 
 ## Configuring DNS for wildcard domain
 
-WeDeploy automatically creates a subdomain for each service. Since you typically will have multiple services inside a project, you will either need multiple records, or a single Wildcard record. A wildcard record allows you to map all subdomains to your wedeploy project with a single record.
+WeDeploy automatically creates a subdomain for each service. Since you typically will have multiple services inside a project, you will either need multiple records, or a single wildcard record. A wildcard record allows you to map all subdomains to your WeDeploy project with a single record.
 
 <table class="table">
   <tr>
