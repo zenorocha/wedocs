@@ -91,7 +91,7 @@ Authenticate users with their email addresses and passwords. Provides methods to
 
 **Google**
 
-Create a client id and client secret by [registering your application](https://developers.google.com/youtube/registering_an_application) on Google.
+Create a client id and client secret by [registering your application](https://developers.google.com/identity/protocols/OAuth2) on Google.
 
 **GitHub**
 
