@@ -30,6 +30,9 @@ auth.onSignIn(function(user) {
 
 Create a client id and client secret by [registering your application](https://developers.facebook.com/docs/apps/register) on Facebook.
 
+> Please be sure to add the callback url `http://<auth-container-id>.<project-id>.wedeploy.io/oauth/token` in your application.
+> For local development, use `wedeploy.me` instead. To use with custom domains you can change the sufix `<project-id>.wedeploy.io` for your domain.
+
 After retrieving the client id and client secret you can configure them as environment variables of the authentication `container.json`.
 
 ```json
