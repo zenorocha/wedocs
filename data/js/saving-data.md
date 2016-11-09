@@ -28,12 +28,15 @@ This operation will return the newly created document, with the following genera
 
 ```js
 {
-  "id":" 115992383516607958",
+  "id":" "115992383516607958",
   "title": "Star Wars IV",
   "year": 1977,
   "rating": 8.7
 }
 ```
+
+Generated ID is a string and it's structure may vary. It is also possible to define custom app-specific value for the ID, by simply passing the `id` field as part of the new document.
+
 <!-- </article> -->
 
 <!-- <article id="inserting-multiple-data"> -->
