@@ -82,7 +82,7 @@ we link --project demo
 <!-- <article id=“5-login-and-remotes”> -->
 
 ## Remotes and friendly host style
-Many commands requires --project, --container, or --remote flags. You can use the following patterns for passing these values:
+Many commands requires `--project`, `--container`, or `--remote` flags. You can use the following patterns for passing these values:
 
 ```text
 we <command> --project <project> --container <container>
@@ -100,7 +100,7 @@ or even
 we <command> <container>.<project> --remote <remote>
 ```
 
-For the local cloud, just don't add a --remote or <remote address> value like in:
+For the local cloud, just don't add a `--remote` or `<remote address>` value like in:
 
 ```text
 we log public.chat
@@ -123,7 +123,7 @@ If you know how to use `git remote` you already know how to use `we remote`.
 
 For your convenience we include the wedeploy cloud remote by default once you log in on the CLI app with `we login` (requested when necessary).
 
-All commands that support --project, --container, and / or --remote support this host style as well.
+All commands that support `--project`, `--container`, and / or `--remote` support this host style as well.
 
 <!-- </article> -->
 
