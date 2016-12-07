@@ -63,7 +63,7 @@ Any search in the previous example results in the following match:
 [{"id":"star_wars_vii","title":"Star Wars: Episode VII - The Force Awakens","year":2015}]
   ```
 
-What we did with * can also be done with the prefix operator Filter.prefix('title', 'awake'). The fuzziness we added to 'wakens' using ~, can also be done explicitly with the fuzzy operator Filter.fuzzy('title', 'wakens').
+What we did with `*` can also be done with the prefix operator `Filter.prefix('title', 'awake')`. The fuzziness we added to `wakens` using `~`, can also be done explicitly with the fuzzy operator `Filter.fuzzy('title', 'wakens')`.
 
 So far we are still just filtering data with filters. We can do so much more than that! If we use 'query search' instead of 'filter' to send those filters to the server, we can also get information about how relevant a document is to a given search, and order our results by this criteria. Let us introduce this with a new filter that allows us to query movies with a title similar to a given text:
 
@@ -217,7 +217,7 @@ Cool, right? Simply run another query for the newest movies, and then you'll hav
 
 
 Notice that in order to read and write your service's root path you need to map it with an API endpoint and data flag active.
-If we want to inform the server of the data type of a collection field before it receives its first document, we can POST/PATCH the data root with the mapping information:
+If we want to inform the server of the data type of a collection field before it receives its first document, we can `POST`/`PATCH` the data root with the mapping information:
 
   ```js
 WeDeploy
@@ -229,7 +229,7 @@ WeDeploy
 });
   ```
 
-We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: date, geo_point, and geo_shape. We will focus on geo_point for this next feature.
+We can never update an already mapped field, but we can map new fields in an existing collection, as we did in the request above. When we manually map our collection, we can use some extra datatypes that are not mapped dynamically: `date`, `geo_point`, and `geo_shape`. We will focus on geo_point for this next feature.
 
 So, we mapped a field called location, in the collection places, as representing a geolocation point. This means we can operate, filter, and aggregate the places we put in that collection, using geo filters over this field! Let's try something simple: find cinemas close to London's Waterloo Station. To run the search criteria, we'll use the following code:
 
