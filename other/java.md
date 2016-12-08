@@ -134,7 +134,7 @@ WeDeploy collects all the console output as logs. To see the logs, just invoke: 
 
 ### Application port
 
-If your Java application does not run on port `8080` you need to specify it using the field `port` in the `container.json` definition.
+If your Java application does not run on port `8080` you need to specify it using the field `port` in the [`container.json` definition](/docs/intro/configuration-files.html#service-configuration).
 
 <!-- </article> -->
 
