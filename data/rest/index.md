@@ -43,7 +43,7 @@ http://datademo.wedeploy.me
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-data/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.com).
-3. [Create a project](http://dashboard.wedeploy.com/projects/create).
+3. [Create a project](http://dashboard.wedeploy.com/new).
 4. In the sidebar, click on *Deployment*.
 5. Using your local machine, clone your Github fork:
   ```text
