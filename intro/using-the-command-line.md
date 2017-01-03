@@ -53,28 +53,22 @@ Usage:
 
 For this demo we are going to use the hosting boilerplate.
 
-1. Start local infrastructure:
-
-  ```text
-we run
-  ```
-
-2. Clone this repository:
+1. Clone this repository:
 
   ```text
 git clone https://github.com/wedeploy/boilerplate-hosting.git
 cd boilerplate-hosting
   ```
 
-3. Link this container to a new project named demo:
+2. Run this container locally on a new project named demo:
 
   ```text
-we link --project demo
+we dev --project demo
   ```
 
 4. Now your container should be accessible from [http://hosting.demo.wedeploy.me](http://hosting.demo.wedeploy.me)
 
-*On the first first time it might take a few minutes while downloading the hosting image on the background.*
+*It might take a few minutes to run `we dev` on the first time (while downloading infra-structure or container images).*
 
 <!-- </article> -->
 
@@ -123,7 +117,7 @@ If you know how to use `git remote` you already know how to use `we remote`.
 
 For your convenience we include the wedeploy cloud remote by default once you log in on the CLI app with `we login` (requested when necessary).
 
-All commands that support `--project`, `--container`, and / or `--remote` support this host style as well.
+All commands that support `--project`, `--container`, and / or `--remote` support this host style as well, except `we dev`.
 
 <!-- </article> -->
 

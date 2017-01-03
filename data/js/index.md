@@ -26,26 +26,20 @@ We also feature code snippets using the API Client, [visit this guide](/docs/int
 
 ## Running locally
 
-1. Start local infrastructure:
-
-  ```text
-we run
-  ```
-
-2. Clone this repository:
+1. Clone this repository:
 
   ```text
 git clone -b js https://github.com/wedeploy/boilerplate-data.git boilerplate-data-js
 cd boilerplate-data-js
   ```
 
-3. Link this container with the local infrastructure:
+2. Run this container locally:
 
   ```text
-we link
+we dev
   ```
 
-4. Now your container is ready to be used:
+3. Now your container is ready to be used:
 
   ```text
 http://boilerplate-data.wedeploy.me

@@ -24,32 +24,26 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 ## Running locally
 
-1. Start local infrastructure:
-
-  ```text
-we run
-  ```
-
-2. Clone this repository:
+1. Clone this repository:
 
   ```text
 git clone https://github.com/wedeploy/boilerplate-nodejs.git
 cd boilerplate-nodejs
   ```
 
-3. Build the container:
+2. Build the container:
 
   ```text
 we build
   ```
 
-4. Link this container with the local infrastructure:
+3. Run this container locally:
 
   ```text
-we link --project <projectID>
+we dev --project <projectID>
   ```
 
-5. Now your container is ready to be used:
+4. Now your container is ready to be used:
 
   ```text
 http://nodejs.<projectID>.wedeploy.me
