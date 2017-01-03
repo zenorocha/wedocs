@@ -24,26 +24,20 @@ This section assumes that you already have the **WeDeploy CLI** installed and **
 
 ## Running locally
 
-1. Start local infrastructure:
-
-  ```text
-we run
-  ```
-
-2. Clone this repository:
+1. Clone this repository:
 
   ```text
 git clone https://github.com/wedeploy/boilerplate-liferay.git
 cd boilerplate-liferay
   ```
 
-3. Link this container with the local infrastructure:
+2. Run this container locally:
 
   ```text
-we link --project <projectID>
+we dev --project <projectID>
   ```
 
-4. Now your container is ready to be used:
+3. Now your container is ready to be used:
 
   ```text
 http://liferay.<projectID>.wedeploy.me
@@ -57,7 +51,7 @@ http://liferay.<projectID>.wedeploy.me
 
 1. [Fork this repository](https://github.com/wedeploy/boilerplate-liferay/fork).
 2. Go to the [Dashboard](http://dashboard.wedeploy.com).
-3. [Create a project](http://dashboard.wedeploy.com/projects/create).
+3. [Create a project](http://dashboard.wedeploy.com/new).
 4. In the sidebar, click on *Deployment*.
 5. Using your local machine, clone your Github fork:
   ```text
