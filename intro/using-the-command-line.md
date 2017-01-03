@@ -34,15 +34,15 @@ If you use Windows, you probably want the [Windows amd64 installer](https://bin.
 
 <!-- <article id="3-creating-projects"> -->
 
-## Creating projects locally
+## Generating projects locally
 
 You are able to organize your services by project. Inside each project you can create services (called containers here), like static hosting, data API, Auth service, etc.
 
-Use `we create` to create projects and containers. You can create a project anywhere on your machine. Containers might be created one directory above a project for your convenience.
+Use `we generate` to generate (or create) projects and containers. You can generate a project anywhere on your machine. Containers might be created one directory above a project for your convenience.
 
 ```text
 Usage:
-  we create --project <project> --container <container>
+  we generate --project <project> --container <container>
 ```
 
 <!-- </article> -->
