@@ -42,13 +42,13 @@ cd boilerplate-hosting
 3. Link this container with the local infrastructure:
 
   ```text
-we link
+we link --project demo
   ```
 
 4. Now your container is ready to be used:
 
   ```text
-http://hosting.<projectID>.wedeploy.me
+http://hosting.demo.wedeploy.me
   ```
 
 Inside this project folder, you can find a `container.json` with the container ID used in this case: `hosting`.
