@@ -29,6 +29,8 @@ curl http://cdn.wedeploy.com/cli/latest/wedeploy.sh -sL | bash
 
 If you use Windows, you probably want the [Windows amd64 installer](https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.msi). For other systems, check a list of [all builds available](https://bin.equinox.io/c/8WGbGy94JXa/cli-stable-windows-amd64.zip).
 
+**Check your docker configuration:** docker comes with a 2.0GB maximum memory limit by default on macOS and Windows. You should increase this limit to at least 4.0GB.
+
 <!-- </article> -->
 
 
