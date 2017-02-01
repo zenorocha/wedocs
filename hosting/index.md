@@ -88,6 +88,44 @@ Files put into the special directory `/_error` are mapped as the error files to 
 
 <!-- </article> -->
 
+<!-- <article id="using-node-js"> -->
+
+## Using Node.js
+
+There’s a simple easy trick to publish your static assets if you already have Node.js in your build pipeline (for instance with [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)). In fact there’s a nice package on npm called [*gh-pages*](https://www.npmjs.com/package/gh-pages) originally intended to work with GitHub Pages that can be easily configured to work with WeDeploy.
+
+In order for publishing to work remember that if your compiled site resides in a different directory (typically *dist/* or *build/*) you need to copy the *container.json* file in it too.
+
+With Gulp you can for example do it as simply as this:
+
+```js
+gulp.task('container',  function() {
+  return gulp.src('container.json')
+    .pipe(gulp.dest('<YOUR-DIST-PATH>'));
+});
+
+gulp.task('build', [ 'container', ... ]);
+```
+
+To actually deploy with *gh-pages* you need to correctly point the `repo` and `branch` configuration properties.
+
+An example (with Gulp.js) is the following:
+
+```js
+var ghpages = require('gh-pages');
+
+gulp.task('build', [ ... ]);
+
+gulp.task('deploy', ['build'], function(done) {
+  ghpages.publish(path.join(__dirname, '<YOUR-DIST-PATH>'), {
+    repo: 'http://git.wedeploy.com/<PROJECT-ID>.git',
+    branch: 'master'
+  }, done);
+});
+```
+
+<!-- </article> -->
+
 
 ## What's next?
 
